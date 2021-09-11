@@ -1,8 +1,8 @@
 const fs = require('fs');
 const Discord = require('discord.js');
-const { CommandoClient } = require('discord.js-commando');
+//const { CommandoClient } = require('discord.js-commando');
 const client = new Discord.Client();
-const config = require('./config.json');
+//const config = require('./config.json');
 const Database = require("@replit/database");
 const db = new Database();
 const winston = require('winston');
@@ -16,14 +16,14 @@ client.on('interactionCreate', interaction => {
 	if (blockedUsers.includes(interaction.user.id)) return
   message.channel.send("vous êtes bak ban, vous ne pouvez pas executer de commende");
 });
-
+/*
 client.on('ready', () => client.logger.log('info', 'Le bot est en ligne!'));
 client.on('debug', m => client.logger.log('debug', m));
 client.on('warn', m => client.logger.log('warn', m));
 client.on('error', m => client.logger.log('error', m));
-
+*/
 //initialisation du système de log
-client.logger = winston.createLogger({
+/*client.logger = winston.createLogger({
   transports: [
     new winston.transports.Console(),
     new winston.transports.File({ filename: 'log' })
@@ -34,7 +34,7 @@ client.logger = winston.createLogger({
 
 
 process.on('uncaughtException', error => client.logger.log('error', error));
-
+*/
 //le bot fera ceci dès son allumage
 client.on("ready", function() {
   client.user.setActivity('activity', { type: 'LISTENING' });

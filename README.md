@@ -1,4 +1,17 @@
-# Valv0_twillight-sparkle
+# Botty
 Actuellement, botty.js n'est pas encore disponible.
 
-> j'aime la thune ;-;
+L'hébergement se fait sur [Repl.it](https://replit.com).
+
+## Scripts
+
+```bash
+# Installation des dépendances
+npm install
+
+# Démarrage
+npm start
+
+# Développement
+npm run dev
+```
