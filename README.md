@@ -1,7 +1,10 @@
 # Botty
-Actuellement, botty.js n'est pas encore disponible.
 
-L'hébergement se fait sur [Repl.it](https://replit.com).
+Actuellement, Botty.js n'est pas encore disponible.
+
+## Le bak-ban
+
+[**Cliquez ici**](./BAKBAN.md) pour retrouver la FAQ et les explications sur le bak-ban.
 
 ## Scripts
 

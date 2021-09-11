@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node .",
-    "dev": "nodemon ."
+    "dev": "nodemon .",
+    "lint": "eslint . --ext .js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
     "nodemon": "^2.0.12"
   }
 }
