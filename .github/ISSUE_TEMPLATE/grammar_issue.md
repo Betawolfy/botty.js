@@ -1,8 +1,8 @@
 ---
 name: grammar_issue
 about: Créez un rapport à propos d'une faute d'orthographe du bot.
-title: ''
-labels: ''
+title: GRAM_ISSUE
+labels: enhancement
 assignees: ''
 
 ---

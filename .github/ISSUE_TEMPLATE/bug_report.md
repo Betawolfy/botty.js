@@ -1,8 +1,8 @@
 ---
 name: Bug report
 about: Créez un rapport pour nous aider à nous améliorer.
-title: ''
-labels: bug
+title: BUG
+labels: bug mineur
 assignees: ''
 
 ---
