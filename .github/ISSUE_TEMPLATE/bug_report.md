@@ -29,4 +29,4 @@ Le cas échéant, ajoutez des captures d'écran pour aider à expliquer votre pr
 Ajoutez tout autre contexte concernant le problème ici.
 
 --- 
-& = obligatoire 
+& = obligatoire
