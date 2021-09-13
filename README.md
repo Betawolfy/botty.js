@@ -1,4 +1,4 @@
-# Valv0_twillight-sparkle
+# botty.js
 Actuellement, botty.js n'est pas encore disponible.
 
 > j'aime la thune ;-;
