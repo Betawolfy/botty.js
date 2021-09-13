@@ -1,14 +1,14 @@
 const fs = require("fs");
 const Discord = require("discord.js");
-//const { CommandoClient } = require('discord.js-commando');
+// const { CommandoClient } = require('discord.js-commando');
 const client = new Discord.Client();
-//const config = require('./config.json');
+// const config = require('./config.json');
 const Database = require("@replit/database");
 const db = new Database();
-const winston = require("winston");
+// const winston = require("winston");
 const { MessageButton, MessageActionRow } = require("discord-buttons");
-const myConsole = new console.Console(fs.createWriteStream("./msgs.txt"));
-client.commands = new Discord.Collection();
+// const myConsole = new console.Console(fs.createWriteStream("./msgs.txt"));
+// client.commands = new Discord.Collection();
 require("discord-buttons")(client);
 
 const blockedUsers = ["719463073416609854", "id2"];
@@ -36,24 +36,26 @@ client.on('error', m => client.logger.log('error', m));
 process.on('uncaughtException', error => client.logger.log('error', error));
 */
 //le bot fera ceci dès son allumage
+/*
 client.on("ready", function() {
 	client.user.setActivity("activity", { type: "LISTENING" });
 	client.user.setStatus("dnd");
 });
-
+*/
+/*
 client.on("ready", async () => {
 	console.log(`${client.user.username} est en ligne sur ${client.guilds.size} serveurs!`);
 });
-
+*/
 //ici, on dit que les commendes ce trouvent dans le fichier "commands"
-const commandFiles = fs.readdirSync("./commands")
+/*const commandFiles = fs.readdirSync("./commands")
 	.filter(file => file.endsWith(".js"));
 
 
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
 	client.commands.set(command.name, command);
-}
+}*/
 
 // ici, ce sont les réponses de la commandes *8ball
 function doMagic8BallVoodoo() {
@@ -310,6 +312,6 @@ la loi française nous oblige à vous donner le droit de:
 > de récupérer vos données personnelles, dans un format utilisé et lisible par machine, pour un usage personnel ou pour les transférer à un autre organisme ;
 > de demander que les décisions fondées sur un traitement automatisé qui vous concernent ou vous affectent de manière significative et fondées sur vos données à caractère personnel soient prises par des personnes physiques et non uniquement par des ordinateurs. Dans ce cas, vous avez également le droit d’exprimer votre avis et de contester lesdites décisions ;
 > en cas de dommage matériel ou moral lié à la violation du RGPD, vous disposez d’un droit de recours. Vous pouvez déposer une réclamation auprès de la Commission nationale Informatique et libertés (CNIL) ou introduire une action collective en faisant notamment appel aux associations nationales agréées de défense des consommateurs.
-*/
+
 require("./server")();
-client.login("BahNonEnFait");
+client.login("BahNonEnFait");*/
