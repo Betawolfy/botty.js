@@ -1,7 +1,7 @@
 module.exports = {
 	data: {
 		name: "unlock",
-		description: "Dévérouiller le channel, où le message est envoyé, pour tout le monde."
+		description: "Permet de dévérouiller le salon sélectionné."
 	},
 
 	/**

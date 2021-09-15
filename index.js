@@ -3,19 +3,19 @@ const Discord = require("discord.js");
 // const { CommandoClient } = require('discord.js-commando');
 const client = new Discord.Client();
 // const config = require('./config.json');
-const Database = require("@replit/database");
-const db = new Database();
+// const Database = require("@replit/database");
+// const db = new Database();
 // const winston = require("winston");
 const { MessageButton, MessageActionRow } = require("discord-buttons");
 // const myConsole = new console.Console(fs.createWriteStream("./msgs.txt"));
 // client.commands = new Discord.Collection();
 require("discord-buttons")(client);
 
-const blockedUsers = ["719463073416609854", "id2"];
-client.on("interactionCreate", interaction => {
-	if (blockedUsers.includes(interaction.user.id)) return;
-	message.channel.send("vous êtes bak ban, vous ne pouvez pas executer de commende");
-});
+// const blockedUsers = ["719463073416609854", "id2"];
+// client.on("interactionCreate", interaction => {
+// 	if (blockedUsers.includes(interaction.user.id)) return;
+// 	message.channel.send("vous êtes bak ban, vous ne pouvez pas executer de commende");
+// });
 /*
 client.on('ready', () => client.logger.log('info', 'Le bot est en ligne!'));
 client.on('debug', m => client.logger.log('debug', m));
@@ -24,11 +24,11 @@ client.on('error', m => client.logger.log('error', m));
 */
 //initialisation du système de log
 /*client.logger = winston.createLogger({
-  transports: [
-    new winston.transports.Console(),
-    new winston.transports.File({ filename: 'log' })
-  ],
-  format: winston.format.printf((log) => `[${new Date().toLocaleString()}] - [${log.level.toUpperCase()}] - ${log.message}`)
+	transports: [
+		new winston.transports.Console(),
+		new winston.transports.File({ filename: 'log' })
+	],
+	format: winston.format.printf((log) => `[${new Date().toLocaleString()}] - [${log.level.toUpperCase()}] - ${log.message}`)
 });
 
 
@@ -58,10 +58,10 @@ for (const file of commandFiles) {
 }*/
 
 // ici, ce sont les réponses de la commandes *8ball
-function doMagic8BallVoodoo() {
-	var rand = [":8ball: Absolument!", ":8ball: Absolument pas.", ":8ball: cest .", ":8ball: Impossible.", ":8ball: bien sur.", ":8ball: Je ne crois pas.", ":8ball: c'est vrai.", ":8ball: c'est pas vrai.", ":8ball: I am very undoubtful of that.", ":8ball: I am very doubtful of that.", ":8ball: Sources point to no.", ":8ball: Theories prove it.", ":8ball: Reply hazy try again", ":8ball: Ask again later", ":8ball: Better not tell you now", ":8ball: Cannot predict now", ":8ball: Concentrate and ask again"];
-	return rand[Math.floor(Math.random()*rand.length)];
-}
+// function doMagic8BallVoodoo() {
+// 	var rand = [":8ball: Absolument!", ":8ball: Absolument pas.", ":8ball: cest .", ":8ball: Impossible.", ":8ball: bien sur.", ":8ball: Je ne crois pas.", ":8ball: c'est vrai.", ":8ball: c'est pas vrai.", ":8ball: I am very undoubtful of that.", ":8ball: I am very doubtful of that.", ":8ball: Sources point to no.", ":8ball: Theories prove it.", ":8ball: Reply hazy try again", ":8ball: Ask again later", ":8ball: Better not tell you now", ":8ball: Cannot predict now", ":8ball: Concentrate and ask again"];
+// 	return rand[Math.floor(Math.random()*rand.length)];
+// }
 
 
 //on définit ici le préfixe du bot (ici "*") et le message d'erreur.
@@ -92,26 +92,26 @@ client.on("message", message => {
 	};
 	db[message.author.id].xp++;
 	let userInfo = db[message.author.id];
-	if(userInfo.xp > 100) {
+	if (userInfo.xp > 100) {
 		userInfo.level++;
 		userInfo.xp = 0;
 		message.reply("Felicitation, tu as augmenté d'un niveau! ");
 	}
 	const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 	const cmd = args.shift().toLowerCase();
-	if(cmd === "info") {
+	if (cmd === "info") {
 		let userInfo = db[message.author.id];
 		let member = message.mentions.members.first();
 		let embed = new Discord.MessageEmbed()
 			.setColor(0x4286f4)
 			.addField("Niveau", userInfo.level)
-			.addField("XP", userInfo.xp+"/100");
-		if(!member) return message.channel.send(embed);
+			.addField("XP", userInfo.xp + "/100");
+		if (!member) return message.channel.send(embed);
 		let memberInfo = db[member.id];
 		let embed2 = new Discord.MessageEmbed()
 			.setColor(0x4286f4)
 			.addField("Niveau", memberInfo.level)
-			.addField("XP", memberInfo.xp+"/100");
+			.addField("XP", memberInfo.xp + "/100");
 		message.channel.send(embed2);
 	}
 	fs.writeFile("./database.json", JSON.stringify(db), (x) => {
@@ -121,7 +121,7 @@ client.on("message", message => {
 
 
 //commande help
-client.on("message", function(message) {
+client.on("message", function (message) {
 	if (message.content === "*help") {
 		const helpEmbed = new Discord.MessageEmbed()
 			.setColor("#0099ff")
@@ -138,7 +138,7 @@ client.on("message", function(message) {
 	}
 });
 
-client.on("message", function(message) {
+client.on("message", function (message) {
 	if (message.content === "*bak-help") {
 		const bakhelpEmbed = new Discord.MessageEmbed()
 			.setColor("#0099ff")
@@ -156,7 +156,7 @@ client.on("message", function(message) {
 });
 
 //commande help
-client.on("message", function(message) {
+client.on("message", function (message) {
 	if (message.content === "*help-level") {
 		const helpLevelEmbed = new Discord.MessageEmbed()
 			.setColor("#0099ff")
@@ -251,7 +251,7 @@ client.on("guildBanAdd", async (guild, user) => {
 });
 
 client.on("message", msg => {
-	if(msg.author.bot) return;
+	if (msg.author.bot) return;
 	const currentDate = new Date();
 	const guildTag = msg.channel.type === "text" ? `[${msg.guild.name}]` : "[DM]";
 	const channelTag = msg.channel.type === "text" ? `[#${msg.channel.name}]` : "";
@@ -259,7 +259,7 @@ client.on("message", msg => {
 });
 
 client.on("message", async message => {
-	if(message.content === "*button-test"){
+	if (message.content === "*button-test") {
 		const button = new MessageButton()
 			.setLabel("ca")
 			.setStyle("red")
@@ -274,35 +274,35 @@ client.on("message", async message => {
 			.setID("btn3");
 		let row = new MessageActionRow()
 			.addComponents(button, button1, button2);
-  
+
 		message.channel.send("is it work?", row);
-  
+
 
 	}
 });
 
 
 client.on("clickButton", async (button) => {
-	if(button.id === "btn1"){
+	if (button.id === "btn1") {
 		await button.reply.defer();
 		await button.message.channel.send("yep, ca marche");
 	}
 });
 client.on("clickButton", async (button) => {
-	if(button.id === "btn2"){
+	if (button.id === "btn2") {
 		await button.reply.defer();
 		await button.message.channel.send("yep, ca marche");
 	}
 });
 client.on("clickButton", async (button) => {
-	if(button.id === "btn3"){
+	if (button.id === "btn3") {
 		await button.reply.defer();
 		await button.message.channel.send("yep, ca marche");
 	}
 });
 
-/* consernant les logs générals et les données stockées par le bot: 
-la loi française nous oblige à vous donner le droit de: 
+/* consernant les logs générals et les données stockées par le bot:
+la loi française nous oblige à vous donner le droit de:
 > de demander des informations sur le traitement de vos données à caractère personnel ;
 > d’obtenir l’accès aux données à caractère personnel détenues à votre sujet ;
 > de demander que les données à caractère personnel incorrectes, inexactes ou incomplètes soient corrigées ;

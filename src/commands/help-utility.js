@@ -1,8 +1,22 @@
 module.exports = {
-	name: "help-utility",
-	description: "page d aide",
-	execute(message, args) {
-		message.channel.send("_serverinfo : Permet de voir les informations du serveur.\n_optiwork: montre le niveau de sécurité de botty sur une échelle de critères. \n_ping: donne votre ping en ms.\n_serverlist : afficher la liste des serveurs qui font confiance à botty.\n_userinfo {mention}: donne des info sur le membre mentionné.\n_finduser {ID}: vérifie si l ID est bien attaché à un membre de discord.\n_getserverinvite {id du serveur}: génère une invitation temporaire via l ID vers le serveur donné\n_getuserinfo {ID}: version amélioré de `_userinfo`.");
-		console.log("help utilitaire reçu!");
+	data: {
+		name: "help-utility",
+		description: "Page d'aide sur les utilitaires."
+	},
+
+	/**
+	 * @param {import("discord.js").Message} message
+	 * @returns {Promise<void>}
+	 */
+	async execute(message) {
+		message.channel.send({
+			content: "_serverinfo : Permet de voir les informations du serveur.\n"
+				+ "_optiwork: montre le niveau de sécurité de botty sur une échelle de critères. \n"
+				+ "_ping: donne votre ping en ms.\n"
+				+ "_serverlist : afficher la liste des serveurs qui font confiance à Botty.\n"
+				+ "_userinfo {mention}: donne des info sur le membre mentionné.\n"
+				+ "_finduser {ID}: vérifie si l ID est bien attaché à un membre de discord.\n"
+				+ "_getserverinvite {id du serveur}: génère une invitation temporaire via l ID vers le serveur donné\n"
+		});
 	},
 };

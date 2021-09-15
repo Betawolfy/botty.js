@@ -1,7 +1,7 @@
 module.exports = {
 	data: {
 		name: "lock",
-		description: "Vérouiller le channel, où le message est envoyé, pour tout le monde."
+		description: "Permet de vérouiller le salon sélectionné."
 	},
 
 	/**
