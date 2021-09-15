@@ -4,7 +4,7 @@ Actuellement, Botty.js n'est pas encore disponible.
 
 ## Le bak-ban
 
-[**Cliquez ici**](./wiki/BAK-BAN) pour retrouver la FAQ et les explications sur le bak-ban.
+[**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/BAK-BAN) pour retrouver la FAQ et les explications sur le bak-ban.
 
 ## Scripts
 
