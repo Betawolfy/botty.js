@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const pkg = require("../../package.json");
 
 module.exports = {
 	data: {
@@ -15,7 +16,7 @@ module.exports = {
 			.setColor("#0099ff")
 			.setTitle("Page d'aide globale")
 			.setURL("https://botty.ga/")
-			.setAuthor("Botty.js v0.2-bêta", message.client.application.iconURL(), "https://botty.ga/")
+			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
 				"**Commandes pour le staff:** \\*help-staff\n"
 				+ "**Commandes pour les utilitaires:** \\*help-utility\n"

@@ -6,18 +6,25 @@ module.exports = {
 
 	/**
 	 * @param {import("discord.js").Message} message
+	 * @returns {Promise<void>}
 	 */
 	async execute(message) {
-		let member = message.mentions.members.first();
-		member.kick().then((member) => {
-			message.channel.send(`:wave: ${member.displayName} has been kicked`);
-		}).catch(() => {
-			if (!message.member.hasPermission(["KICK_MEMBERS", "ADMINISTRATOR"])) {
-				message.reply("You cannot kick members");
+		const member = message.mentions.members.first();
+
+		try {
+			const kickedMember = await member.kick();
+			await message.channel.send(`:wave: ${kickedMember.displayName} a été kick.`);
+		}
+		catch (e) {
+			if (!message.member.permissions.has("KICK_MEMBERS") || !message.member.permissions.has("ADMINISTRATOR")) {
+				await message.reply("Vous ne pouvez pas utiliser cette commande !");
 			}
-			else if (member.hasPermission(["KICK_MEMBERS", "BAN_MEMBERS", "ADMINISTRATOR"])) {
-				message.reply("You cannont kick this member");
+			else if (message.member.permissions.has("KICK_MEMBERS") || message.member.permissions.has("ADMINISTRATOR")) {
+				await message.reply({
+					content: "Vous ne pouvez pas kick cet utilisateur."
+				});
 			}
-		});
+
+		}
 	}
 };

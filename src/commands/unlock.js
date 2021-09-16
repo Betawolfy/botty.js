@@ -9,6 +9,12 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	async execute(message) {
+		if (!message.member.permissions.has("MANAGE_CHANNELS")) {
+			return await message.reply({
+				content: "Vous ne pouvez pas utiliser cette commande !"
+			});
+		}
+
 		await message.channel.updateOverwrite(
 			message.channel.guild.roles.everyone,
 			{

@@ -11,6 +11,10 @@ module.exports = {
 	 */
 	async execute(message, args) {
 		let textToSay = args.join(" ");
-		await message.channel.send(textToSay);
+		if (textToSay.length <= 0) return;
+
+		await message.channel.send({
+			content: textToSay
+		});
 	}
 };

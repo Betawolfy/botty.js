@@ -24,12 +24,12 @@ module.exports = {
 				id: message.author.id
 			}) || await User.create({ // On crée l'utilisateur s'il n'existe pas.
 				id: message.author.id,
-				servers: [message.guild.id]
+				servers: [{ id: message.guild.id }]
 			});
 
 			// On récupère les données de cette utilisateur
 			// sur le serveur où le message est envoyé.
-			const userInServer = user.servers[message.guild.id];
+			const userInServer = user.servers.find(server => server.id === message.guild.id);
 
 			// On définit le préfix.
 			const prefix = "*";
@@ -41,7 +41,7 @@ module.exports = {
 				const commandName = args.shift().toLowerCase();
 	
 				// Vérification si la commande existe.
-				if (this.commands.has(commandName)) return;
+				if (!message.client.commands.has(commandName)) return;
 	
 				// On exécute la commande.
 				logger.info(`[${message.guild.id}] La commande ${commandName} a bien été executé par ${message.author.id}`);
@@ -65,6 +65,8 @@ module.exports = {
 						ephemeral: true
 					});
 				}
+
+				await User.findByIdAndUpdate(user._id, user);
 			}
 		}
 		// Une erreur est survenue.

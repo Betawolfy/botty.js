@@ -10,15 +10,34 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	async execute(message, args) {
+		if (!message.member.permissions.has("ADMINISTRATOR")) {
+			return await message.reply({
+				content: "Vous ne pouvez pas utiliser cette commande !"
+			});
+		}
 
-		let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-		if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You can't use that command!");
-		if (!dUser) return message.channel.send("Can't find user!");
-		let dMessage = args.join(" ").slice(22);
-		if (dMessage.length < 1) return message.reply("what is the reason???");
+		// Utilisateur à warn.
+		const userMentionInArgs = args.shift();
+		if (!userMentionInArgs) {
+			return await message.reply({
+				content: "Utilisateur introuvable !"
+			});
+		}
 
-		dUser.send(`${dUser}, You have been warned for doing ${dMessage} in the server ${message.guild.name}`);
+		const userToWarn = 
+			message.guild.members.cache.find(member => member.user == message.mentions.users.first())
+			|| message.guild.members.get(userMentionInArgs);
 
-		message.channel.send(`${dUser} has been warned for doing ${dMessage} :thumbsdown:`);
+		// Raison du warn
+		const warnReason = args.join(" ");
+
+		// Envoie du message à l'utilisateur.
+		await userToWarn.send(
+			`Vous avez été warn de **${message.guild.name}** par **${message.author.username}** !\n`
+			+ `Raison du warn: **${warnReason.length <= 0 ? "Inconnue" : warnReason}**`
+		);
+
+		// Information dans le serveur.
+		await message.channel.send(`${userToWarn} a été warn pour la raison: **${warnReason.length < 1 ? "Inconnue" : warnReason}**`);
 	}
 };

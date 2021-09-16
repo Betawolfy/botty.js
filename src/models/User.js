@@ -1,5 +1,44 @@
 const mongoose = require("mongoose");
 
+// Les données des warns de l'utilisateur sur un serveur.
+const warnSchema = new mongoose.Schema({
+	// La raison du warn. ("Inconnue" par défaut)
+	reason: {
+		type: String,
+		default: "Inconnue"
+	},
+	author: { // L'auteur (ID) du warn.
+		type: String,
+		required: true
+	}
+});
+
+
+// Les données de l'utilisateur sur chaques serveurs.
+const serverSchema = new mongoose.Schema({
+	id: {
+		type: String,
+		required: true
+	},
+	
+	// Les niveaux.
+	level_system: {
+		xp: { // XP accumulée (se remet à 0 à chaque niveau)
+			type: Number,
+			required: true,
+			default: 0
+		},
+		level: { // Niveau de l'utilisateur.
+			type: Number,
+			required: true,
+			default: 0
+		}
+	},
+
+	// Les warns accumulés.
+	warns: [warnSchema]
+});
+
 const userSchema = new mongoose.Schema({
 	// ID de l'utilisateur
 	id: {
@@ -16,41 +55,7 @@ const userSchema = new mongoose.Schema({
 	},
 
 	// Les données de l'utilisateur sur chaque serveurs.
-	servers: {
-		type: [{
-
-			// Les données sur le système de niveau.
-			level_system: {
-				xp: { // XP accumulée (se remet à 0 à chaque niveau)
-					type: Number,
-					required: true,
-					default: 0
-				},
-				level: { // Niveau de l'utilisateur.
-					type: Number,
-					required: true,
-					default: 0
-				}
-			},
-
-			// Tous les warns accumulés sur le serveur.
-			warns: {
-				type: [{ // Sur chaque warns on a ...
-					// La raison du warn. ("Inconnue" par défaut)
-					reason: {
-						type: String,
-						default: "Inconnue"
-					},
-					author: { // L'auteur (ID) du warn.
-						type: String,
-						required: true
-					}
-				}],
-				default: []
-			}
-		}],
-		default: []
-	}
+	servers: [serverSchema]
 });
 
 module.exports = mongoose.model("User", userSchema);

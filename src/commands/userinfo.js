@@ -39,9 +39,9 @@ module.exports = {
 			id: member.user.id
 		}) || await User.create({
 			id: member.user.id,
-			servers: [message.guild.id]
+			servers: [{ id: message.guild.id }]
 		});
-		const userInfoDbInServer = userInfoDb.servers[message.guild.id];
+		const userInfoDbInServer = userInfoDb.servers.find(server => server.id === message.guild.id);
 
 		// Récupération des permissions.
 		const permissions = member.permissions.toArray().map(perm => {
