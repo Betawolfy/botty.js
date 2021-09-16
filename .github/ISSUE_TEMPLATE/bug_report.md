@@ -1,8 +1,8 @@
 ---
 name: Bug report
 about: Créez un rapport pour nous aider à nous améliorer.
-title: ''
-labels: bug
+title: BUG
+labels: bug mineur
 assignees: ''
 
 ---
@@ -29,4 +29,4 @@ Le cas échéant, ajoutez des captures d'écran pour aider à expliquer votre pr
 Ajoutez tout autre contexte concernant le problème ici.
 
 --- 
-& = obligatoire 
+& = obligatoire
