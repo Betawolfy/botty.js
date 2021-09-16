@@ -1,20 +1,18 @@
 const logger = require("./utils/logger");
 const Discord = require("discord.js");
-const mongoose = require("mongoose");
+const connectDatabase = require("./utils/connectDatabase");
 const express = require("express");
 const router = require("./routes");
 const path = require("path");
 
+// Chargement des variables d'environnements.
+require("dotenv").config();
+
 // Connexion à la base de données.
-mongoose.connect(process.env.MONGODB_URI)
-	.then(() => logger.info("Connexion à la base de données réussie !"))
-	.catch((e) => logger.error(`Une erreur est survenue pendant la connexion à la base de données\n${e}`));
+connectDatabase();
 
 // Création du serveur web.
 const app = express();
-
-// Chargement des variables d'environnements.
-require("dotenv").config();
 
 // On crée le sharding du bot.
 logger.log("info", "Le bot est en cours de démarrage...");

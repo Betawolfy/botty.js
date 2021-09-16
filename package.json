@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/DiscordBotty/botty.js/issues"
   },
-  "homepage": "https://botty.ga",
+  "homepage": "https://github.com/DiscordBotty/botty.js",
   "dependencies": {
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
