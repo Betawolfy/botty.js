@@ -3,12 +3,10 @@
 Actuellement, Botty.js n'est pas encore disponible. Sachez dès à présent que toutes les informations se trouveront sur ce GitHub. 
 
 ## Le bak-ban
-
 [**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/BAK-BAN)
 pour retrouver la FAQ et les explications sur le bak-ban.
 
 ## Premium
-
 [**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/Premium) pour retrouver les infos concernant le système premium.
 
 ## Le système de niveaux
