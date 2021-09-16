@@ -1,3 +1,5 @@
+const User = require("../models/User");
+
 module.exports = {
 	data: {
 		name: "userinfo",
@@ -31,6 +33,16 @@ module.exports = {
 			}
 		}
 
+		// On récupère l'info de l'utilisateur dans la BDD.
+		// On le crée s'il n'existe pas encore.
+		const userInfoDb = await User.findOne({
+			id: member.user.id
+		}) || await User.create({
+			id: member.user.id,
+			servers: [message.guild.id]
+		});
+		const userInfoDbInServer = userInfoDb.servers[message.guild.id];
+
 		// Récupération des permissions.
 		const permissions = member.permissions.toArray().map(perm => {
 			return perm
@@ -63,6 +75,10 @@ module.exports = {
 				{
 					name: "À rejoint le",
 					value: `${member.joinedAt.toDateString()} à ${member.joinedAt.toTimeString()}`
+				},
+				{
+					name: "Niveau",
+					value: `${userInfoDbInServer.level_system.level} et ${userInfoDbInServer.level_system.xp}/100 d'XP`
 				},
 				{
 					name: "Membre n.",

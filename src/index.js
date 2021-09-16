@@ -1,8 +1,14 @@
 const logger = require("./utils/logger");
 const Discord = require("discord.js");
+const mongoose = require("mongoose");
 const express = require("express");
 const router = require("./routes");
 const path = require("path");
+
+// Connexion à la base de données.
+mongoose.connect(process.env.MONGODB_URI)
+	.then(() => logger.info("Connexion à la base de données réussie !"))
+	.catch((e) => logger.error(`Une erreur est survenue pendant la connexion à la base de données\n${e}`));
 
 // Création du serveur web.
 const app = express();
