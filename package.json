@@ -1,6 +1,6 @@
 {
   "name": "botty",
-  "version": "0.2-beta",
+  "version": "0.0.2-beta",
   "description": "Botty official Discord bot.",
   "main": "src/index.js",
   "scripts": {
