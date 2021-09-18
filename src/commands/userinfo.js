@@ -65,16 +65,22 @@ module.exports = {
 
 		// Construction de la réponse.
 		const embed = new MessageEmbed()
-			.setColor(member.displayHexColor) 
+			
+      .setColor(member.displayHexColor) 
 			.setTitle(member.user.tag)
 			.setDescription(`Informations sur l'utilisateur ${member.displayName} (${member.user.tag})`)
 			.setThumbnail(member.user.avatarURL())
 			.addFields(
 				{
 					name: "Niveau",
-					value: `niveau ${userInfoDbInServer.level_system.level} et ${userInfoDbInServer.level_system.xp}/100 d'XP`,
+					value: `niveau ${userInfoDbInServer.level_system.level}`,
 					inline: true
 				},
+        {
+          name: "xp",
+          value: `${userInfoDbInServer.level_system.xp}/100 xp`,
+          inline: true
+        },
 				{
 					name: "À rejoint le",
 					value: `${member.joinedAt.toDateString()} à ${member.joinedAt.toTimeString()}`,
@@ -93,7 +99,7 @@ module.exports = {
 				},
 				{
 					name: "Bak-ban ?",
-					value: "0 Bak ban enregistrés",
+					value: ` 0 Bak ban enregistrés`,
 					inline: true
 				},
 				{ name: '\u200B', value: '\u200B' },
