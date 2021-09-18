@@ -1,7 +1,8 @@
 module.exports = {
 	data: {
 		name: "ping",
-		description: "Donne le ping du bot."
+		description: "Donne le ping du bot.",
+    category: "utility",
 	},
 
 	/**

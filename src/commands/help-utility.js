@@ -1,7 +1,9 @@
 module.exports = {
 	data: {
 		name: "help-utility",
-		description: "Page d'aide sur les utilitaires."
+		description: "Page d'aide sur les utilitaires.",
+    category: "help",
+    
 	},
 
 	/**

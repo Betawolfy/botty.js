@@ -1,6 +1,5 @@
 const { MessageEmbed } = require("discord.js");
 const User = require("../models/User");
-
 module.exports = {
 	data: {
 		name: "userinfo",
@@ -92,6 +91,11 @@ module.exports = {
 					inline: true
 				},
 				{ name: '\u200B', value: '\u200B' },
+        {
+          name: "premium",
+          value: `${userInfoDbInServer.id.premium}` ,
+          inline: true
+        },
 				{
 					name: "Bak-warns",
 					value: `*indispo pour le moment*`,
@@ -99,7 +103,7 @@ module.exports = {
 				},
 				{
 					name: "Bak-ban ?",
-					value: ` 0 Bak ban enregistrés`,
+					value: `:white_check_mark: 0 Bak ban enregistrés`,
 					inline: true
 				},
 				{ name: '\u200B', value: '\u200B' },
