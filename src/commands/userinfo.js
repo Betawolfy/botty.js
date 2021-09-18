@@ -1,3 +1,4 @@
+const { MessageEmbed } = require("discord.js");
 const User = require("../models/User");
 
 module.exports = {
@@ -17,12 +18,12 @@ module.exports = {
 		// Si l'utilisateur n'est pas mentionné
 		// on affiche les infos de l'auteur du message.
 		if (!args.length) {
-			member = message.memberList(message.author);
+			member = await message.guild.members.fetch(message.author);
 		}
 
 		// Si l'utilisateur est mentionné, on affiche ses infos.
 		else {
-			member = message.memberList(message.mentions.users.first());
+			member = await message.guild.members.fetch(message.mentions.users.first());
 
 			// Afficher une erreur si on ne peut pas récupérer le membre.
 			if (!member) {
@@ -55,45 +56,54 @@ module.exports = {
 		});
 
 		// Calculate Join Position
-		let joinPosition;
-		const members = message.guild.members.cache.array();
-		members.sort((a, b) => a.joinedAt - b.joinedAt);
-		for (let i = 0; i < members.length; i++) {
-			if (members[i].id == message.guild.member(message.author).id)
+		let joinPosition = 0;
+		const guildMembers = message.guild.members.cache.sort((a, b) => a.joinedAt - b.joinedAt);
+		for (let i = 0; i < guildMembers.length; i++) {
+			if (guildMembers[i].id == member.user.id)
 				joinPosition = i;
 		}
 
 		// Construction de la réponse.
-		const embed = {
-			color: 3447003,
-			title: `${member.user.tag}`,
-			thumbnail: {
-				url: member.user.avatarURL()
-			},
-			description: `${member.displayName}`,
-			fields: [
-				{
-					name: "À rejoint le",
-					value: `${member.joinedAt.toDateString()} à ${member.joinedAt.toTimeString()}`
-				},
+		const embed = new MessageEmbed()
+			.setColor(member.displayHexColor) 
+			.setTitle(member.user.tag)
+			.setDescription(`Informations sur l'utilisateur ${member.displayName} (${member.user.tag})`)
+			.setThumbnail(member.user.avatarURL())
+			.addFields(
 				{
 					name: "Niveau",
-					value: `${userInfoDbInServer.level_system.level} et ${userInfoDbInServer.level_system.xp}/100 d'XP`
+					value: `${userInfoDbInServer.level_system.level} et ${userInfoDbInServer.level_system.xp}/100 d'XP`,
+					inline: true
 				},
 				{
-					name: "Membre n.",
-					value: joinPosition
+					name: "À rejoint le",
+					value: `${member.joinedAt.toDateString()} à ${member.joinedAt.toTimeString()}`,
+					inline: true
 				},
+				{
+					name: "En position",
+					value: `N. ${joinPosition}` ,
+					inline: true
+				},
+				{ name: '\u200B', value: '\u200B' },
+				{
+					name: "Bak-warns",
+					value: `*indispo pour le moment*`,
+					inline: true
+				},
+				{
+					name: "Bak-ban ?",
+					value: "0 Bak ban enregistrés",
+					inline: true
+				},
+				{ name: '\u200B', value: '\u200B' },
 				{
 					name: "Permissions",
 					value: permissions.join(", ")
-				},
-			],
-			timestamp: new Date(),
-			footer: {
-				text: `ID: ${member.id}`
-			}
-		};
+				}
+			)
+			.setTimestamp()
+			.setFooter(`*userinfo de ${member.user.tag}`, member.user.avatarURL());
 
 		await message.channel.send({
 			embeds: [embed]
