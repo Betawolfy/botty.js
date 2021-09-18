@@ -18,7 +18,7 @@ const client = new Client({
 	// => Écoute les commandes.
 	presence: {
 		activities: [{
-			name: "les commandes.",
+			name: "une version pas encore sorti",
 			type: "LISTENING"
 		}]
 	}
