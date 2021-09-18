@@ -15,51 +15,56 @@ module.exports = {
 			/** @type {Discord.GuildMember[]} */
 			let admins = [];
 
+			// Récupération des données du serveur.
+			const currentGuild = await message.client.guilds.fetch(message.guild.id);
+			const channelsCount = currentGuild.channels.cache.size;
+			
+			// Récupération des membres du serveur.
+			const currentGuildMembers = await currentGuild.members.fetch();
+			const membersCount = currentGuildMembers.filter(member => !member.user.bot).size;
+			const botsCount = currentGuildMembers.filter(member => member.user.bot).size;
+
 			// Récupération des administrateurs du serveur.
-			message.guild.members.cache.array().forEach(
+			currentGuildMembers.each(
 				/** @param {Discord.GuildMember} member */
 				member => {
-					if (member.hasPermission(Discord.Permissions.FLAGS.ADMINISTRATOR)) {
+					if (member.permissions.has("ADMINISTRATOR")) {
 						admins.push(member.displayName);
 					}
 				}
 			);
 
-			const embed = {
-				color: 3447003,
-				title: message.guild.name,
-				thumbnail: {
-					url: message.guild.iconURL()
-				},
-				fields: [
+			const embed = new Discord.MessageEmbed()
+				.setTitle(message.guild.name)
+				.setDescription("Informations sur ce serveur.")
+				.setThumbnail(message.guild.iconURL())
+				.addFields(
 					{
 						name: "Administrateurs",
 						value: admins.join(", ")
 					},
 					{
 						name: "Date de création",
-						value: `${message.guild.createdAt.toDateString()} at ${message.guild.createdAt.toTimeString()}`
+						value: `${message.guild.createdAt.toDateString()} à ${message.guild.createdAt.toTimeString()}`
 					},
 					{
-						name: "Nombre de salons",
-						value: message.guild.channels.cache.size
+						name: "Salons",
+						value: String(channelsCount ?? 0),
+						inline: true
 					},
 					{
-						name: "Nombre de membres",
-						value: message.guild.members.cache.filter(member => !member.user.bot)
-							.size
+						name: "Membres",
+						value: String(membersCount ?? 0),
+						inline: true
 					},
 					{
-						name: "Nombre de bots",
-						value: message.guild.members.cache.filter(member => member.user.bot)
-							.size
+						name: "Bots",
+						value: String(botsCount ?? 0),
+						inline: true
 					}
-				],
-				timestamp: new Date(),
-				footer: {
-					text: `ID: ${message.guild.id}`
-				}
-			};
+				)
+				.setTimestamp()
+				.setFooter(`ID: ${message.guild.id}`); 
 
 			await message.channel.send({
 				embeds: [embed]
