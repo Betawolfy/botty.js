@@ -72,7 +72,7 @@ module.exports = {
 			.addFields(
 				{
 					name: "Niveau",
-					value: `${userInfoDbInServer.level_system.level} et ${userInfoDbInServer.level_system.xp}/100 d'XP`,
+					value: `niveau ${userInfoDbInServer.level_system.level} et ${userInfoDbInServer.level_system.xp}/100 d'XP`,
 					inline: true
 				},
 				{
