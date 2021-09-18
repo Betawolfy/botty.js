@@ -17,12 +17,12 @@ module.exports = {
 		// Si l'utilisateur n'est pas mentionné
 		// on affiche les infos de l'auteur du message.
 		if (!args.length) {
-			member = message.guild.member(message.author);
+			member = message.memberList(message.author);
 		}
 
 		// Si l'utilisateur est mentionné, on affiche ses infos.
 		else {
-			member = message.guild.member(message.mentions.users.first());
+			member = message.memberList(message.mentions.users.first());
 
 			// Afficher une erreur si on ne peut pas récupérer le membre.
 			if (!member) {
