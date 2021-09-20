@@ -1,7 +1,8 @@
 module.exports = {
 	data: {
 		name: "unlock",
-		description: "Permet de dévérouiller le salon sélectionné."
+		description: "Permet de dévérouiller le salon sélectionné.",
+    category: "moderation",
 	},
 
 	/**

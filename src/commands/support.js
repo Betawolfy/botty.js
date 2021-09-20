@@ -4,7 +4,8 @@ const pkg = require("../../package.json");
 module.exports = {
 	data: {
 		name: "support",
-		description: "commande pour savoir tout les liens."
+		description: "commande pour savoir tout les liens.",
+    category: "utility",
 	},
 
 	/**

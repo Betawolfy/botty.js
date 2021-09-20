@@ -22,6 +22,8 @@ module.exports = {
 			"C'est pas vrai.",
 			"Je doute de ça.",
 			"Je n'en doute pas.",
+      "n'y compte pas.",
+      "repose moi la question plus clairement.",
 		];
 
 		message.channel.send({

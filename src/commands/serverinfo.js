@@ -3,7 +3,8 @@ const Discord = require("discord.js");
 module.exports = {
 	data: {
 		name: "serverinfo",
-		description: "Affiche des informations sur le serveur actuel."
+		description: "Affiche des informations sur le serveur actuel.",
+    category: "utility",
 	},
 
 	/**

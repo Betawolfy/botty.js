@@ -4,6 +4,7 @@ module.exports = {
 	data: {
 		name: "test-message",
 		description: "Vérifie si le bot est en ligne ou non.",
+    category: "devloppement",
 	},
 
 	/**

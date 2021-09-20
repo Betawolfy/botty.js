@@ -4,6 +4,7 @@ module.exports = {
 	data: {
 		name: "userinfo",
 		description: "Affiche des informations sur un utilisateur.",
+    category: "utility",
 	},
 
 	/**
