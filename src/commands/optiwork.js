@@ -32,9 +32,8 @@ module.exports = {
 				+ "> Souscription au programme Bak-secure: éligible \n"
 				+ "** **\n"
 				+ ":shield:| permission maximum (perm admin + rôle personnel du bot au-dessus des modo-admin (pour anti-trahison)): \n"
-				+	"Sécurité de la part de Botty: maximale. \n"
-				+ "Souscription au programme Bak-secure: imposé \n"
-				+ "Souscription au programme premium: éligible."
+				+	"> Sécurité de la part de Botty: maximale. \n"
+				+ "> Souscription au programme Bak-secure: imposé \n"
 			)
 			.setFooter("les serveurs inscrits dans _serverlist (bientôt dispo) peuvent voir leurs niveau grâce au émoji qui précède les optimisations.");
 
