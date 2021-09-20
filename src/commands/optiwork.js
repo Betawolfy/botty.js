@@ -18,13 +18,19 @@ module.exports = {
 			.setURL("https://botty.ga/")
 			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
-				":x:| aucune permission de moderation:\n" 
-				+ "> Sécurité de la part de botty: nul" 
+				" :x: | aucune permission de moderation:\n" 
+				+ "> Sécurité de la part de botty: nul \n" 
 				+ "> Souscription au programme Bak-secure: inéligible.\n"
-				+ "> Souscription au programme Premium: inéligible \n"
 				+ "> Autres: auto-leave du bot si le problème n'est pas réglé dans les 3 jours suivant le join du bot. \n"
-				+ "\n"
-				
+				+ "** **\n"
+				+ ":warning: | permission minimale: \n"
+				+ "Sécurité de la part de botty: minimale \n"
+				+ "Souscription au programme Bak-secure: inéligible \n"  
+				+ "** **\n"
+				+ ":white_check_mark: | permission optimale (perm admin): \n"
+				+ "Sécurité de la part de botty: moyenne \n"
+				+ "Souscription au programme Bak-secure: éligible \n"
+				+ "Souscription au programme premium: éligible \n"
 			)
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
 
