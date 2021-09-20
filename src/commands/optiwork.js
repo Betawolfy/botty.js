@@ -4,7 +4,7 @@ const pkg = require("../../package.json");
 module.exports = {
 	data: {
 		name: "optiwork",
-		description: "Page d'aide globale",
+		description: "optimisation de la sécurité",
 	},
 
 	/**
@@ -12,7 +12,7 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	async execute(message) {
-		const helpEmbed = new Discord.MessageEmbed()
+		const optiEmbed = new Discord.MessageEmbed()
 			.setColor("#0099ff")
 			.setTitle("Botty est un bot de sécurité. Il est donc nécessaire, pour garantir le fonctionnement des modules, de donner à botty certaines permissions. Nous avons imaginé 4 configurations possibles et les conséquences entraînés:")
 			.setURL("https://botty.ga/")
@@ -24,18 +24,22 @@ module.exports = {
 				+ "> Autres: auto-leave du bot si le problème n'est pas réglé dans les 3 jours suivant le join du bot. \n"
 				+ "** **\n"
 				+ ":warning: | permission minimale: \n"
-				+ "Sécurité de la part de botty: minimale \n"
-				+ "Souscription au programme Bak-secure: inéligible \n"  
+				+ "> Sécurité de la part de botty: minimale \n"
+				+ "> Souscription au programme Bak-secure: inéligible \n"  
 				+ "** **\n"
 				+ ":white_check_mark: | permission optimale (perm admin): \n"
-				+ "Sécurité de la part de botty: moyenne \n"
-				+ "Souscription au programme Bak-secure: éligible \n"
-				+ "Souscription au programme premium: éligible \n"
+				+ "> Sécurité de la part de botty: moyenne \n"
+				+ "> Souscription au programme Bak-secure: éligible \n"
+				+ "** **\n"
+				+ ":shield:| permission maximum (perm admin + rôle personnel du bot au-dessus des modo-admin (pour anti-trahison)): \n"
+				+	"Sécurité de la part de Botty: maximale. \n"
+				+ "Souscription au programme Bak-secure: imposé \n"
+				+ "Souscription au programme premium: éligible."
 			)
-			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
+			.setFooter("les serveurs inscrits dans _serverlist (bientôt dispo) peuvent voir leurs niveau grâce au émoji qui précède les optimisations.");
 
 		message.channel.send({
-			embeds: [helpEmbed],
+			embeds: [optiEmbed],
 			ephemeral: true
 		});
 	}
