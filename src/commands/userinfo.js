@@ -104,7 +104,7 @@ module.exports = {
 				},
 				{
 					name: "Bak-ban ?",
-					value: `:white_check_mark: 0 Bak ban enregistrés`,
+					value: `${userInfoDbInServer.id.bakbanned}`,
 					inline: true
 				},
 				{ name: '\u200B', value: '\u200B' },

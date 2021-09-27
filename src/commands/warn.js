@@ -34,8 +34,8 @@ module.exports = {
 
 		// Envoie du message à l'utilisateur.
 		await userToWarn.send(
-			`Vous avez été warn de **${message.guild.name}** par **${message.author.username}** !\n`
-			+ `Raison du warn: **${warnReason.length <= 0 ? "Inconnue" : warnReason}**`
+			`Vous avez reçu un avertissement venant de la guilde **${message.guild.name}** par **${message.author.username}** !\n`
+			+ `Raison du warn: **${warnReason.length <= 0 ? "Aucune raison donné" : warnReason}**`
 		);
 
 		// Information dans le serveur.
