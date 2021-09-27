@@ -74,9 +74,9 @@ module.exports = {
 		// Une erreur est survenue.
 		catch (error) {
 			logger.error(error);
-	
+	var result = Math.floor((Math.random() * 100) + 1)
 			await message.reply({
-				content: "Hmmm... Cette commande n'a pas l'air de fonctionner ! L'équipe technique à été prévenue et va essayer de régler ce problème au plus vite !",
+				content: "Hmmm... Cette commande n'a pas l'air de fonctionner ! L'équipe technique à été prévenue et va essayer de régler ce problème au plus vite ! numéro de l'erreur: " +result,
 				ephemeral: true
 			});
 		}
