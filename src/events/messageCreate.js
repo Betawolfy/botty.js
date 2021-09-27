@@ -52,10 +52,11 @@ module.exports = {
 			// et on lui donne de l'XP.
 			else {
 				// On augmente son XP.
-				userInServer.level_system.xp++;
+				
+        // userInServer.level_system.xp++;
 			
 				// Si il dépasse 100 d'XP, on augmente le level.
-				if (userInServer.level_system.xp >= 100) {
+				/*if (userInServer.level_system.xp >= 100) {
 					userInServer.level_system.level++;
 					userInServer.level_system.xp = 0;
 				
@@ -67,7 +68,8 @@ module.exports = {
 				}
 
 				await User.findByIdAndUpdate(user._id, user);
-			}
+			*/}
+
 		}
 		// Une erreur est survenue.
 		catch (error) {

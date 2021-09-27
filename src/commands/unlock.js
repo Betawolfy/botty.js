@@ -16,7 +16,7 @@ module.exports = {
 			});
 		}
 
-		await message.channel.updateOverwrite(
+		await message.channel.permissionOverwrites.edit(
 			message.channel.guild.roles.everyone,
 			{
 				VIEW_CHANNEL: true,
