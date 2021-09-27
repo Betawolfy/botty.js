@@ -2,8 +2,8 @@ const logger = require("../utils/logger");
 
 module.exports = {
 	data: {
-		name: "test-message",
-		description: "Vérifie si le bot est en ligne ou non.",
+		name: "serverlist",
+		description: "tt les serveurs.",
     category: "devloppement",
 	},
 
@@ -12,11 +12,9 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	async execute(message) {
-    if (message.guild.id !== '596306506819960832') return message.reply(':x: Votre serveur n\' est pas autorisé à utiliser cette commande. ');
-		await message.reply({
-			content: "Le bot est bien en ligne !",
-			ephemeral: true
-		});
+    if (message.guild.id !== '596306506819960832') return message.reply(':x: Votre serveur n\' est pas autorisé à utiliser cette commande. ')
+
+		;
 
 		logger.info("info", `[test-message] Test envoyé par ${message.author.username} reçu !`);
 	}
