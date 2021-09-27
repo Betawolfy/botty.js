@@ -94,7 +94,7 @@ module.exports = {
 				{ name: '\u200B', value: '\u200B' },
         {
           name: "premium",
-          value: `${userInfoDbInServer.id.premium}` ,
+          value: `${userInfoDbInServer.userSchema.premium}` ,
           inline: true
         },
 				{
@@ -104,7 +104,7 @@ module.exports = {
 				},
 				{
 					name: "Bak-ban ?",
-					value: `${userInfoDbInServer.id.bakbanned}`,
+					value: `${userInfoDbInServer.userSchema.bakbanned}`,
 					inline: true
 				},
 				{ name: '\u200B', value: '\u200B' },
