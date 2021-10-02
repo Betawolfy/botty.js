@@ -42,7 +42,7 @@ module.exports = {
 			servers: [{ id: message.guild.id }]
 		});
 		const userInfoDbInServer = userInfoDb.servers.find(server => server.id === message.guild.id);
-		
+
 		let joinPosition = 0;
 		const guildMembers = message.guild.members.cache.sort((a, b) => a.joinedAt - b.joinedAt);
 		for (let i = 0; i < guildMembers.length; i++) {
@@ -67,11 +67,6 @@ module.exports = {
 					inline: true
 				},
 				{ name: '\u200B', value: '\u200B' },
-				{
-					name: "Bak-ban ?",
-					value: `${userInfoDbInServer.id.bakbanned}`,
-					inline: true
-				},
 			)
 			.setTimestamp()
 			.setFooter(`*userinfo de ${member.user.tag}`, member.user.avatarURL());
