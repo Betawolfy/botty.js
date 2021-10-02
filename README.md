@@ -11,7 +11,7 @@ pour retrouver la FAQ et les explications sur le bak-ban.
 
 ## Le système de niveaux
 
-[**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/level) pour retrouver toutes les informations sur le système de leveling.
+[**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/level) pour retrouver toutes les informations sur le système de leveling (encore en maintenence).
 
 ## Scripts
 
