@@ -39,3 +39,8 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
 	logger.log("info", `Le serveur web est en ligne sur le port ${PORT} !`);
 });
+
+var stream = fs.createWriteStream("udp-stream.log", {'flags': 'a'});
+stream.once('open', function(fd) {
+	stream.write(msg+"\r\n");
+});
