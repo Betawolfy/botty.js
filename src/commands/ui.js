@@ -34,6 +34,15 @@ module.exports = {
 				return;
 			}
 		}
+
+		const userInfoDb = await User.findOne({
+			id: member.user.id
+		}) || await User.create({
+			id: member.user.id,
+			servers: [{ id: message.guild.id }]
+		});
+		const userInfoDbInServer = userInfoDb.servers.find(server => server.id === message.guild.id);
+		
 		let joinPosition = 0;
 		const guildMembers = message.guild.members.cache.sort((a, b) => a.joinedAt - b.joinedAt);
 		for (let i = 0; i < guildMembers.length; i++) {
