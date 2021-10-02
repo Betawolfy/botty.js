@@ -38,7 +38,7 @@ module.exports = {
 			if (guildMembers[i].id == member.user.id)
 				joinPosition = i;
 		}
-		const embed = new MessageEmbed()
+		const embed = new Discord.MessageEmbed()
 			
       .setColor(member.displayHexColor) 
 			.setTitle(member.user.tag)
