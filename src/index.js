@@ -4,6 +4,7 @@ const connectDatabase = require("./utils/connectDatabase");
 const express = require("express");
 const router = require("./routes");
 const path = require("path");
+const fs = require("fs");
 
 // Chargement des variables d'environnements.
 require("dotenv").config();
