@@ -24,7 +24,7 @@ module.exports = {
 				"tout manquement au règles et aux conditions d'utilisation de botty entrainera un bannissement permanent"
 			)
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
-			if (interaction.user.id === 'id') {
+			if (interaction.user.id === '432116536866766849') {
 				// ...
 			
 		message.channel.send({
