@@ -18,7 +18,7 @@ module.exports = {
 			.setColor("#0099ff")
 			.setTitle("Ce serveur est protégé par Botty Bak-Ban.")
 			.setURL("https://botty.ga/")
-			setThumbnail("")
+			.setThumbnail("")
 			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
 				"tout manquement au règles et aux conditions d'utilisation de botty entrainera un bannissement permanent"
