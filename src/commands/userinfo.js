@@ -71,7 +71,7 @@ module.exports = {
 			.setDescription(`Informations sur l'utilisateur ${member.displayName} (${member.user.tag})`)
 			.setThumbnail(member.user.avatarURL())
 			.addFields(
-				{
+				/*{
 					name: "Niveau",
 					value: `niveau ${userInfoDbInServer.level_system.level}`,
 					inline: true
@@ -80,7 +80,7 @@ module.exports = {
           name: "xp",
           value: `${userInfoDbInServer.level_system.xp}/100 xp`,
           inline: true
-        },
+        },*/
 				{
 					name: "À rejoint le",
 					value: `${member.joinedAt.toDateString()} à ${member.joinedAt.toTimeString()}`,
