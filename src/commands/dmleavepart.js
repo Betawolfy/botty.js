@@ -11,8 +11,8 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	async execute(message, args) {
-	
-  const msgSended = await message.client.users.fetch(snowflakeID).send({
+		const member = message.id.members.first();
+  const msgSended = await message.client.users.fetch(id).send({
   content: "test"
 });
 
