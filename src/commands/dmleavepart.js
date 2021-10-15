@@ -12,7 +12,7 @@ module.exports = {
 	 */
 	async execute(message, args) {
 	
-  const msgSended = await client.users.fetch(snowflakeID).send({
+  const msgSended = await message.client.users.fetch(snowflakeID).send({
   content: "test"
 });
 

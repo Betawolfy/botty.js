@@ -53,13 +53,17 @@ module.exports = {
 			
       .setColor(member.displayHexColor) 
 			.setTitle(member.user.tag)
-			.setDescription(`Informations sur l'utilisateur ${member.displayName} (${member.user.tag})`)
+			.setDescription(`Informations locales sur l'utilisateur ${member.displayName} (${member.user.tag})`)
 			.setThumbnail(member.user.avatarURL())
 			.addFields(
 				{
-					name: "À rejoint le",
+					name: "à rejoint le serveur le:",
 					value: `${member.joinedAt.toDateString()} à ${member.joinedAt.toTimeString()}`,
 					inline: true
+				},
+				{
+					name: "compte crée le: ",
+					value: `${member.createAt.toDateString()} à ${member.createAt.toTimeString()}`,
 				},
 				{
 					name: "En position",
@@ -69,7 +73,7 @@ module.exports = {
 				{ name: '\u200B', value: '\u200B' },
 			)
 			.setTimestamp()
-			.setFooter(`*userinfo de ${member.user.tag}`, member.user.avatarURL());
+			.setFooter(`ui de ${member.user.tag}`, member.user.avatarURL());
 
 		await message.channel.send({
 			embeds: [embed]

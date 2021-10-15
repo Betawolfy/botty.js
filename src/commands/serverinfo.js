@@ -34,7 +34,7 @@ module.exports = {
 					}
 				}
 			);
-
+			// on construit l'embed
 			const embed = new Discord.MessageEmbed()
 				.setTitle(message.guild.name)
 				.setDescription("Informations sur ce serveur.")
