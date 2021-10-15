@@ -26,7 +26,7 @@ module.exports = {
 		}
 
 		const userToWarn = 
-			message.guild.members.cache.find(member => member.user == message.id.first())
+			message.user.cache.find(user => user.id === target)
 			|| message.guild.members.get(userMentionInArgs);
 
 		// Raison du warn
