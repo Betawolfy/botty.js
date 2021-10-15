@@ -11,7 +11,7 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	async execute(message, args) {
-		const member = message.id.members.first();
+		const member = message.id.members();
   const msgSended = await message.client.users.fetch(id).send({
   content: "test"
 });
