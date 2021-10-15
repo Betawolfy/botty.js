@@ -34,10 +34,15 @@ npm run dev
 # remerciement: 
 
 merci à Vexcited pour le refractoring des commandes, le passage à discord.js V13, la mise en place de la base de donnée et l'API du bot! 
+
 merci à Aqr_Rastiq pour le site et le nom de domaine du bot! (grace à toi, l'organisation Github est vérifié :smile: )
+
 merci à Mary pour l'estethique du support Discord!
+
 merci aux testeurs!
+
 merci à nos partenaires et à nos donnateurs.
+
 ET A VOUS!
 
 
