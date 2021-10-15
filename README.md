@@ -4,6 +4,9 @@ Actuellement, Botty.js n'est pas encore disponible. le bot est encore en Bêta. 
 
 (bientôt) Les nouveautés seront donnés sur le site du bot. pour  le moment, elles sont [**ici**](https://github.com/betawolfy/botty.js/blob/main/nouveautés.md)
 
+# le coté information:
+vous retrouverez ici tout les aspects complexe du bot.
+
 ## Le bak-ban
 [**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/BAK-BAN)
 pour retrouver la FAQ et les explications sur le bak-ban.
@@ -27,6 +30,16 @@ npm start
 # Développement
 npm run dev
 ```
+
+# remerciement: 
+
+merci à Vexcited pour le refractoring des commandes, le passage à discord.js V13, la mise en place de la base de donnée et l'API du bot! 
+merci à Aqr_Rastiq pour le site et le nom de domaine du bot! (grace à toi, l'organisation Github est vérifié :smile: )
+merci à Mary pour l'estethique du support Discord!
+merci aux testeurs!
+merci à nos partenaires et à nos donnateurs.
+ET A VOUS!
+
 
 ## Note sur les logs stockés par le bot
 
