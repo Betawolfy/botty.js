@@ -21,14 +21,17 @@ module.exports = {
 		const userMentionInArgs = args.shift();
 		if (!userMentionInArgs) {
 			return await message.reply({
-				content: "Utilisateur introuvable !"
+				content: "Utilisateur non mentionné !"
 			});
 		}
 
-		const userToWarn = 
-			message.user.cache.find(user => user.id === target)
-			|| message.guild.members.get(userMentionInArgs);
+		const userToWarn = await message.client.users.fetch(userMentionInArgs)
+                  .catch(e => {
+                    console.error(e);
 
+                    return await message.reply("Utilisateur introuvable");
+                  });
+	
 		// Raison du warn
 		const warnReason = args.join(" ");
 
