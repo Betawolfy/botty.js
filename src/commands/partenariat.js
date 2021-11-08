@@ -3,8 +3,8 @@ const pkg = require("../../package.json");
 
 module.exports = {
 	data: {
-		name: "help",
-		description: "Page d'aide globale"
+		name: "partenariat",
+		description: "exclusivement pour le serveur teko coffee"
 	},
 
 	/**
@@ -14,7 +14,7 @@ module.exports = {
 	async execute(message) {
 		const partEmbed = new Discord.MessageEmbed()
 			.setColor("#0099ff")
-			.setTitle("Page d'aide globale")
+			.setTitle("Un nouveau partenariat!")
 			.setURL("https://botty.ga/")
 			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
