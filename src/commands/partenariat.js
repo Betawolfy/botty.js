@@ -12,6 +12,7 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	async execute(message, args) {
+		if (message.guild.id !== '861611425524219924') return message.reply(':x: Votre serveur n\' est pas autorisé à utiliser cette commande. ');
 		
 		const userMentionInArgs = args.shift();
 			if (!userMentionInArgs) {
