@@ -27,12 +27,12 @@ module.exports = {
 
 		
 		const partEmbed = new Discord.MessageEmbed()
-			.setColor("#0099ff")
+			.setColor("#f5af96")
 			.setTitle("Un nouveau partenariat!")
 			.setURL("https://botty.ga/")
-			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
+			.setAuthor(`mais que vois-je?`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
-        `**・┈・₊˚⿻ ・↓🧺↓₍ᐢᐢ₎ ꒰ nous avons un nouveau partenaire de confience! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚**\n`
+        `**・↓🧺↓₍ᐢᐢ₎ ꒰ nous avons un nouveau partenaire de confience! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚**\n`
         +`\n`
         +`**╭₊꒷︶ଓ 🌷✦✦ ﹕partenariat réalisé avec ${userTopart} **\n`
         +`**┊ᓚ𖦹 ୨🍓୧₊˚𓂃 mention: à mettre à la fin des tests ici partenariat **\n`
