@@ -18,12 +18,12 @@ module.exports = {
 			.setURL("https://botty.ga/")
 			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
-        "・┈・₊˚⿻ ・↓🧺↓₍ᐢᐢ₎ ꒰ text !! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚"
-        +" "
-        +"╭₊꒷︶ଓ 🌷✦✦ ﹕text"
-        +"┊ᓚ𖦹 ୨🍓୧₊˚𓂃 text"
-        +"┊₊˚ꕤꕤ﹕⌗🌈︵ ︵ text"
-        +"╰ ୨🌱﹕๑‧₊˚┈ ᘏᘏ text"
+        "・┈・₊˚⿻ ・↓🧺↓₍ᐢᐢ₎ ꒰ text !! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚\n"
+        +"\n"
+        +"╭₊꒷︶ଓ 🌷✦✦ ﹕text\n"
+        +"┊ᓚ𖦹 ୨🍓୧₊˚𓂃 text\n"
+        +"┊₊˚ꕤꕤ﹕⌗🌈︵ ︵ text\n"
+        +"╰ ୨🌱﹕๑‧₊˚┈ ᘏᘏ text\n"
 			)
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
 
