@@ -29,7 +29,6 @@ module.exports = {
 		const partEmbed = new Discord.MessageEmbed()
 			.setColor("#f5af96")
 			.setTitle("Un nouveau partenariat!")
-			.setURL("https://botty.ga/")
 			.setAuthor(`mais que vois-je?`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
         `**・↓🧺↓₍ᐢᐢ₎ ꒰ nous avons un nouveau partenaire de confience! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚**\n`
