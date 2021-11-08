@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const pkg = require("../../package.json");
+const logger = require("../utils/logger");
 
 module.exports = {
 	data: {
@@ -26,7 +27,7 @@ module.exports = {
 			|| message.guild.members.get(userMentionInArgs);
 		const partReason = args.join(" ");
 
-		
+		logger.info(` Service partenariat - un partenariat avec la mention partenariat à été réalisé par ${message.author.username}`);
 		const partEmbed = new Discord.MessageEmbed()
 			.setColor("#f5af96")
 			.setTitle("﹒൭˚ Un nouveau partenariat!")
