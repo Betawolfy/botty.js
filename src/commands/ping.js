@@ -13,6 +13,6 @@ module.exports = {
 		const pongMessage = await message.channel.send("Pong !");
 		const latence = pongMessage.createdTimestamp - message.createdTimestamp;
 
-		await pongMessage.edit(`Pong !\nLatence HTTP: ${latence}ms\nLatence WS: ${message.client.ws.ping}ms`);
+		await pongMessage.edit(`Pong !\nLatence HTTP: ${latence}ms\nLatence WS: ${message.client.ws.ping}ms\n > page de status: https://stats.uptimerobot.com/QLKNrfXNLo`);
 	}
 };
