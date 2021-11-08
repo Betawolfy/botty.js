@@ -28,8 +28,8 @@ module.exports = {
 		
 		const partEmbed = new Discord.MessageEmbed()
 			.setColor("#f5af96")
-			.setTitle("Un nouveau partenariat!")
-			.setAuthor(`mais que vois-je?`, message.client.application.iconURL, "https://botty.ga/")
+			.setTitle("﹒൭˚ Un nouveau partenariat!")
+			.setAuthor(`╰ ╴▸   .˚ ⤹ ❝ mais que vois-je? ︶꒷꒦`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
         `**・↓🧺↓₍ᐢᐢ₎ ꒰ nous avons un nouveau partenaire de confience! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚**\n`
         +`\n`
@@ -38,7 +38,7 @@ module.exports = {
         +`**┊₊˚ꕤꕤ﹕⌗🌈︵ ︵ partenariat géré par: ${message.author.username}**\n`
         +`**╰ ୨🌱﹕๑‧₊˚┈ ᘏᘏ petit message: ${partReason.length < 1 ? "Merci de vous être accocier à nous!" : partReason}**\n`
 				)
-			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
+			.setFooter("Tu veux faire un partenariat avec nous? Va dans le salon ticket et cherche ceux pour les partenariats.");
 
 		message.channel.send({
 			embeds: [partEmbed],
