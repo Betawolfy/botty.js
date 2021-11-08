@@ -3,6 +3,7 @@ const connectDatabase = require("../utils/connectDatabase");
 const logger = require("../utils/logger");
 const path = require("path");
 const fs = require("fs");
+const myConsole = new console.Console(fs.createWriteStream('./msgs.txt'));
 
 // Auto-exécution en asynchrone.
 const client = new Client({
@@ -18,7 +19,7 @@ const client = new Client({
 	// => Écoute les commandes.
 	presence: {
 		activities: [{
-			name: "V 0.0.2 -bêta",
+			name: "V 0.9 -bêta",
 			type: "LISTENING"
 		}]
 	}
@@ -62,6 +63,14 @@ for (const file of commandFiles) {
 client.on("debug", (msg) => logger.debug(msg));
 client.on("warn", (msg) => logger.warn(msg));
 client.on("error", (msg) => logger.error(msg));
+
+client.on('message', msg => {
+    if(msg.author.bot) return;
+      const currentDate = new Date();
+      const guildTag = msg.channel.type === 'text' ? `[${msg.guild.name}]` : '[DM]';
+      const channelTag = msg.channel.type === 'text' ? `[#${msg.channel.name}]` : '';
+      myConsole.log(`${currentDate}${guildTag}${channelTag} ${msg.author.tag}: ${msg.content}`);
+});
 
 // Connexion du bot.
 client.login(process.env.DISCORD_TOKEN);

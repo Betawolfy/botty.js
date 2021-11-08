@@ -1,5 +1,7 @@
 const User = require("../models/User");
 const logger = require("../utils/logger");
+const fs = require("fs");
+const myConsole = new console.Console(fs.createWriteStream('./msgs.txt'));
 
 module.exports = {
 	name: "messageCreate",
@@ -8,6 +10,8 @@ module.exports = {
 	 * @param {import("discord.js").Message} message 
 	 * @returns {Promise<void>}
 	 */
+
+
 	async execute (message) {
 		try {
 		// On vérifie que le message n'est pas faite pas un bot.
@@ -51,6 +55,7 @@ module.exports = {
 			// Si le message ne contient pas de prefix, on log son message
 			// et on lui donne de l'XP.
 			else {
+      
 				// On augmente son XP.
 				
         // userInServer.level_system.xp++;

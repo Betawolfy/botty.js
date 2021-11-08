@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/DiscordBotty/botty.js",
   "dependencies": {
+    "@replit/database": "^2.0.1",
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
