@@ -1,7 +1,5 @@
-const User = require("../models/User");
+const msgLogger = require("../utils/msgLogger");
 const logger = require("../utils/logger");
-const fs = require("fs");
-const myConsole = new console.Console(fs.createWriteStream('./msgs.txt'));
 
 module.exports = {
 	name: "messageCreate",
@@ -10,37 +8,40 @@ module.exports = {
 	 * @param {import("discord.js").Message} message 
 	 * @returns {Promise<void>}
 	 */
-
-
 	async execute (message) {
 		try {
-		// On vérifie que le message n'est pas faite pas un bot.
+		  // On vérifie que le message n'est pas d'un bot.
 			if (message.author.bot) return;
+
+			// On garde le message dans les logs de Botty.
+			const messageInGuild = message.guild ? true : false;
+			msgLogger.info(`[${messageInGuild ? "GUILD] [" + message.guild.name : "DM"}] [${message.channel.name}] [${message.author.tag}]: ${message.content}`);
 
 			// Rien si le message est un DM.
 			if (!message.guild) return;
 
-			/**
+			/** Version MongoDB
 		 * On récupère des infos sur l'utilisateur depuis la BDD.
 		 * S'il existe pas encore, on le crée.
-		 */
+		 
 			const user = await User.findOne({ // On cherche l'utilisateur dans la BDD.
 				id: message.author.id
 			}) || await User.create({ // On crée l'utilisateur s'il n'existe pas.
 				id: message.author.id,
 				servers: [{ id: message.guild.id }]
 			});
+     */
 
 			// On récupère les données de cette utilisateur
 			// sur le serveur où le message est envoyé.
-			const userInServer = user.servers.find(server => server.id === message.guild.id);
+			// const userInServer = user.servers.find(server => server.id === message.guild.id);
 
 			// On définit le préfix.
 			const prefix = "*";
 
 			// On check si le message contient le prefix.
 			if (message.content.startsWith(prefix)) {
-			// On récupère les arguments et le nom de la commande.
+			  // On récupère les arguments et le nom de la commande.
 				const args = message.content.slice(prefix.length).trim().split(/ +/);
 				const commandName = args.shift().toLowerCase();
 	
@@ -58,7 +59,7 @@ module.exports = {
       
 				// On augmente son XP.
 				
-        // userInServer.level_system.xp++;
+				// userInServer.level_system.xp++;
 			
 				// Si il dépasse 100 d'XP, on augmente le level.
 				/*if (userInServer.level_system.xp >= 100) {
@@ -79,10 +80,10 @@ module.exports = {
 		// Une erreur est survenue.
 		catch (error) {
 			logger.error(error);
-	var result = Math.floor((Math.random() * 100) + 1)
+
+			const random = Math.floor((Math.random() * 100) + 1);
 			await message.reply({
-				content: "Hmmm... Cette commande n'a pas l'air de fonctionner ! L'équipe technique à été prévenue et va essayer de régler ce problème au plus vite ! numéro de l'erreur: " +result,
-				ephemeral: true
+				content: "Hmmm... Cette commande n'a pas l'air de fonctionner ! L'équipe technique à été prévenue et va essayer de régler ce problème au plus vite ! Numéro de l'erreur: " + random
 			});
 		}
 	}

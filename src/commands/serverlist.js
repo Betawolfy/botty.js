@@ -4,7 +4,7 @@ module.exports = {
 	data: {
 		name: "serverlist",
 		description: "tt les serveurs.",
-    category: "devloppement",
+		category: "devloppement",
 	},
 
 	/**
@@ -12,7 +12,7 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	async execute(message) {
-    if (message.guild.id !== '596306506819960832') return message.reply(':x: Votre serveur n\' est pas autorisé à utiliser cette commande.')
+		if (message.guild.id !== "596306506819960832") return message.reply(":x: Votre serveur n' est pas autorisé à utiliser cette commande.")
 
 		;
 

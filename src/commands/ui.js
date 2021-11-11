@@ -6,7 +6,7 @@ module.exports = {
 	data: {
 		name: "ui",
 		description: "version plus simple de userinfo",
-    category: "devloppement",
+		category: "devloppement",
 	},
 
 	/**
@@ -51,7 +51,7 @@ module.exports = {
 		}
 		const embed = new Discord.MessageEmbed()
 			
-      .setColor(member.displayHexColor) 
+			.setColor(member.displayHexColor) 
 			.setTitle(member.user.tag)
 			.setDescription(`Informations locales sur l'utilisateur ${member.displayName} (${member.user.tag})`)
 			.setThumbnail(member.user.avatarURL())
@@ -70,7 +70,7 @@ module.exports = {
 					value: `N. ${joinPosition}` ,
 					inline: true
 				},
-				{ name: '\u200B', value: '\u200B' },
+				{ name: "\u200B", value: "\u200B" },
 			)
 			.setTimestamp()
 			.setFooter(`ui de ${member.user.tag}`, member.user.avatarURL());
@@ -79,4 +79,4 @@ module.exports = {
 			embeds: [embed]
 		});
 	}
-}
+};

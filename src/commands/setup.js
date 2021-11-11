@@ -5,7 +5,7 @@ module.exports = {
 	data: {
 		name: "setup",
 		description: "créer tout les objets necessaires au bon fonctionnement du bot",
-    category: "utility",
+		category: "utility",
 	},
 
 	/**
@@ -25,7 +25,7 @@ module.exports = {
 			)
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
 			
-				// ...
+		// ...
 			
 		message.channel.send({
 			embeds: [setupEmbed],

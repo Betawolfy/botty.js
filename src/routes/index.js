@@ -1,13 +1,9 @@
 const router = require("express").Router();
-const apiRouter = require("./api");
-const pkg = require("../../package.json"); 
+const controllers = require("./controllers");
 
-// Ajout des routes pour l'API.
-router.use("/api", apiRouter);
-
-// GET /
-router.get("/", (req, res) => {
-	res.send(`Bienvenue sur le site de Botty ! Celui-ci est en cours de construction...\n version du bot: ${pkg.version} `);
-});
+/** Accueil de l'API.
+ * @route {GET} /api
+ */
+router.get("/", controllers.homepage);
 
 module.exports = router;

@@ -2,7 +2,7 @@ module.exports = {
 	data: {
 		name: "help-staff",
 		description: "Page d'aide pour le staff.",
-    category: "help",
+		category: "help",
 	},
 
 	/**

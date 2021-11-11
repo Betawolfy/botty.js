@@ -1,8 +1,9 @@
-const router = require("express").Router();
-
-// GET /api/
-router.get("/", async (req, res) => {
-	/** @type {import("discord.js").ShardingManager} */
+/** Accueil de l'API.
+ * @param {import("../types/express").CustomRequest} req
+ * @param {import("express").Response} res
+ * @route {GET} /api
+ */
+exports.homepage = async (req, res) => {
 	const sharding = req.discord;
 
 	// Récupérer le nombre total de membres sur tout les serveurs de chaque shards du bot.
@@ -24,6 +25,4 @@ router.get("/", async (req, res) => {
 			guilds
 		}
 	});
-});
-
-module.exports = router;
+};

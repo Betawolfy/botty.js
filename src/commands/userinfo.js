@@ -4,7 +4,7 @@ module.exports = {
 	data: {
 		name: "userinfo",
 		description: "Affiche des informations sur un utilisateur.",
-    category: "utility",
+		category: "utility",
 	},
 
 	/**
@@ -66,7 +66,7 @@ module.exports = {
 		// Construction de la réponse.
 		const embed = new MessageEmbed()
 			
-      .setColor(member.displayHexColor) 
+			.setColor(member.displayHexColor) 
 			.setTitle(member.user.tag)
 			.setDescription(`Informations sur l'utilisateur ${member.displayName} (${member.user.tag})`)
 			.setThumbnail(member.user.avatarURL())
@@ -91,15 +91,15 @@ module.exports = {
 					value: `N. ${joinPosition}` ,
 					inline: true
 				},
-				{ name: '\u200B', value: '\u200B' },
-        {
-          name: "premium",
-          value: `${userInfoDbInServer.id.premium}` ,
-          inline: true
-        },
+				{ name: "\u200B", value: "\u200B" },
+				{
+					name: "premium",
+					value: `${userInfoDbInServer.id.premium}` ,
+					inline: true
+				},
 				{
 					name: "Bak-warns",
-					value: `*indispo pour le moment*`,
+					value: "*indispo pour le moment*",
 					inline: true
 				},
 				{
@@ -107,7 +107,7 @@ module.exports = {
 					value: `${userInfoDbInServer.id.bakbanned}`,
 					inline: true
 				},
-				{ name: '\u200B', value: '\u200B' },
+				{ name: "\u200B", value: "\u200B" },
 				{
 					name: "Permissions",
 					value: permissions.join(", ")
