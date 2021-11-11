@@ -1,6 +1,6 @@
 {
   "name": "botty",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Botty official Discord bot.",
   "main": "src/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DiscordBotty/botty.js.git"
+    "url": "git+https://github.com/betawolfy/botty.js.git"
   },
   "keywords": [
     "Discord",
@@ -20,9 +20,9 @@
   "author": "DiscordBotty",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DiscordBotty/botty.js/issues"
+    "url": "https://github.com/betawolfy/botty.js/issues"
   },
-  "homepage": "https://github.com/DiscordBotty/botty.js",
+  "homepage": "https://github.com/betawolfy/botty.js",
   "dependencies": {
     "@replit/database": "^2.0.1",
     "discord.js": "^13.1.0",
