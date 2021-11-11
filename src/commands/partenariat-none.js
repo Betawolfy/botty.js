@@ -4,7 +4,7 @@ const logger = require("../utils/logger");
 
 module.exports = {
 	data: {
-		name: "partenariat",
+		name: "partenariat-none",
 		description: "exclusivement pour le serveur teko coffee"
 	},
 
@@ -36,7 +36,7 @@ module.exports = {
         `**・↓🧺↓₍ᐢᐢ₎ ꒰ nous avons un nouveau partenaire de confience! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚**\n`
         +`\n`
         +`**╭₊꒷︶ଓ 🌷✦✦ ﹕partenariat réalisé avec ${userTopart} **\n`
-        +`**┊ᓚ𖦹 ୨🍓୧₊˚𓂃 mention: @<897416241784954912> **\n`
+        +`**┊ᓚ𖦹 ୨🍓୧₊˚𓂃 mention: aucune **\n`
         +`**┊₊˚ꕤꕤ﹕⌗🌈︵ ︵ partenariat géré par: ${message.author.username}**\n`
         +`**╰ ୨🌱﹕๑‧₊˚┈ ᘏᘏ petit message: ${partReason.length < 1 ? "Merci de vous être accocier à nous!" : partReason}**\n`
 				)

@@ -19,7 +19,7 @@ const client = new Client({
 	// => Écoute les commandes.
 	presence: {
 		activities: [{
-			name: "V 0.9 -bêta",
+			name: "V1.0 | *help",
 			type: "LISTENING"
 		}]
 	}

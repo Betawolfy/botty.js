@@ -2,7 +2,8 @@
 
 Actuellement, Botty.js n'est pas encore disponible. le bot est encore en Bêta. Sachez dès à présent que toutes les informations se trouveront sur ce GitHub. 
 
-(bientôt) Les nouveautés seront donnés sur le site du bot. pour  le moment, elles sont [**ici**](https://github.com/betawolfy/botty.js/blob/main/nouveautés.md)
+page de status du bot:
+[**cliquez ici**](https://bottybot.statuspage.io)
 
 # le coté information:
 vous retrouverez ici tout les aspects complexe du bot.
