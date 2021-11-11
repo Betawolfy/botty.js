@@ -41,7 +41,7 @@ npm run dev
 
 - Merci à **Vexcited** pour le refactoring des commandes, le passage à Discord.js v13, la mise en place de la base de données et l'API de Botty !
 - Merci à **Aqr_Rastiq** pour le site et le nom de domaine du bot ! (grace à toi, l'organisation GitHub est vérifié :smile:)
-- Merci à **Mary* pour l'estethique du support Discord !
+- Merci à **Mary** pour l'estethique du support Discord !
 - Merci aux testeurs !
 - Merci à nos partenaires et à nos donnateurs.
 - ET A VOUS !
