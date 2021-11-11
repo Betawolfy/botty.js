@@ -1,7 +1,6 @@
 {
   "name": "botty",
   "version": "1.0.1",
-  "description": "Botty official Discord bot.",
   "main": "src/index.js",
   "scripts": {
     "start": "node .",
@@ -25,15 +24,15 @@
   "homepage": "https://github.com/betawolfy/botty.js",
   "dependencies": {
     "@replit/database": "^2.0.1",
-    "discord.js": "^13.1.0",
+    "discord.js": "^13.3.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongoose": "^6.0.5",
+    "mongoose": "^6.0.12",
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "node": "^16.13.0",
-    "nodemon": "^2.0.12"
+    "eslint": "^8.2.0",
+    "node": "^17.0.1",
+    "nodemon": "^2.0.15"
   }
 }
