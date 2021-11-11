@@ -1,15 +1,17 @@
 const logger = require("./utils/logger");
 const Discord = require("discord.js");
-const connectDatabase = require("./utils/connectDatabase");
+// const connectDatabase = require("./utils/connectDatabase");
 const express = require("express");
 const router = require("./routes");
 const path = require("path");
 const fs = require("fs");
+
 // Chargement des variables d'environnements.
 require("dotenv").config();
 
+// On désactive temporairement => replit/db
 // Connexion à la base de données.
-connectDatabase();
+// connectDatabase();
 
 // Création du serveur web.
 const app = express();
