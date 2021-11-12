@@ -5,7 +5,8 @@ const logger = require("../utils/logger");
 module.exports = {
 	data: {
 		name: "partenariat-none",
-		description: "exclusivement pour le serveur teko coffee"
+		description: "Exclusivement pour le serveur Teko's Coffee.",
+		category: "Exclusif Teko's Coffee"
 	},
 
 	/**
@@ -13,7 +14,7 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	async execute(message, args) {
-		if (message.guild.id !== "861611425524219924") return message.reply(":x: Votre serveur n' est pas autorisé à utiliser cette commande. ");
+		if (message.guild.id !== "861611425524219924") return message.reply(":x: Votre serveur n'est pas autorisé à utiliser cette commande. ");
 		
 		const userMentionInArgs = args.shift();
 		if (!userMentionInArgs) {

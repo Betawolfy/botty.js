@@ -4,8 +4,8 @@ const pkg = require("../../package.json");
 module.exports = {
 	data: {
 		name: "setup",
-		description: "créer tout les objets necessaires au bon fonctionnement du bot",
-		category: "utility",
+		description: "Créer tout les objets necessaires au bon fonctionnement du bot",
+		category: "Utilitaires"
 	},
 
 	/**

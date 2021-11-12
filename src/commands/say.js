@@ -2,7 +2,7 @@ module.exports = {
 	data: {
 		name: "say",
 		description: "Faire dire au bot ce que tu veux.",
-		category: "fun",
+		category: "Fun",
 	},
 
 	/**

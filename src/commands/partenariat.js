@@ -5,7 +5,8 @@ const logger = require("../utils/logger");
 module.exports = {
 	data: {
 		name: "partenariat",
-		description: "exclusivement pour le serveur teko coffee"
+		description: "Exclusivement pour le serveur Teko's Coffee.",
+		category: "Exclusif Teko's Coffee"
 	},
 
 	/**
@@ -13,7 +14,7 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	async execute(message, args) {
-		if (message.guild.id !== "861611425524219924") return message.reply(":x: Votre serveur n' est pas autorisé à utiliser cette commande. ");
+		if (message.guild.id !== "861611425524219924") return message.reply(":x: Votre serveur n'est pas autorisé à utiliser cette commande. ");
 		
 		const userMentionInArgs = args.shift();
 		if (!userMentionInArgs) {
@@ -27,7 +28,7 @@ module.exports = {
 			|| message.guild.members.get(userMentionInArgs);
 		const partReason = args.join(" ");
 
-		logger.info(` Service partenariat - un partenariat avec la mention partenariat à été réalisé par ${message.author.username}`);
+		logger.info(`Service partenariat - un partenariat avec la mention partenariat à été réalisé par ${message.author.username}`);
 		const partEmbed = new Discord.MessageEmbed()
 			.setColor("#f5af96")
 			.setTitle("﹒൭˚ Un nouveau partenariat!")

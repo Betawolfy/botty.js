@@ -4,7 +4,8 @@ const pkg = require("../../package.json");
 module.exports = {
 	data: {
 		name: "optiwork",
-		description: "optimisation de la sécurité",
+		description: "Optimisation de la sécurité",
+		category: "Utilitaires"
 	},
 
 	/**

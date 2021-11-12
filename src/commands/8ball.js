@@ -2,7 +2,7 @@ module.exports = {
 	data: {
 		name: "8ball",
 		description: "Démarre un jeu de 8ball.",
-		category: "fun",
+		category: "Fun"
 	},
 
 	/**
