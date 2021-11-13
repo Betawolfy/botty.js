@@ -74,8 +74,8 @@ module.exports = {
 				components: [menu]
 			});
 		}
-		catch (error) {
-			logger.error(error);
+		catch (e) {
+			logger.error(e);
 		}
 	}
 };

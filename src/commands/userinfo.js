@@ -1,5 +1,5 @@
 const { MessageEmbed } = require("discord.js");
-const Client = require("@replit/database");
+const getUserDb = require("../utils/getUser");
 const logger = require("../utils/logger");
 
 module.exports = {
@@ -49,36 +49,28 @@ module.exports = {
 
 		// Calculate Join Position
 		let joinPosition = 0;
-		const guildMembers = message.guild.members.cache.sort((a, b) => a.joinedAt - b.joinedAt);
-		for (let i = 0; i < guildMembers.length; i++) {
-			if (guildMembers[i].id == member.user.id)
+		const guildMembers = await message.guild.members.fetch()
+		const sortedMembers = guildMembers.sort((a, b) => a.joinedTimestamp - b.joinedTimestamp).toJSON();
+		for (let i = 0; i < sortedMembers.length; i++) {
+			console.log(i, sortedMembers[i])
+			if (sortedMembers[i].user.id == member.user.id) {
 				joinPosition = i;
+			}
 		}
 
-		const db = new Client();
-		const userInDb = await db.get(`user-${message.author.id}`).catch(e => logger.log("error", e));
+		const userInDb = getUserDb(message.author.id);
+		const joinDate = new Date(member.joinedAt);
 
 		// Construction de la réponse.
 		const embed = new MessageEmbed()
-			
 			.setColor(member.displayHexColor) 
 			.setTitle(member.user.tag)
 			.setDescription(`Informations sur l'utilisateur ${member.displayName} (${member.user.tag})`)
 			.setThumbnail(member.user.avatarURL())
 			.addFields(
-				/*{
-					name: "Niveau",
-					value: `niveau ${userInfoDbInServer.level_system.level}`,
-					inline: true
-				},
-        {
-          name: "xp",
-          value: `${userInfoDbInServer.level_system.xp}/100 xp`,
-          inline: true
-        },*/
 				{
 					name: "À rejoint le",
-					value: `${member.joinedAt.toDateString()} à ${member.joinedAt.toTimeString()}`,
+					value: joinDate.toLocaleString("fr-FR"),
 					inline: true
 				},
 				{
