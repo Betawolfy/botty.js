@@ -25,8 +25,6 @@ module.exports = {
 			)
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
 			
-		// ...
-			
 		message.channel.send({
 			embeds: [setupEmbed],
 			ephemeral: true

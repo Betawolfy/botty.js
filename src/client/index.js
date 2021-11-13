@@ -1,5 +1,7 @@
-const { Client, Intents, Collection } = require("discord.js");
+// Désactivation de Mongo.
 // const connectDatabase = require("../utils/connectDatabase");
+
+const { Client, Intents, Collection } = require("discord.js");
 const logger = require("../utils/logger");
 const pkg = require("../../package.json");
 const path = require("path");
@@ -17,7 +19,7 @@ const client = new Client({
 	// Personalisation de la présence
 	presence: {
 		activities: [{
-			name: `V${pkg.version} | *help`,
+			name: `v${pkg.version} | *help`,
 			type: "LISTENING"
 		}]
 	}

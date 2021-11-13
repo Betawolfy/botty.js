@@ -1,5 +1,6 @@
 const msgLogger = require("../utils/msgLogger");
 const logger = require("../utils/logger");
+// const Client = require("@replit/database");
 
 module.exports = {
 	name: "messageCreate",
@@ -10,7 +11,7 @@ module.exports = {
 	 */
 	async execute (message) {
 		try {
-		  // On vérifie que le message n'est pas d'un bot.
+			// On vérifie que le message n'est pas d'un bot.
 			if (message.author.bot) return;
 
 			// On garde le message dans les logs de Botty.
@@ -19,6 +20,9 @@ module.exports = {
 
 			// Rien si le message est un DM.
 			if (!message.guild) return;
+
+			// const db = new Client();
+			// const user = await db.get(`user-${message.author.id}`);
 
 			/** Version MongoDB
 		 * On récupère des infos sur l'utilisateur depuis la BDD.
@@ -41,7 +45,7 @@ module.exports = {
 
 			// On check si le message contient le prefix.
 			if (message.content.startsWith(prefix)) {
-			  // On récupère les arguments et le nom de la commande.
+				// On récupère les arguments et le nom de la commande.
 				const args = message.content.slice(prefix.length).trim().split(/ +/);
 				const commandName = args.shift().toLowerCase();
 	

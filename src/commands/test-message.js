@@ -12,14 +12,11 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	async execute(message) {
-		if (message.guild.id !== "596306506819960832") return message.reply(":x: Votre serveur n' est pas autorisé à utiliser cette commande. ");
+		if (message.guild.id !== "596306506819960832") return message.reply(":x: Votre serveur n'est pas autorisé à utiliser cette commande.");
 		await message.reply({
-			content: "Le bot est bien en ligne !",
-			ephemeral: true
+			content: "Le bot est bien en ligne !"
 		});
 
-		logger.info("info", `[test-message] Test envoyé par ${message.author.username} reçu !`);
+		logger.info(`[test-message] Test envoyé par ${message.author.username} reçu !`);
 	}
-	//fin de execute
 };
-//fin de module.exports

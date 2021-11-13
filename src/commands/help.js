@@ -41,9 +41,11 @@ module.exports = {
 					.setCustomId(`menu-help-${message.id}`)
 					.setPlaceholder("Rien est selectionné")
 					.addOptions(selectOptions)
-		  );
+			);
 
 		try {
+			// On vérifie si l'ID du message est le même,
+			// et si l'utilisateur est le mëme.
 			const filter = i => {
 				return (i.customId.replace("menu-help-", "") === message.id)
           && (i.user.id === message.author.id);
@@ -67,10 +69,10 @@ module.exports = {
 				});
 			});
 
-		  message.channel.send({
-			  embeds: [helpEmbed],
+			message.channel.send({
+				embeds: [helpEmbed],
 				components: [menu]
-		  });
+			});
 		}
 		catch (error) {
 			logger.error(error);

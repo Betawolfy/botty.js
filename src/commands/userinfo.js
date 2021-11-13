@@ -1,10 +1,12 @@
 const { MessageEmbed } = require("discord.js");
-const User = require("../models/User");
+const Client = require("@replit/database");
+const logger = require("../utils/logger");
+
 module.exports = {
 	data: {
 		name: "userinfo",
 		description: "Affiche des informations sur un utilisateur.",
-		category: "Informations",
+		category: "Informations"
 	},
 
 	/**
@@ -34,16 +36,6 @@ module.exports = {
 			}
 		}
 
-		// On récupère l'info de l'utilisateur dans la BDD.
-		// On le crée s'il n'existe pas encore.
-		const userInfoDb = await User.findOne({
-			id: member.user.id
-		}) || await User.create({
-			id: member.user.id,
-			servers: [{ id: message.guild.id }]
-		});
-		const userInfoDbInServer = userInfoDb.servers.find(server => server.id === message.guild.id);
-
 		// Récupération des permissions.
 		const permissions = member.permissions.toArray().map(perm => {
 			return perm
@@ -62,6 +54,9 @@ module.exports = {
 			if (guildMembers[i].id == member.user.id)
 				joinPosition = i;
 		}
+
+		const db = new Client();
+		const userInDb = await db.get(`user-${message.author.id}`).catch(e => logger.log("error", e));
 
 		// Construction de la réponse.
 		const embed = new MessageEmbed()
@@ -93,8 +88,8 @@ module.exports = {
 				},
 				{ name: "\u200B", value: "\u200B" },
 				{
-					name: "premium",
-					value: `${userInfoDbInServer.id.premium}` ,
+					name: "Premium",
+					value: `${userInDb.premium ? "Oui" : "Non"}`,
 					inline: true
 				},
 				{
@@ -103,8 +98,8 @@ module.exports = {
 					inline: true
 				},
 				{
-					name: "Bak-ban ?",
-					value: `${userInfoDbInServer.id.bakbanned}`,
+					name: "Bak-ban",
+					value: `${userInDb.bakbanned ? "Oui" : "Non"}`,
 					inline: true
 				},
 				{ name: "\u200B", value: "\u200B" },

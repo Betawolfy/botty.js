@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const pkg = require("../../package.json");
 const logger = require("../utils/logger");
 
 module.exports = {

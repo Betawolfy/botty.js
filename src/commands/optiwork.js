@@ -39,8 +39,7 @@ module.exports = {
 			.setFooter("les serveurs inscrits dans _serverlist (bientôt dispo) peuvent voir leurs niveau grâce au émoji qui précède les optimisations.");
 
 		message.channel.send({
-			embeds: [optiEmbed],
-			ephemeral: true
+			embeds: [optiEmbed]
 		});
 	}
 };
