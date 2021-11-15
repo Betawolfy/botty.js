@@ -41,12 +41,13 @@ module.exports = {
 				"**・↓🧺↓₍ᐢᐢ₎ ꒰ nous avons un nouveau partenaire de confiance! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚**\n"
         +"\n"
         +`**╭₊꒷︶ଓ 🌷✦✦ ﹕partenariat réalisé avec ${userTopart} **\n`
-        +"**┊ᓚ𖦹 ୨🍓୧₊˚𓂃 mention: @<897416241784954912> **\n"
+        +"**┊ᓚ𖦹 ୨🍓୧₊˚𓂃 mention: partenariat **\n"
         +`**┊₊˚ꕤꕤ﹕⌗🌈︵ ︵ partenariat géré par: ${message.author.username}**\n`
         +`**╰ ୨🌱﹕๑‧₊˚┈ ᘏᘏ petit message: ${partReason.length < 1 ? "Merci de vous être associés à nous!" : partReason}**\n`
 			)
 			.setFooter("Tu veux faire un partenariat avec nous? Va dans le salon ticket et cherche ceux pour les partenariats.");
 
+    message.channel.send("<@&897416241784954912>")
 		message.channel.send({
 			embeds: [partEmbed],
 			ephemeral: true
