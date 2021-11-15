@@ -53,10 +53,10 @@ const userSchema = new mongoose.Schema({
 	bakBannedReason: {
 		type: String
 	},
-  premium: {
-    type: Boolean,
-    default: false
-  },
+	premium: {
+		type: Boolean,
+		default: false
+	},
 	// Les données de l'utilisateur sur chaque serveurs.
 	servers: [serverSchema]
 });

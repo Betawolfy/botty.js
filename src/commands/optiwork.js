@@ -4,7 +4,8 @@ const pkg = require("../../package.json");
 module.exports = {
 	data: {
 		name: "optiwork",
-		description: "optimisation de la sécurité",
+		description: "Optimisation de la sécurité",
+		category: "Utilitaires"
 	},
 
 	/**
@@ -38,8 +39,7 @@ module.exports = {
 			.setFooter("les serveurs inscrits dans _serverlist (bientôt dispo) peuvent voir leurs niveau grâce au émoji qui précède les optimisations.");
 
 		message.channel.send({
-			embeds: [optiEmbed],
-			ephemeral: true
+			embeds: [optiEmbed]
 		});
 	}
 };

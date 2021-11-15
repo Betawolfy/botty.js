@@ -1,11 +1,12 @@
+// Désactivation de Mongo.
+// const connectDatabase = require("../utils/connectDatabase");
+
 const { Client, Intents, Collection } = require("discord.js");
-const connectDatabase = require("../utils/connectDatabase");
 const logger = require("../utils/logger");
+const pkg = require("../../package.json");
 const path = require("path");
 const fs = require("fs");
-const myConsole = new console.Console(fs.createWriteStream('./msgs.txt'));
 
-// Auto-exécution en asynchrone.
 const client = new Client({
 	// Intents préviligiés du bot.
 	intents: [
@@ -16,10 +17,9 @@ const client = new Client({
 	],
 
 	// Personalisation de la présence
-	// => Écoute les commandes.
 	presence: {
 		activities: [{
-			name: "V1.0 | *help",
+			name: `v${pkg.version} | *help`,
 			type: "LISTENING"
 		}]
 	}
@@ -30,7 +30,8 @@ const client = new Client({
 client.once("ready", async () => {
 	logger.info(`${client.user.username} est en ligne sur ${client.guilds.cache.size} serveurs !`);
 
-	await connectDatabase();
+	// On désactive temporairement Mongo.
+	// await connectDatabase();
 });
 	
 // Ajout des events
@@ -63,14 +64,6 @@ for (const file of commandFiles) {
 client.on("debug", (msg) => logger.debug(msg));
 client.on("warn", (msg) => logger.warn(msg));
 client.on("error", (msg) => logger.error(msg));
-
-client.on('message', msg => {
-    if(msg.author.bot) return;
-      const currentDate = new Date();
-      const guildTag = msg.channel.type === 'text' ? `[${msg.guild.name}]` : '[DM]';
-      const channelTag = msg.channel.type === 'text' ? `[#${msg.channel.name}]` : '';
-      myConsole.log(`${currentDate}${guildTag}${channelTag} ${msg.author.tag}: ${msg.content}`);
-});
 
 // Connexion du bot.
 client.login(process.env.DISCORD_TOKEN);

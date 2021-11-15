@@ -2,7 +2,7 @@ module.exports = {
 	data: {
 		name: "ping",
 		description: "Donne le ping du bot.",
-    category: "utility",
+		category: "Utilitaires",
 	},
 
 	/**
@@ -13,6 +13,6 @@ module.exports = {
 		const pongMessage = await message.channel.send("Pong !");
 		const latence = pongMessage.createdTimestamp - message.createdTimestamp;
 
-		await pongMessage.edit(`Pong !\nLatence HTTP: ${latence}ms\nLatence WS: ${message.client.ws.ping}ms\n > page de status: https://bottybot.statuspage.io`);
+		await pongMessage.edit(`Pong !\nLatence HTTP: ${latence}ms\nLatence WS: ${message.client.ws.ping}ms\nStatus: https://bottybot.statuspage.io`);
 	}
 };

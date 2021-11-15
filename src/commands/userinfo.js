@@ -1,10 +1,12 @@
 const { MessageEmbed } = require("discord.js");
-const User = require("../models/User");
+const getUserDb = require("../utils/getUser");
+const logger = require("../utils/logger");
+
 module.exports = {
 	data: {
 		name: "userinfo",
 		description: "Affiche des informations sur un utilisateur.",
-    category: "utility",
+		category: "Informations"
 	},
 
 	/**
@@ -34,16 +36,6 @@ module.exports = {
 			}
 		}
 
-		// On récupère l'info de l'utilisateur dans la BDD.
-		// On le crée s'il n'existe pas encore.
-		const userInfoDb = await User.findOne({
-			id: member.user.id
-		}) || await User.create({
-			id: member.user.id,
-			servers: [{ id: message.guild.id }]
-		});
-		const userInfoDbInServer = userInfoDb.servers.find(server => server.id === message.guild.id);
-
 		// Récupération des permissions.
 		const permissions = member.permissions.toArray().map(perm => {
 			return perm
@@ -57,33 +49,28 @@ module.exports = {
 
 		// Calculate Join Position
 		let joinPosition = 0;
-		const guildMembers = message.guild.members.cache.sort((a, b) => a.joinedAt - b.joinedAt);
-		for (let i = 0; i < guildMembers.length; i++) {
-			if (guildMembers[i].id == member.user.id)
+		const guildMembers = await message.guild.members.fetch()
+		const sortedMembers = guildMembers.sort((a, b) => a.joinedTimestamp - b.joinedTimestamp).toJSON();
+		for (let i = 0; i < sortedMembers.length; i++) {
+			console.log(i, sortedMembers[i])
+			if (sortedMembers[i].user.id == member.user.id) {
 				joinPosition = i;
+			}
 		}
+
+		const userInDb = getUserDb(message.author.id);
+		const joinDate = new Date(member.joinedAt);
 
 		// Construction de la réponse.
 		const embed = new MessageEmbed()
-			
-      .setColor(member.displayHexColor) 
+			.setColor(member.displayHexColor) 
 			.setTitle(member.user.tag)
 			.setDescription(`Informations sur l'utilisateur ${member.displayName} (${member.user.tag})`)
 			.setThumbnail(member.user.avatarURL())
 			.addFields(
-				/*{
-					name: "Niveau",
-					value: `niveau ${userInfoDbInServer.level_system.level}`,
-					inline: true
-				},
-        {
-          name: "xp",
-          value: `${userInfoDbInServer.level_system.xp}/100 xp`,
-          inline: true
-        },*/
 				{
 					name: "À rejoint le",
-					value: `${member.joinedAt.toDateString()} à ${member.joinedAt.toTimeString()}`,
+					value: joinDate.toLocaleString("fr-FR"),
 					inline: true
 				},
 				{
@@ -91,23 +78,23 @@ module.exports = {
 					value: `N. ${joinPosition}` ,
 					inline: true
 				},
-				{ name: '\u200B', value: '\u200B' },
-        {
-          name: "premium",
-          value: `${userInfoDbInServer.id.premium}` ,
-          inline: true
-        },
+				{ name: "\u200B", value: "\u200B" },
+				{
+					name: "Premium",
+					value: `${userInDb.premium ? "Oui" : "Non"}`,
+					inline: true
+				},
 				{
 					name: "Bak-warns",
-					value: `*indispo pour le moment*`,
+					value: "*indispo pour le moment*",
 					inline: true
 				},
 				{
-					name: "Bak-ban ?",
-					value: `${userInfoDbInServer.id.bakbanned}`,
+					name: "Bak-ban",
+					value: `${userInDb.bakbanned ? "Oui" : "Non"}`,
 					inline: true
 				},
-				{ name: '\u200B', value: '\u200B' },
+				{ name: "\u200B", value: "\u200B" },
 				{
 					name: "Permissions",
 					value: permissions.join(", ")

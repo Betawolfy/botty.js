@@ -4,8 +4,8 @@ const pkg = require("../../package.json");
 module.exports = {
 	data: {
 		name: "setup",
-		description: "créer tout les objets necessaires au bon fonctionnement du bot",
-    category: "utility",
+		description: "Créer tout les objets necessaires au bon fonctionnement du bot",
+		category: "Utilitaires"
 	},
 
 	/**
@@ -24,8 +24,6 @@ module.exports = {
 				"tout manquement au règles et aux conditions d'utilisation de botty entrainera un bannissement permanent"
 			)
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
-			
-				// ...
 			
 		message.channel.send({
 			embeds: [setupEmbed],

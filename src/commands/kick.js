@@ -2,7 +2,7 @@ module.exports = {
 	data: {
 		name: "kick",
 		description: "Expulser un membre.",
-    category: "moderation",
+		category: "Modération",
 	},
 
 	/**

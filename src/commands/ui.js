@@ -1,12 +1,10 @@
-const logger = require("../utils/logger");
 const Discord = require("discord.js");
-const pkg = require("../../package.json");
 
 module.exports = {
 	data: {
 		name: "ui",
-		description: "version plus simple de userinfo",
-    category: "devloppement",
+		description: "Version plus simple de userinfo",
+		category: "Développement"
 	},
 
 	/**
@@ -35,14 +33,6 @@ module.exports = {
 			}
 		}
 
-		const userInfoDb = await User.findOne({
-			id: member.user.id
-		}) || await User.create({
-			id: member.user.id,
-			servers: [{ id: message.guild.id }]
-		});
-		const userInfoDbInServer = userInfoDb.servers.find(server => server.id === message.guild.id);
-
 		let joinPosition = 0;
 		const guildMembers = message.guild.members.cache.sort((a, b) => a.joinedAt - b.joinedAt);
 		for (let i = 0; i < guildMembers.length; i++) {
@@ -51,7 +41,7 @@ module.exports = {
 		}
 		const embed = new Discord.MessageEmbed()
 			
-      .setColor(member.displayHexColor) 
+			.setColor(member.displayHexColor) 
 			.setTitle(member.user.tag)
 			.setDescription(`Informations locales sur l'utilisateur ${member.displayName} (${member.user.tag})`)
 			.setThumbnail(member.user.avatarURL())
@@ -70,7 +60,7 @@ module.exports = {
 					value: `N. ${joinPosition}` ,
 					inline: true
 				},
-				{ name: '\u200B', value: '\u200B' },
+				{ name: "\u200B", value: "\u200B" },
 			)
 			.setTimestamp()
 			.setFooter(`ui de ${member.user.tag}`, member.user.avatarURL());
@@ -79,4 +69,4 @@ module.exports = {
 			embeds: [embed]
 		});
 	}
-}
+};

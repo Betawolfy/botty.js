@@ -1,25 +1,30 @@
-# Botty
+# Botty.js
 
-Actuellement, Botty.js n'est pas encore disponible. le bot est encore en Bêta. Sachez dès à présent que toutes les informations se trouveront sur ce GitHub. 
+<p align="center">
+<a href="https://bottybot.statuspage.io">
+<img alt="Status" src="https://img.shields.io/badge/dynamic/json?color=c36666&label=Status&query=%24.status.description&url=https%3A%2F%2F7dlbrn7w2vm1.statuspage.io%2Fapi%2Fv2%2Fstatus.json&style=for-the-badge" />
+</a> <br />
+<img alt="Version" src="https://img.shields.io/github/package-json/v/vexcited/botty.js.svg?style=flat-square&label=Version&color=c36666" />
+<img alt="Licence" src="https://img.shields.io/github/license/betawolfy/botty.js?style=flat-square&label=Licence&color=c36666" />
+</p>
 
-page de status du bot:
-[**cliquez ici**](https://bottybot.statuspage.io)
+<hr />
 
-# le coté information:
-vous retrouverez ici tout les aspects complexe du bot.
+## Informations
+Vous retrouverez, ici, tout les aspects complexe du bot.
 
-## Le bak-ban
+### Le bak-ban
 [**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/BAK-BAN)
 pour retrouver la FAQ et les explications sur le bak-ban.
 
-## Premium
+### Premium
 [**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/Premium) pour retrouver les infos concernant le système premium.
 
-## Le système de niveaux
+### Le système de niveaux
 
 [**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/level) pour retrouver toutes les informations sur le système de leveling (encore en maintenence).
 
-## Scripts
+### Scripts
 
 ```bash
 # Installation des dépendances
@@ -32,20 +37,14 @@ npm start
 npm run dev
 ```
 
-# remerciement: 
+## Remerciements 
 
-merci à Vexcited pour le refractoring des commandes, le passage à discord.js V13, la mise en place de la base de donnée et l'API du bot! 
-
-merci à Aqr_Rastiq pour le site et le nom de domaine du bot! (grace à toi, l'organisation Github est vérifié :smile: )
-
-merci à Mary pour l'estethique du support Discord!
-
-merci aux testeurs!
-
-merci à nos partenaires et à nos donnateurs.
-
-ET A VOUS!
-
+- Merci à **Vexcited** pour le refactoring des commandes, le passage à Discord.js v13, la mise en place de la base de données et l'API de Botty !
+- Merci à **Aqr_Rastiq** pour le site et le nom de domaine du bot ! (grace à toi, l'organisation GitHub est vérifié :smile:)
+- Merci à **Mary** pour l'estethique du support Discord !
+- Merci aux testeurs !
+- Merci à nos partenaires et à nos donnateurs.
+- ET A VOUS !
 
 ## Note sur les logs stockés par le bot
 
