@@ -28,6 +28,11 @@ module.exports = {
 		const partReason = args.join(" ");
 
 		logger.info(`Service partenariat - un partenariat avec la mention partenariat à été réalisé par ${message.author.username}`);
+
+    // On supprime le message original.
+		await message.delete();
+
+    
 		const partEmbed = new Discord.MessageEmbed()
 			.setColor("#f5af96")
 			.setTitle("﹒൭˚ Un nouveau partenariat!")
