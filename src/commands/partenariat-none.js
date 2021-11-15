@@ -4,7 +4,7 @@ const logger = require("../utils/logger");
 module.exports = {
 	data: {
 		name: "partenariat-none",
-		description: "Exclusivement pour le serveur Teko's Coffee.",
+		description: "partenariat sans mention",
 		category: "Exclusif Teko's Coffee"
 	},
 
@@ -33,12 +33,12 @@ module.exports = {
 			.setTitle("﹒൭˚ Un nouveau partenariat!")
 			.setAuthor("╰ ╴▸   .˚ ⤹ ❝ mais que vois-je? ︶꒷꒦", message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
-				"**・↓🧺↓₍ᐢᐢ₎ ꒰ nous avons un nouveau partenaire de confience! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚**\n"
+				"**・↓🧺↓₍ᐢᐢ₎ ꒰ nous avons un nouveau partenaire de confiance! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚**\n"
         +"\n"
         +`**╭₊꒷︶ଓ 🌷✦✦ ﹕partenariat réalisé avec ${userTopart} **\n`
         +"**┊ᓚ𖦹 ୨🍓୧₊˚𓂃 mention: aucune **\n"
         +`**┊₊˚ꕤꕤ﹕⌗🌈︵ ︵ partenariat géré par: ${message.author.username}**\n`
-        +`**╰ ୨🌱﹕๑‧₊˚┈ ᘏᘏ petit message: ${partReason.length < 1 ? "Merci de vous être accocier à nous!" : partReason}**\n`
+        +`**╰ ୨🌱﹕๑‧₊˚┈ ᘏᘏ petit message: ${partReason.length < 1 ? "Merci de vous être associés à nous!" : partReason}**\n`
 			)
 			.setFooter("Tu veux faire un partenariat avec nous? Va dans le salon ticket et cherche ceux pour les partenariats.");
 
