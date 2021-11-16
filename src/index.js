@@ -40,6 +40,20 @@ app.use(
 // On ajoute le routeur de l'API.
 app.use("/api", router);
 
+// Route pour UptimeRobot
+app.get("/" (_, res) => {
+  res.status(200).json({
+    success: true
+  });
+});
+
+// Custom 404.
+app.all("*", (_, res) => {
+  res.status(404).json({
+    success: false
+  });
+});
+
 // On démarre l'API.
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
