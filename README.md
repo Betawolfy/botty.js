@@ -4,7 +4,7 @@
 <a href="https://bottybot.statuspage.io">
 <img alt="Status" src="https://img.shields.io/badge/dynamic/json?color=c36666&label=Status&query=%24.status.description&url=https%3A%2F%2F7dlbrn7w2vm1.statuspage.io%2Fapi%2Fv2%2Fstatus.json&style=for-the-badge" />
 </a> <br />
-<img alt="Version" src="https://img.shields.io/github/package-json/v/vexcited/botty.js.svg?style=flat-square&label=Version&color=c36666" />
+<img alt="Version" src="https://img.shields.io/github/package-json/v/betawolfy/botty.js.svg?style=flat-square&label=Version&color=c36666" />
 <img alt="Licence" src="https://img.shields.io/github/license/betawolfy/botty.js?style=flat-square&label=Licence&color=c36666" />
 </p>
 
