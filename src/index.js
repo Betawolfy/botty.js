@@ -41,7 +41,7 @@ app.use(
 app.use("/api", router);
 
 // Route pour UptimeRobot
-app.get("/" (_, res) => {
+app.get("/", (_, res) => {
   res.status(200).json({
     success: true
   });

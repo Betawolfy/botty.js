@@ -4,7 +4,7 @@ const logger = require("../utils/logger");
 module.exports = {
 	data: {
 		name: "partenariat-none",
-		description: "partenariat sans mention",
+		description: "1 - 2 partenariat sans mention",
 		category: "Exclusif Teko's Coffee"
 	},
 
