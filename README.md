@@ -17,13 +17,6 @@ Vous retrouverez, ici, tout les aspects complexe du bot.
 [**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/BAK-BAN)
 pour retrouver la FAQ et les explications sur le bak-ban.
 
-### Premium
-[**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/Premium) pour retrouver les infos concernant le système premium.
-
-### Le système de niveaux
-
-[**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/level) pour retrouver toutes les informations sur le système de leveling (encore en maintenence).
-
 ### Scripts
 
 ```bash
@@ -47,6 +40,9 @@ npm run dev
 - ET A VOUS !
 
 ## Note sur les logs stockés par le bot
+
+Le bot est équipé d'un système de log général. ces log ne sont visibles uniquement en cas d'enquête de la part de l'équipe sécurité. Les logs sont régulièrement enregistrés dans une base de données sécurisée. Ceci n'est en aucun cas un système de traçage, la confidentialité des salons privés (ceux entre staff par exemple)et/ou des bot de confessions anonymes est respectée.
+
 
 **La loi Française nous oblige à vous donner le droit**
 - de demander des informations sur le traitement de vos données à caractère personnel ;
