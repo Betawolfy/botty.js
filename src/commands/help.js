@@ -16,11 +16,12 @@ module.exports = {
 	async execute(message) {
 		const helpEmbed = new Discord.MessageEmbed()
 			.setColor("#0099ff")
-			.setTitle("Page d'aide globale")
+			.setTitle("꒷꒦︶︶ Page d'aide globale")
 			.setURL("https://botty.ga/")
+      .setImage("https://www.icegif.com/wp-content/uploads/aesthetic-icegif-11.gif")
 			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
-				"Sélectionnez une catégorie ci-dessous."
+				"**﹒ ﹕ ̟乀 Sélectionnez une catégorie ci-dessous. .✦**"
 			)
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
 
