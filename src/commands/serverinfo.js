@@ -37,29 +37,29 @@ module.exports = {
 			// on construit l'embed
 			const embed = new Discord.MessageEmbed()
 				.setTitle(message.guild.name)
-				.setDescription("Informations sur ce serveur.")
+				.setDescription("**﹒ ﹕ ̟乀 Informations sur ce serveur.꒷.✦**")
 				.setThumbnail(message.guild.iconURL())
 				.addFields(
 					{
-						name: "Administrateurs",
+						name: "₊˚દ Administrateurs ┊ ⋆ 。 ",
 						value: admins.join(", ")
 					},
 					{
-						name: "Date de création",
+						name: "₊˚દ Date de création ┊ ⋆ 。 ",
 						value: `${message.guild.createdAt.toDateString()} à ${message.guild.createdAt.toTimeString()}`
 					},
 					{
-						name: "Salons",
+						name: "₊˚દ Salons ┊ ⋆ 。 ",
 						value: String(channelsCount ?? 0),
 						inline: true
 					},
 					{
-						name: "Membres",
+						name: "₊˚દ Membres ┊ ⋆ 。 ",
 						value: String(membersCount ?? 0),
 						inline: true
 					},
 					{
-						name: "Bots",
+						name: "₊˚દ Bots ┊ ⋆ 。 ",
 						value: String(botsCount ?? 0),
 						inline: true
 					}
@@ -75,7 +75,7 @@ module.exports = {
 		// Message envoyé en DM, impossible de récupérer infos du serveur.
 		else {
 			return message.reply(
-				":warning: - Tu dois envoyer cette commande depuis un serveur qui possède ce bot."
+				"﹒ ﹕ ̟乀  :warning: - Tu dois envoyer cette commande depuis un serveur qui possède ce bot. ꒷꒦︶︶"
 			);
 		}
 	}

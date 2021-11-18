@@ -27,7 +27,7 @@ module.exports = {
 		];
 
 		message.channel.send({
-			content: ":8ball: " + responses[Math.floor(Math.random() * responses.length)]
+			content: "**ʚ . ⋆ ₊** :8ball: **・— ๑ ˖ **\n ╰﹕୭ ₊˚  ︰" + responses[Math.floor(Math.random() * responses.length)]
 		});
 	}
 };

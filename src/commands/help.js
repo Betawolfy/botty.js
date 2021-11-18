@@ -15,7 +15,7 @@ module.exports = {
 	 */
 	async execute(message) {
 		const helpEmbed = new Discord.MessageEmbed()
-			.setColor("#0099ff")
+			.setColor("c36666")
 			.setTitle("꒷꒦︶︶ Page d'aide globale")
 			.setURL("https://botty.ga/")
       .setImage("https://www.icegif.com/wp-content/uploads/aesthetic-icegif-11.gif")

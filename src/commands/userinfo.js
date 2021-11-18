@@ -30,7 +30,7 @@ module.exports = {
 			// Afficher une erreur si on ne peut pas récupérer le membre.
 			if (!member) {
 				await message.reply(
-					`:x: - Je n'ai pas pu retrouver de membre avec l'ID \`${args[0]}\``
+					`:x: ꒷ Je n'ai pas pu retrouver de membre avec l'ID \`${args[0]}\`.✦`
 				);
 				return;
 			}
@@ -65,38 +65,39 @@ module.exports = {
 		const embed = new MessageEmbed()
 			.setColor(member.displayHexColor) 
 			.setTitle(member.user.tag)
-			.setDescription(`Informations sur l'utilisateur ${member.displayName} (${member.user.tag})`)
+      .setAuthor("‿̩͙‿̩̩̽‿̩͙‿̩̥̩‿̩̩̽‿̩͙‿̩͙‿̩̩̽‿̩͙‿̩͙‿̩̩̽‿̩͙‿̩̥̩‿̩̩̽‿̩͙‿̩͙‿̩̩̽‿̩͙‿̩̥̩‿̩̩̽‿̩͙ˊ")
+			.setDescription(`**﹒ ﹕ ̟乀 Informations sur l'utilisateur ${member.displayName} (${member.user.tag}).꒷.✦ **`)
 			.setThumbnail(member.user.avatarURL())
 			.addFields(
 				{
-					name: "À rejoint le",
+					name: "₊˚દ À rejoint le ┊ ⋆ 。 ",
 					value: joinDate.toLocaleString("fr-FR"),
 					inline: true
 				},
 				{
-					name: "En position",
+					name: "₊˚દ En position ┊ ⋆ 。 ",
 					value: `N. ${joinPosition}` ,
 					inline: true
 				},
 				{ name: "\u200B", value: "\u200B" },
 				{
-					name: "Premium",
+					name: "₊˚દ Premium ┊ ⋆ 。 ",
 					value: `${userInDb.premium ? "Oui" : "Non"}`,
 					inline: true
 				},
 				{
-					name: "Bak-warns",
+					name: "₊˚દ Bak-warns ┊ ⋆ 。 ",
 					value: "*indispo pour le moment*",
 					inline: true
 				},
 				{
-					name: "Bak-ban",
+					name: "₊˚દ Bak-ban ┊ ⋆ 。 ",
 					value: `${userInDb.bakbanned ? "Oui" : "Non"}`,
 					inline: true
 				},
 				{ name: "\u200B", value: "\u200B" },
 				{
-					name: "Permissions",
+					name: "₊˚દ Permissions ┊ ⋆ 。 ",
 					value: permissions.join(", ")
 				}
 			)

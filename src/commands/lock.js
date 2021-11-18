@@ -24,6 +24,6 @@ module.exports = {
 			}
 		);
 
-		await message.channel.send(`Le salon **${message.channel.name}** à été bloqué avec succès.`);
+		await message.channel.send(`**‿̩͙‿̩̩̽‿̩͙‿̩̥̩‿̩̩̽‿̩͙‿̩͙‿̩̩̽‿̩͙‿̩͙‿̩̩̽‿̩͙‿̩̥̩‿̩̩̽‿̩͙‿̩͙‿̩̩̽‿̩͙‿̩̥̩‿̩̩̽‿̩͙ˊ** \n₊˚દ Le salon **${message.channel.name}** à été bloqué avec succès..✦`);
 	}
 };
