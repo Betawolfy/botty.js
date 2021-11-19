@@ -12,7 +12,7 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	async execute(message) {
-		const contactEmbed = new Discord.MessageEmbed()
+		const voteEmbed = new MessageEmbed()
 			.setColor("#0099ff")
 			.setTitle("Merci de voter pour botty!")
 			.setURL("https://botty.ga/")
@@ -42,7 +42,7 @@ module.exports = {
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
 
 	message.channel.send({
-		embeds: [contactEmbed],
+		embeds: [voteEmbed],
 		ephemeral: true
 	});
 	}
