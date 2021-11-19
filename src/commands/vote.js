@@ -1,5 +1,7 @@
 const logger = require("../utils/logger");
 const { MessageEmbed } = require("discord.js");
+const pkg = require("../../package.json");
+
 
 module.exports = {
 	data: {
