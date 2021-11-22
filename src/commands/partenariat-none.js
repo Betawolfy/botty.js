@@ -33,7 +33,7 @@ module.exports = {
 		await message.delete();
     
 		const partEmbed = new Discord.MessageEmbed()
-			.setColor("#f5af96")
+			.setColor("#dfb7e2")
 			.setTitle("﹒൭˚ Un nouveau partenariat!")
 			.setAuthor("╰ ╴▸   .˚ ⤹ ❝ mais que vois-je? ︶꒷꒦", message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
@@ -42,9 +42,9 @@ module.exports = {
         +`**╭₊꒷︶ଓ  <a:A_InterrogationPink:902491970713300992> ✦✦ ﹕partenariat réalisé avec ${userTopart} **\n`
         +"**┊ᓚ𖦹 ୨<a:A_maryetmudae:902449424771457024> ୧₊˚𓂃 mention: aucune **\n"
         +`**┊₊˚ꕤꕤ﹕⌗<a:A_CatHeart:901163577250021428> ﹒ ﹕ ̟乀 partenariat géré par: ${message.author.username}**\n`
-        +`**╰ ୨<a:A_Multi_stars:902276277124354128>﹕๑‧₊˚┈ ᘏᘏ petit message: ${partReason.length < 1 ? "Merci de vous être associés à nous!" : partReason}**\n`
+        +`**╰ ୨<a:A_Multi_stars:902276277124354128>﹕๑‧₊˚┈ ᘏᘏ petit message: ${partReason.length < 1 ? "Merci de vous être associé.e à nous!" : partReason}**\n`
 			)
-			.setFooter("Tu veux faire un partenariat avec nous? Va dans le salon ticket et cherche ceux pour les partenariats.");
+			.setFooter("Vous voulez faire un partenariat avec nous? Allez dans le salon ticket et cherchez ceux pour les partenariats.");
 
 		message.channel.send({
 			embeds: [partEmbed],

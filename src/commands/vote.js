@@ -22,24 +22,24 @@ module.exports = {
 			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
 				"‧˚꒷꒦︶︶₊꒷꒦︶︶₊꒷꒦˚꒷꒦︶︶₊꒷꒦︶︶₊꒷꒦˚‧\n"
-			+ "⊹ ˚. Botty est jeune, alors voter pour lui nous aidera à le rendre connu!"
-			+ ":warning: Attention: apparement, il y aurait des pubs avent de pouvoir voter. sachez que ceci est entièrment pour top.gg et les créateurs de bot n'ont pas la possiblité de les retirer pour le moment. \n"
-		  + "₊˚દ Voici le lien: \n"
+			+ "**⊹ ˚. Botty est jeune, alors voter pour lui nous aidera à le rendre connu!"
+			+ ":warning: Attention: apparement, il y aurait des pubs avent de pouvoir voter. sachez que ceci est entièrment pour top.gg et les créateurs de bot n'ont pas la possiblité de les retirer pour le moment.** \n"
+		  + "**₊˚દ Voici le lien:** \n"
 			+ "﹒ ﹕ ̟乀  https://top.gg/bot/480032260993581056/vote \n"
-			+ "ʚ . ⋆ ₊ —・・₊˚๑・—・— ๑ ˖\n"
+			+ "**ʚ . ⋆ ₊ —・・₊˚๑・—・— ๑ ˖**\n"
 			+ "┊ ⋆ 。 Données de votes ⊹ ˚. ┊\n"
 			+ "\n"
 		)
 			.addFields(
 				{
 					name: "nombre de votes:",
-					value: "indisponible",
-					inline: true
+					value: "https://top.gg/api/bots/480032260993581056/check?userId=" + message.author.id,
+					inline: false
 				},
 				{
 					name: "reward",
 					value: "aucun pour le moment",
-					inline: true
+					inline: false
 				}
 			)
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
