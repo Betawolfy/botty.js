@@ -5,7 +5,7 @@ module.exports = {
 	data: {
 		name: "partenariat",
 		description: "2 - 2 partenariat avec la mention partenariat",
-		category: "Exclusif Teko's Coffee"
+		category: "₊˚દ Exclusif Teko's Coffee"
 	},
 
 	/**

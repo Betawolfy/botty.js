@@ -6,7 +6,7 @@ module.exports = {
 	data: {
 		name: "help",
 		description: "Page d'aide",
-		category: "Utilitaires"
+		category: "₊˚દ Utilitaires"
 	},
 
 	/**
@@ -31,7 +31,7 @@ module.exports = {
 		const selectOptions = categoriesSorted.map(category =>
 			({
 				label: category,
-				description: `Affiche les commandes de la catégorie ${category}`,
+				description: `₊˚ ୨ Affiche les commandes de la catégorie ${category} ・— ๑`,
 				value: `help-${category}`
 			})
 		);

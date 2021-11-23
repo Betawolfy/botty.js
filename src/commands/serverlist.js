@@ -4,7 +4,7 @@ module.exports = {
 	data: {
 		name: "serverlist",
 		description: "Tout les serveurs.",
-		category: "Développement"
+		category: "₊˚દ Développement"
 	},
 
 	/**

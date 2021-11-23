@@ -2,7 +2,7 @@ module.exports = {
 	data: {
 		name: "lock",
 		description: "Permet de vérouiller le salon sélectionné.", 
-		category: "Modération",
+		category: "₊˚દ Modération",
 	},
 
 	/**

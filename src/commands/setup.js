@@ -5,7 +5,7 @@ module.exports = {
 	data: {
 		name: "setup",
 		description: "Créer tout les objets necessaires au bon fonctionnement du bot",
-		category: "Utilitaires"
+		category: "₊˚દ Utilitaires"
 	},
 
 	/**

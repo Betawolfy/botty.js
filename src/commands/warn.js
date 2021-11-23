@@ -2,7 +2,7 @@ module.exports = {
 	data: {
 		name: "warn",
 		description: "Avertir un utilisateur.",
-		category: "Modération"
+		category: "₊˚દ Modération"
 	},
 
 	/**

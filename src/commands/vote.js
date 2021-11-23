@@ -7,7 +7,7 @@ module.exports = {
 	data: {
 		name: "vote",
 		description: "redirection pour voter pour le bot",
-		category: "Utilitaires"
+		category: "₊˚દ Utilitaires"
 	},
 
 	/**

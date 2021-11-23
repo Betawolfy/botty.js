@@ -5,7 +5,7 @@ module.exports = {
 	data: {
 		name: "optiwork",
 		description: "Optimisation de la sécurité",
-		category: "Utilitaires"
+		category: "₊˚દ Utilitaires"
 	},
 
 	/**

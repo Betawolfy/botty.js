@@ -4,7 +4,7 @@ module.exports = {
 	data: {
 		name: "serverinfo",
 		description: "Affiche des informations sur le serveur actuel.",
-		category: "Informations",
+		category: "₊˚દ Informations",
 	},
 
 	/**

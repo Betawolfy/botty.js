@@ -4,7 +4,7 @@ module.exports = {
 	data: {
 		name: "ui",
 		description: "Version plus simple de userinfo",
-		category: "Développement"
+		category: "₊˚દ Développement"
 	},
 
 	/**

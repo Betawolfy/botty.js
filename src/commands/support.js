@@ -5,7 +5,7 @@ module.exports = {
 	data: {
 		name: "support",
 		description: "Commande pour savoir tout les liens.",
-		category: "Utilitaires"
+		category: "₊˚દ Utilitaires"
 	},
 
 	/**
