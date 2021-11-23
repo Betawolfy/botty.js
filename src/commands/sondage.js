@@ -35,5 +35,6 @@ module.exports = {
 			embeds: [embed],
 			ephemeral: true
 		});
+		message.react('🤔')
 	}
 };
