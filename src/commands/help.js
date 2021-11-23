@@ -16,7 +16,7 @@ module.exports = {
 	async execute(message) {
 		const helpEmbed = new Discord.MessageEmbed()
 			.setColor("c36666")
-			.setTitle("꒷꒦︶︶ Page d'aide globale")
+			.setTitle("꒷꒦︶︶ Page d'aide globale ✦ . *")
 			.setURL("https://botty.ga/")
       .setImage("https://www.icegif.com/wp-content/uploads/aesthetic-icegif-11.gif")
 			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
@@ -40,7 +40,7 @@ module.exports = {
 			.addComponents(
 				new Discord.MessageSelectMenu()
 					.setCustomId(`menu-help-${message.id}`)
-					.setPlaceholder("Rien est selectionné")
+					.setPlaceholder("₊˚દ Rien est selectionné ✦ . *")
 					.addOptions(selectOptions)
 			);
 

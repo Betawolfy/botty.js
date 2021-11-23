@@ -17,6 +17,10 @@ Vous retrouverez, ici, tout les aspects complexe du bot.
 [**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/BAK-BAN)
 pour retrouver la FAQ et les explications sur le bak-ban.
 
+### Commandes exclusifs pour les serveurs
+[**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/commandes---systèmes-exclusif-serveur)
+pour retrouver la FAQ et les explications sur cette fonctionnalité.
+
 ### Scripts
 
 ```bash
@@ -36,7 +40,7 @@ npm run dev
 - Merci à **Aqr_Rastiq** pour le site et le nom de domaine du bot ! (grace à toi, l'organisation GitHub est vérifié :smile:)
 - Merci à **Mary** pour l'estethique du support Discord !
 - Merci aux testeurs !
-- Merci à nos partenaires et à nos donnateurs.
+- Merci à nos partenaires et à nos donateurs.
 - ET A VOUS !
 
 ## Note sur les logs stockés par le bot
