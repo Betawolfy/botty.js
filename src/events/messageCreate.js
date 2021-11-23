@@ -78,7 +78,7 @@ module.exports = {
 				}
 
 				await User.findByIdAndUpdate(user._id, user);
-			},
+			}
 
 		}
 		// Une erreur est survenue.
