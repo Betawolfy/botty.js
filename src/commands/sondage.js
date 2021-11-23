@@ -1,3 +1,5 @@
+const { MessageEmbed } = require("discord.js");
+
 module.exports = {
 	data: {
 		name: "sondage",
@@ -29,8 +31,8 @@ module.exports = {
 
 		// On envoie celui que dira le bot.
 		await message.channel.send({
-			 embeds: [embed]
+			embeds: [voteEmbed],
+			ephemeral: true
 		});
-		message.react('🤔')
 	}
 };
