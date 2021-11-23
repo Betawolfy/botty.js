@@ -62,7 +62,7 @@ module.exports = {
 			else {
       
 				// On augmente son XP.
-				
+				/*
 				 userInServer.level_system.xp++;
 			
 				// Si il dépasse 100 d'XP, on augmente le level.
@@ -78,6 +78,7 @@ module.exports = {
 				}
 
 				await User.findByIdAndUpdate(user._id, user);
+				*/
 			}
 
 		}
