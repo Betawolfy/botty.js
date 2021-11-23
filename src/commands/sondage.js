@@ -32,7 +32,7 @@ module.exports = {
 
 		// On envoie celui que dira le bot.
 		await message.channel.send({
-			embeds: [voteEmbed],
+			embeds: [embed],
 			ephemeral: true
 		});
 	}
