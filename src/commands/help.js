@@ -21,7 +21,8 @@ module.exports = {
       .setImage("https://www.icegif.com/wp-content/uploads/aesthetic-icegif-11.gif")
 			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
-				"**﹒ ﹕ ̟乀 Sélectionnez une catégorie ci-dessous. .✦**"
+				"**﹒ ﹕ ̟乀 Sélectionnez une catégorie ci-dessous. .✦**\n"
+				+ "**₊˚ ୨ note: vous devez avoir la vernière version de discord pour pouvoir sélectionner.** "
 			)
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
 
