@@ -23,30 +23,29 @@ module.exports = {
 		const random1 = Math.floor((Math.random() * 10) + 1);
 		const random2 = Math.floor((Math.random() * 10) + 1);
 
-	
 		const bingoEmbed = new MessageEmbed()
-			.setColor("#0099ff")
-			.setTitle("Merci de voter pour botty!")
+			.setColor("#f8baff")
+			.setTitle("﹒ ﹕ ̟乀 Bingo! ✦ . *")
 			.setURL("https://botty.ga/")
 			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
 				"‧˚꒷꒦︶︶₊꒷꒦︶︶₊꒷꒦˚꒷꒦︶︶₊꒷꒦︶︶₊꒷꒦˚‧\n"
-				+ "Voici ton tirage.\n"
+				+ "₊˚ ୨ Voici ton tirage.\n"
 				+ responses[Math.floor(Math.random() * responses.length)]
 		)
 			.addFields(
 				{
-					name: "numéro 1",
+					name: "=・numéro 1",
 					value: "" +random,
 					inline: true
 				},
 				{
-					name: "numéro 2",
+					name: "・୨・ numéro 2 ・୨・",
 					value: ""+ random1,
 					inline: true
 				},
 				{
-					name: "numéro 3",
+					name: "numéro 3 ───・",
 					value: ""+ random2,
 					inline: true
 				}
