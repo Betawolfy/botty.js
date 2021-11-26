@@ -32,7 +32,7 @@ module.exports = {
 			.setDescription(
 				"‧˚꒷꒦︶︶₊꒷꒦︶︶₊꒷꒦˚꒷꒦︶︶₊꒷꒦︶︶₊꒷꒦˚‧\n"
 				+ "Voici ton tirage.\n"
-				+ responses
+				+ responses[Math.floor(Math.random() * responses.length)]
 		)
 			.addFields(
 				{
