@@ -37,17 +37,17 @@ module.exports = {
 			.addFields(
 				{
 					name: "numéro 1",
-					value: random,
+					value: "" +random,
 					inline: true
 				},
 				{
 					name: "numéro 2",
-					value: random1,
+					value: ""+ random1,
 					inline: true
 				},
 				{
 					name: "numéro 3",
-					value: random2,
+					value: ""+ random2,
 					inline: true
 				}
 			)
