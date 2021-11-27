@@ -12,7 +12,11 @@ module.exports = {
 	 */
 	async execute(message, args) {
 		let textToSay = args.join(" ");
-		if (textToSay.length <= 0) return;
+		if (textToSay.length <= 0) {
+			return await message.channel.send({
+			content:":x: - veuillez coller votre pub."
+		});
+		}
 
 		// On supprime le message original.
 		await message.delete();
