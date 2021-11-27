@@ -45,7 +45,7 @@ module.exports = {
         +`**┊₊˚ꕤꕤ﹕⌗<a:A_CatHeart:901163577250021428> ﹒ ﹕ ̟乀 partenariat géré par: ${message.author.username}**\n`
         +`**╰ ୨<a:A_Multi_stars:902276277124354128>﹕๑‧₊˚┈ ᘏᘏ petit message: ${partReason.length < 1 ? "Merci de vous être associé.e à nous!" : partReason}**\n`
 				*/
-				+ `**╭ ꒷꒦ ‧₊˚<a:A_InterrogationPink:902491970713300992> >↓₍ᐢᐢ₎ ꒰ nous avons un nouveau partenaire de confiance! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚**\n`
+				+ `**╭ ꒷꒦ ‧₊˚<a:A_InterrogationPink:902491970713300992> ↓₍ᐢᐢ₎ ꒰ nous avons un nouveau partenaire de confiance! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚**\n`
 				+ `**┊  ꒱꒱﹕**\n`
 				+ "**╰╮˚꒷˖꒦︶꒷ ♡︶˚꒥₊**\n"
 				+ `** ・<a:A_CatHeart:901163577250021428>・↷ Merci à· ${userTopart}˚ ༘**\n`
