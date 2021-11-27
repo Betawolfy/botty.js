@@ -44,14 +44,14 @@ module.exports = {
         +`**┊₊˚ꕤꕤ﹕⌗<a:A_CatHeart:901163577250021428> ﹒ ﹕ ̟乀 partenariat géré par: ${message.author.username}**\n`
         +`**╰ ୨<a:A_Multi_stars:902276277124354128>﹕๑‧₊˚┈ ᘏᘏ petit message: ${partReason.length < 1 ? "Merci de vous être associé.e à nous!" : partReason}**\n`
 				*/
-				+ `**╭ ꒷꒦ ‧₊˚:pastel_pinkbow: ୧ ❝ Partenariat ❞ ꒷₊˚**\n`
-				+ `**┊:pastel_pixel_wings:  ꒱꒱﹕**\n`
+				+ `**╭ ꒷꒦ ‧₊˚<a:A_InterrogationPink:902491970713300992> ୧ ❝ Partenariat ❞ ꒷₊˚**\n`
+				+ `**┊  ꒱꒱﹕**\n`
 				+ "**╰╮˚꒷˖꒦︶꒷ ♡︶˚꒥₊**\n"
-				+ `**・・↷ Merci à· ${userTopart}˚ ༘**\n`
-				+ `**✿・↷ Partenariat géré par ${message.author.username} ·˚ ༘**\n`
-				+ `**・・↷  Ping a voir après test\n**`
-        + `**🌸 ୨୧  ̊  ̟ ๑ ︵︵  ${partReason.length < 1 ? "Merci de vous être associé.e à nous!" : partReason} ·˚ ༘**\n`
- 				+ `**╰ ๑₊˚ʚ:pastel_cupcake:ɞ︶꒦꒷₊˚**`
+				+ `** <a:A_CatHeart:901163577250021428>・・↷ Merci à· ${userTopart}˚ ༘**\n`
+				+ `** <a:A_maryetmudae:902449424771457024>・↷ Partenariat géré par ${message.author.username} ·˚ ༘**\n`
+				+ `** <a:A_Multi_stars:902276277124354128>・・↷  Ping a voir après test**\n`
+        + `**<B_NezukoCute:901469985300439040> ୨୧  ̊  ̟ ๑ ︵︵  ${partReason.length < 1 ? "Merci de vous être associé.e à nous!" : partReason} ·˚ ༘**\n`
+ 				+ `**╰ ๑₊˚ʚ<a:A_ValideRose:902448325733781524>ɞ︶꒦꒷₊˚**`
 
 			)
 			.setFooter("Tu veux faire un partenariat avec nous? Va dans le salon ticket et cherche ceux pour les partenariats.");
