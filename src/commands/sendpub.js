@@ -14,7 +14,7 @@ module.exports = {
 		let textToSay = args.join(" ");
 		if (textToSay.length <= 0) {
 			return await message.channel.send({
-			content:":x: - veuillez coller votre pub."
+			content:":x: - syntaxe incorrecte! essayez `*sendpub <votre pub>`"
 		});
 		}
 
