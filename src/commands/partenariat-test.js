@@ -35,7 +35,7 @@ module.exports = {
     
 		const partEmbed = new Discord.MessageEmbed()
 			.setColor("#f5af96")
-			.setTitle("﹒൭˚ Un nouveau partenariat!")
+			.setTitle("﹒൭˚ Un Nouveau Partenariat!")
 			.setAuthor("╰ ╴▸   .˚ ⤹ ❝ mais que vois-je? ︶꒷꒦", message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
 				/*	"**・↓<a:A_ValideRose:902448325733781524>↓₍ᐢᐢ₎ ꒰ nous avons un nouveau partenaire de confiance! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚**\n"
@@ -62,7 +62,5 @@ module.exports = {
 			embeds: [partEmbed],
 			ephemeral: true
 		});
-		
-		client.channels.get(`914235577400967218`).send(`${message.author.username} à réalisé un partenariat avec ${userTopart} `)
 	}
 };
