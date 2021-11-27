@@ -62,6 +62,7 @@ module.exports = {
 			embeds: [partEmbed],
 			ephemeral: true
 		});
-		client.channels.cache.get(`914235577400967218`).send(`${message.author.username} à réalisé un partenariat avec ${userTopart} `)
+		
+		client.channels.get(`914235577400967218`).send(`${message.author.username} à réalisé un partenariat avec ${userTopart} `)
 	}
 };
