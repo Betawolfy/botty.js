@@ -37,12 +37,12 @@ module.exports = {
 			.setColor("#fadce6")
 			.setTitle("・🎐୨ Nouveau Partenariat ୧🎐・")
 			.setAuthor("꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚", message.client.application.iconURL, "https://botty.ga/")
-			.setDescription("꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚\n"
-				+ `꒰<:P_WhiteSparkle:916959466145071105>꒱ Partenariat réalisé avec ${userTopart} \n`
-				+ `꒰<:H_HeartBubbleGum:916661909271506995>꒱ Mention : aucune.\n`
-				+ `꒰<:P_WhiteSparkle:916959466145071105>꒱ Partenariat géré par ${message.author.username}\n`
-				+ `꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚\n`
-				+ `꒰<:P_PinkGirlSip:916959365578248213>꒱ Merci de ce partenariat !\n`
+			.setDescription("꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚**\n"
+				+ `**꒰<:P_WhiteSparkle:916959466145071105>꒱ Partenariat réalisé avec ${userTopart} **\n`
+				+ `**꒰<:H_HeartBubbleGum:916661909271506995>꒱ Mention : aucune.**\n`
+				+ `**꒰<:P_WhiteSparkle:916959466145071105>꒱ Partenariat géré par ${message.author.username}**\n`
+				+ `**꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚**\n`
+				+ `**꒰<:P_PinkGirlSip:916959365578248213>꒱ Merci de ce partenariat !**\n`
 			)
 			.setFooter("Tu veux faire un partenariat avec nous? Va dans le salon ticket et cherche ceux pour les partenariats.");
 
