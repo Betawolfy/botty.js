@@ -3,8 +3,8 @@ const logger = require("../utils/logger");
 
 module.exports = {
 	data: {
-		name: "yuu-partenariat-test",
-		description: "1 - 2 partenariat avec aucune mention",
+		name: "yuu-partenariat",
+		description: "2 - 2 partenariat avec mention partenariat",
 		category: "₊˚દ Exclusif Yūutsu"
 	},
 
@@ -27,7 +27,7 @@ module.exports = {
 			|| message.guild.members.get(userMentionInArgs);
 		const partReason = args.join(" ");
 
-		logger.info(`Service partenariat - un partenariat sans mention à été réalisé par ${message.author.username} sur Yūutsu`);
+		logger.info(`Service partenariat - un partenariatavec ping à été réalisé par ${message.author.username} sur Yūutsu`);
 
     // On supprime le message original.
 		await message.delete();
@@ -39,13 +39,14 @@ module.exports = {
 			.setAuthor("꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚", message.client.application.iconURL, "https://botty.ga/")
 			.setDescription("꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚\n"
 				+ `꒰<:P_WhiteSparkle:916959466145071105>꒱ Partenariat réalisé avec ${userTopart} \n`
-				+ `꒰<:H_HeartBubbleGum:916661909271506995>꒱ Mention : test\n`
+				+ `꒰<:H_HeartBubbleGum:916661909271506995>꒱ Mention : partenariat.\n`
 				+ `꒰<:P_WhiteSparkle:916959466145071105>꒱ Partenariat géré par ${message.author.username}\n`
 				+ `꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚\n`
 				+ `꒰<:P_PinkGirlSip:916959365578248213>꒱ Merci de ce partenariat !\n`
 			)
 			.setFooter("Tu veux faire un partenariat avec nous? Va dans le salon ticket et cherche ceux pour les partenariats.");
 
+		message.channel.send("<@&915692653918711869>")
 		message.channel.send({
 			embeds: [partyuuEmbed],
 			ephemeral: true
