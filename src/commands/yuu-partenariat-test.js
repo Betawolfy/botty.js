@@ -34,7 +34,7 @@ module.exports = {
 
     
 		const partyuuEmbed = new Discord.MessageEmbed()
-			.setColor("#042A5F")
+			.setColor("#fadce6")
 			.setTitle("・🎐୨ Nouveau Partenariat ୧🎐・")
 			.setAuthor("꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚", message.client.application.iconURL, "https://botty.ga/")
 			.setDescription("꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚꒷꒦︶︶꒷︶꒦-♡༉⋅₊˚\n"
