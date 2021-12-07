@@ -45,7 +45,7 @@ npm run dev
 
 ## Note sur les logs stockés par le bot
 
-Le bot est équipé d'un système de log général. ces log ne sont visibles uniquement en cas d'enquête de la part de l'équipe sécurité. Les logs sont régulièrement enregistrés dans une base de données sécurisée. Ceci n'est en aucun cas un système de traçage, la confidentialité des salons privés (ceux entre staff par exemple)et/ou des bot de confessions anonymes est respectée.
+Le bot est équipé d'un système de log général. ces log ne sont visibles uniquement en cas d'enquête de la part de l'équipe sécurité. Autrement, tant qu'il n'y a pas d'enquête, seul le fondateur du bot à accès à ces historiques. Les logs sont régulièrement enregistrés dans une base de données sécurisée. Ceci n'est en aucun cas un système de traçage, la confidentialité des salons privés (ceux entre staff par exemple)et/ou des bot de confessions anonymes est respectée. Ceci est entièrement légale tant que ces logs ne sont pas diffusé. 
 
 
 **La loi Française nous oblige à vous donner le droit**
