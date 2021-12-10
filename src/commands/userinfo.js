@@ -1,6 +1,7 @@
 const { MessageEmbed } = require("discord.js");
-const getUserDb = require("../utils/getUser");
-const logger = require("../utils/logger");
+
+const getUserJoinPosition = require("../utils/getUserJoinPosition");
+const getUser = require("../utils/getUser");
 
 module.exports = {
 	data: {
@@ -47,18 +48,8 @@ module.exports = {
 				});
 		});
 
-		// Calculate Join Position
-		let joinPosition = 0;
-		const guildMembers = await message.guild.members.fetch();
-		const sortedMembers = guildMembers.sort((a, b) => a.joinedTimestamp - b.joinedTimestamp).toJSON();
-		for (let i = 0; i < sortedMembers.length; i++) {
-			console.log(i, sortedMembers[i]);
-			if (sortedMembers[i].user.id == member.user.id) {
-				joinPosition = i;
-			}
-		}
-
-		const userInDb = getUserDb(message.author.id);
+		const userJoinPosition = await getUserJoinPosition(message, member);
+		const userInDb = await getUser(message.author.id);
 		const joinDate = new Date(member.joinedAt);
 
 		// Construction de la réponse.
@@ -76,23 +67,23 @@ module.exports = {
 				},
 				{
 					name: "₊˚દ En position ┊ ⋆ 。 ",
-					value: `N. ${joinPosition}` ,
+					value: `N. ${userJoinPosition}` ,
 					inline: true
 				},
 				{ name: "\u200B", value: "\u200B" },
 				{
 					name: "₊˚દ Premium ┊ ⋆ 。 ",
-					value: `${userInDb.premium ? "Oui" : "Non"}`,
+					value: `${userInDb.isPremium ? "Oui" : "Non"}`,
 					inline: true
 				},
 				{
 					name: "₊˚દ Bak-warns ┊ ⋆ 。 ",
-					value: "*indispo pour le moment*",
+					value: "*Indisponible pour le moment.*",
 					inline: true
 				},
 				{
 					name: "₊˚દ Bak-ban ┊ ⋆ 。 ",
-					value: `${userInDb.bakbanned ? "Oui" : "Non"}`,
+					value: `${userInDb.bakBanned ? "Oui" : "Non"}`,
 					inline: true
 				},
 				{ name: "\u200B", value: "\u200B" },

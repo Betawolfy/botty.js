@@ -1,6 +1,6 @@
+const database = require("./utils/connectDatabase");
 const logger = require("./utils/logger");
 const Discord = require("discord.js");
-// const connectDatabase = require("./utils/connectDatabase");
 const express = require("express");
 const router = require("./routes");
 const path = require("path");
@@ -8,9 +8,8 @@ const path = require("path");
 // Chargement des variables d'environnements.
 require("dotenv").config();
 
-// On désactive temporairement => replit/db
 // Connexion à la base de données.
-// connectDatabase();
+database.connect();
 
 // Création du serveur de l'API.
 const app = express();
@@ -26,14 +25,16 @@ const shardingManager = new Discord.ShardingManager(clientPath, {
 shardingManager.on("shardCreate", shard => {
 	logger.log("info", `Le shard ${shard.id} à démarré avec succès !`);
 });
+
+// On créé les shards.
 shardingManager.spawn();
 
 // On ajoute le manager à l'API.
 app.use(
 	/** @param {import("./types/express").CustomRequest} req */
 	(req, _, next) => {
-	  req.discord = shardingManager;
-	  next();
+		req.discord = shardingManager;
+		next();
 	}
 );
 

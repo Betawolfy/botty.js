@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 // Les données des warns de l'utilisateur sur un serveur.
-const warnSchema = new mongoose.Schema({
+const userGuildWarnSchema = new mongoose.Schema({
 	// La raison du warn. ("Inconnue" par défaut)
 	reason: {
 		type: String,
@@ -15,7 +15,7 @@ const warnSchema = new mongoose.Schema({
 
 
 // Les données de l'utilisateur sur chaques serveurs.
-const serverSchema = new mongoose.Schema({
+const userGuildSchema = new mongoose.Schema({
 	id: {
 		type: String,
 		required: true
@@ -36,7 +36,7 @@ const serverSchema = new mongoose.Schema({
 	},
 
 	// Les warns accumulés.
-	warns: [warnSchema]
+	warns: [userGuildWarnSchema]
 });
 
 const userSchema = new mongoose.Schema({
@@ -53,12 +53,14 @@ const userSchema = new mongoose.Schema({
 	bakBannedReason: {
 		type: String
 	},
-	premium: {
+
+	isPremium: {
 		type: Boolean,
 		default: false
 	},
+
 	// Les données de l'utilisateur sur chaque serveurs.
-	servers: [serverSchema]
+	guilds: [userGuildSchema]
 });
 
 module.exports = mongoose.model("User", userSchema);

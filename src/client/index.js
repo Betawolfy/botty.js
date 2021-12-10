@@ -1,7 +1,5 @@
-// Désactivation de Mongo.
-// const connectDatabase = require("../utils/connectDatabase");
-
 const { Client, Intents, Collection } = require("discord.js");
+const database = require("../utils/connectDatabase");
 const logger = require("../utils/logger");
 const pkg = require("../../package.json");
 const path = require("path");
@@ -29,9 +27,7 @@ const client = new Client({
 // Une fois que le bot est connecté.
 client.once("ready", async () => {
 	logger.info(`${client.user.username} est en ligne sur ${client.guilds.cache.size} serveurs !`);
-
-	// On désactive temporairement Mongo.
-	// await connectDatabase();
+	await database.connect();
 });
 	
 // Ajout des events

@@ -19,11 +19,11 @@ module.exports = {
 			.setURL("https://botty.ga/")
 			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
-				"**Site internet:** \ https://botty.ga/ \n"
-				+ "**Lien vers le support** \ https://discord.gg/5AFCw3Nc57 \n"
-				+ "**Twitter Status:** \ https://twitter.com/BottyStatus \n"
-				+ "**GitHub:** \ https://github.com/betawolfy/botty.js \n"
-				+ "**Instagram:** \ pas le lien en poche "
+				"**Site internet:** https://botty.ga/ \n"
+				+ "**Lien vers le support** https://discord.gg/5AFCw3Nc57 \n"
+				+ "**Twitter Status:** https://twitter.com/BottyStatus \n"
+				+ "**GitHub:** https://github.com/betawolfy/botty.js \n"
+				+ "**Instagram:** pas le lien en poche "
 			)
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
 

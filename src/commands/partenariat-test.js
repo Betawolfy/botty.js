@@ -52,7 +52,7 @@ module.exports = {
 				+ `** ・<a:A_maryetmudae:902449424771457024>↷ Partenariat géré par ${message.author.username} ·˚ ༘**\n`
 				+ "** ・<a:A_Multi_stars:902276277124354128>・↷  Ping a voir après test**\n"
         + `** ୨<:B_NezukoCute:901469985300439040>୧  ̊  ̟ ๑ ︵︵  ${partReason.length < 1 ? "Merci de vous être associé.e à nous!" : partReason} ·˚ ༘**\n`
- 				+ "**╰ ๑₊˚ʚ<a:A_ValideRose:902448325733781524>ɞ︶꒦꒷₊˚**"
+				+ "**╰ ๑₊˚ʚ<a:A_ValideRose:902448325733781524>ɞ︶꒦꒷₊˚**"
 
 			)
 			.setFooter("Tu veux faire un partenariat avec nous? Va dans le salon ticket et cherche ceux pour les partenariats.");

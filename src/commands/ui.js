@@ -1,5 +1,7 @@
 const Discord = require("discord.js");
 
+const getUserJoinPosition = require("../utils/getUserJoinPosition");
+
 module.exports = {
 	data: {
 		name: "ui",
@@ -33,14 +35,9 @@ module.exports = {
 			}
 		}
 
-		let joinPosition = 0;
-		const guildMembers = message.guild.members.cache.sort((a, b) => a.joinedAt - b.joinedAt);
-		for (let i = 0; i < guildMembers.length; i++) {
-			if (guildMembers[i].id == member.user.id)
-				joinPosition = i;
-		}
+		const userJoinPosition = await getUserJoinPosition(message, member);
+
 		const embed = new Discord.MessageEmbed()
-			
 			.setColor(member.displayHexColor) 
 			.setTitle(member.user.tag)
 			.setDescription(`Informations locales sur l'utilisateur ${member.displayName} (${member.user.tag})`)
@@ -48,22 +45,21 @@ module.exports = {
 			.addFields(
 				{
 					name: "à rejoint le serveur le:",
-					value: `${member.joinedAt.toDateString()} à ${member.joinedAt.toTimeString()}`,
+					value: new Date(member.joinedAt).toLocaleString("fr-FR"),
 					inline: true
 				},
 				{
-					name: "compte crée le: ",
-					value: `${member.createAt.toDateString()} à ${member.createAt.toTimeString()}`,
+					name: "Compte crée le: ",
+					value: new Date(member.user.createdAt).toLocaleString("fr-FR")
 				},
 				{
 					name: "En position",
-					value: `N. ${joinPosition}` ,
+					value: `N. ${userJoinPosition}`,
 					inline: true
-				},
-				{ name: "\u200B", value: "\u200B" },
+				}
 			)
 			.setTimestamp()
-			.setFooter(`ui de ${member.user.tag}`, member.user.avatarURL());
+			.setFooter(`*ui de ${member.user.tag}`, member.user.avatarURL());
 
 		await message.channel.send({
 			embeds: [embed]

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const logger = require("./logger");
 
 // Connexion à la base de données.
-module.exports = async () => {
+exports.connect = async () => {
 	try {
 		await mongoose.connect(process.env.MONGODB_URI);
 		
