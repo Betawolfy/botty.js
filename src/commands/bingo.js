@@ -35,7 +35,7 @@ module.exports = {
 				"‧˚꒷꒦︶︶₊꒷꒦︶︶₊꒷꒦˚꒷꒦︶︶₊꒷꒦︶︶₊꒷꒦˚‧\n"
 				+ "₊˚ ୨ Voici ton tirage.\n"
 				+ responses[Math.floor(Math.random() * responses.length)]
-		)
+			)
 			.addFields(
 				{
 					name: "=・numéro 1",
@@ -55,9 +55,9 @@ module.exports = {
 			)
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
 
-	message.channel.send({
-		embeds: [bingoEmbed],
-		ephemeral: true
-	});
+		message.channel.send({
+			embeds: [bingoEmbed],
+			ephemeral: true
+		});
 	}
 };

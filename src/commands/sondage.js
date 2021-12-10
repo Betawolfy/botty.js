@@ -20,7 +20,7 @@ module.exports = {
 		// On supprime le message original.
 		await message.delete();
 		
-			const embed = new MessageEmbed()
+		const embed = new MessageEmbed()
 			.setColor("#0099ff")
 			.setTitle("Sondage: ")
 			.setURL("https://botty.ga/")
@@ -35,6 +35,6 @@ module.exports = {
 			embeds: [embed],
 			ephemeral: true
 		});
-		await message.react('🤔')
+		await message.react("🤔");
 	}
 };

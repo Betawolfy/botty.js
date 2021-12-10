@@ -13,7 +13,7 @@ module.exports = async (id) => {
 		const user = {
 			premium: false,
 			bakbanned: false
-		}
+		};
 
 		await db.set(key, user);
 

@@ -29,7 +29,7 @@ module.exports = {
 
 		logger.info(`Service partenariat - un partenariat avec la mention partenariat à été réalisé par ${message.author.username}`);
 
-    // On supprime le message original.
+		// On supprime le message original.
 		await message.delete();
 
     
@@ -46,7 +46,7 @@ module.exports = {
 			)
 			.setFooter("Tu veux faire un partenariat avec nous? Va dans le salon ticket et cherche ceux pour les partenariats.");
 
-    message.channel.send("<@&897416241784954912>")
+		message.channel.send("<@&897416241784954912>");
 		message.channel.send({
 			embeds: [partEmbed],
 			ephemeral: true

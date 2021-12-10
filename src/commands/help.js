@@ -18,7 +18,7 @@ module.exports = {
 			.setColor("c36666")
 			.setTitle("꒷꒦︶︶ Page d'aide globale ✦ . *")
 			.setURL("https://botty.ga/")
-      .setImage("https://www.icegif.com/wp-content/uploads/aesthetic-icegif-11.gif")
+			.setImage("https://www.icegif.com/wp-content/uploads/aesthetic-icegif-11.gif")
 			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(
 				"**﹒ ﹕ ̟乀 Sélectionnez une catégorie ci-dessous. .✦**\n"

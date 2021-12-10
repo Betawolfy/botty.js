@@ -42,16 +42,16 @@ app.use("/api", router);
 
 // Route pour UptimeRobot
 app.get("/", (_, res) => {
-  res.status(200).json({
-    success: true
-  });
+	res.status(200).json({
+		success: true
+	});
 });
 
 // Custom 404.
 app.all("*", (_, res) => {
-  res.status(404).json({
-    success: false
-  });
+	res.status(404).json({
+		success: false
+	});
 });
 
 // On démarre l'API.

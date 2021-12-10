@@ -29,7 +29,7 @@ module.exports = {
 
 		logger.info(`Service partenariat - un partenariat avec la mention partenariat à été réalisé par ${message.author.username}`);
 
-    // On supprime le message original.
+		// On supprime le message original.
 		await message.delete();
 
     
@@ -45,19 +45,19 @@ module.exports = {
         +`**┊₊˚ꕤꕤ﹕⌗<a:A_CatHeart:901163577250021428> ﹒ ﹕ ̟乀 partenariat géré par: ${message.author.username}**\n`
         +`**╰ ୨<a:A_Multi_stars:902276277124354128>﹕๑‧₊˚┈ ᘏᘏ petit message: ${partReason.length < 1 ? "Merci de vous être associé.e à nous!" : partReason}**\n`
 				*/
-				`**╭ ꒷꒦ ‧₊˚<a:A_InterrogationPink:902491970713300992> ↓₍ᐢᐢ₎ ꒰ nous avons un nouveau partenaire de confiance! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚**\n`
-				+ `**┊  ꒱꒱﹕**\n`
+				"**╭ ꒷꒦ ‧₊˚<a:A_InterrogationPink:902491970713300992> ↓₍ᐢᐢ₎ ꒰ nous avons un nouveau partenaire de confiance! ♡ ꒱ ᓚꕤꕤ﹕๑₊˚**\n"
+				+ "**┊  ꒱꒱﹕**\n"
 				+ "**╰╮˚꒷˖꒦︶꒷ ♡︶˚꒥₊**\n"
 				+ `** ・<a:A_CatHeart:901163577250021428>・↷ Merci à· ${userTopart}˚ ༘**\n`
 				+ `** ・<a:A_maryetmudae:902449424771457024>↷ Partenariat géré par ${message.author.username} ·˚ ༘**\n`
-				+ `** ・<a:A_Multi_stars:902276277124354128>・↷  Ping a voir après test**\n`
+				+ "** ・<a:A_Multi_stars:902276277124354128>・↷  Ping a voir après test**\n"
         + `** ୨<:B_NezukoCute:901469985300439040>୧  ̊  ̟ ๑ ︵︵  ${partReason.length < 1 ? "Merci de vous être associé.e à nous!" : partReason} ·˚ ༘**\n`
- 				+ `**╰ ๑₊˚ʚ<a:A_ValideRose:902448325733781524>ɞ︶꒦꒷₊˚**`
+ 				+ "**╰ ๑₊˚ʚ<a:A_ValideRose:902448325733781524>ɞ︶꒦꒷₊˚**"
 
 			)
 			.setFooter("Tu veux faire un partenariat avec nous? Va dans le salon ticket et cherche ceux pour les partenariats.");
 
-    // message.channel.send("<@&897416241784954912>")
+		// message.channel.send("<@&897416241784954912>")
 		message.channel.send({
 			embeds: [partEmbed],
 			ephemeral: true

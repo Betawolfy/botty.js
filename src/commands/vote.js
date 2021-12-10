@@ -29,7 +29,7 @@ module.exports = {
 			+ "**ʚ . ⋆ ₊ —・・₊˚๑・—・— ๑ ˖**\n"
 			+ "┊ ⋆ 。 Données de votes ⊹ ˚. ┊\n"
 			+ "\n"
-		)
+			)
 			.addFields(
 				{
 					name: "nombre de votes:",
@@ -44,9 +44,9 @@ module.exports = {
 			)
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
 
-	message.channel.send({
-		embeds: [voteEmbed],
-		ephemeral: true
-	});
+		message.channel.send({
+			embeds: [voteEmbed],
+			ephemeral: true
+		});
 	}
 };

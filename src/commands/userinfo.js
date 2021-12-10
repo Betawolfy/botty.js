@@ -49,10 +49,10 @@ module.exports = {
 
 		// Calculate Join Position
 		let joinPosition = 0;
-		const guildMembers = await message.guild.members.fetch()
+		const guildMembers = await message.guild.members.fetch();
 		const sortedMembers = guildMembers.sort((a, b) => a.joinedTimestamp - b.joinedTimestamp).toJSON();
 		for (let i = 0; i < sortedMembers.length; i++) {
-			console.log(i, sortedMembers[i])
+			console.log(i, sortedMembers[i]);
 			if (sortedMembers[i].user.id == member.user.id) {
 				joinPosition = i;
 			}
@@ -65,7 +65,7 @@ module.exports = {
 		const embed = new MessageEmbed()
 			.setColor(member.displayHexColor) 
 			.setTitle(member.user.tag)
-      .setAuthor("‿̩͙‿̩̩̽‿̩͙‿̩̥̩‿̩̩̽‿̩͙‿̩͙‿̩̩̽‿̩͙‿̩͙‿̩̩̽‿̩͙‿̩̥̩‿̩̩̽‿̩͙‿̩͙‿̩̩̽‿̩͙‿̩̥̩‿̩̩̽‿̩͙ˊ")
+			.setAuthor("‿̩͙‿̩̩̽‿̩͙‿̩̥̩‿̩̩̽‿̩͙‿̩͙‿̩̩̽‿̩͙‿̩͙‿̩̩̽‿̩͙‿̩̥̩‿̩̩̽‿̩͙‿̩͙‿̩̩̽‿̩͙‿̩̥̩‿̩̩̽‿̩͙ˊ")
 			.setDescription(`**﹒ ﹕ ̟乀 Informations sur l'utilisateur ${member.displayName} (${member.user.tag}).꒷.✦ **`)
 			.setThumbnail(member.user.avatarURL())
 			.addFields(
