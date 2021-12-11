@@ -1,18 +1,9 @@
 const Discord = require("discord.js");
+const getUserJoinPosition = require("../../utils/getUserJoinPosition");
 
-const getUserJoinPosition = require("../utils/getUserJoinPosition");
-
+/** @type {import("../../types/command").CommandFile} */
 module.exports = {
-	data: {
-		name: "ui",
-		description: "Version plus simple de userinfo",
-		category: "₊˚દ Développement"
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message
-	 * @returns {Promise<void>}
-	 */
+	commandDescription: "Version simplifiée de *userinfo.",
 	async execute(message, args) {
 		let member; // L'utilisateur à qui on veut afficher les infos
 

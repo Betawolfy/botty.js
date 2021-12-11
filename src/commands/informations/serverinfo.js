@@ -1,16 +1,8 @@
 const Discord = require("discord.js");
 
+/** @type {import("../../types/command").CommandFile} */
 module.exports = {
-	data: {
-		name: "serverinfo",
-		description: "Affiche des informations sur le serveur actuel.",
-		category: "₊˚દ Informations",
-	},
-
-	/**
-	 * @param {Discord.Message} message 
-	 * @returns {Promise<void>}
-	 */
+	commandDescription: "Affiche des informations sur le serveur actuel.",
 	async execute(message) {
 		if (message.guild) {
 			/** @type {Discord.GuildMember[]} */

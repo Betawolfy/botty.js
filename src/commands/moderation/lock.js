@@ -1,14 +1,6 @@
+/** @type {import("../../types/command").CommandFile} */
 module.exports = {
-	data: {
-		name: "lock",
-		description: "Permet de vérouiller le salon sélectionné.", 
-		category: "₊˚દ Modération",
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message 
-	 * @returns {Promise<void>}
-	 */
+	commandDescription: "Permet de vérouiller le salon sélectionné.", 
 	async execute(message) {
 		if (!message.member.permissions.has("MANAGE_CHANNELS")) {
 			return await message.reply({

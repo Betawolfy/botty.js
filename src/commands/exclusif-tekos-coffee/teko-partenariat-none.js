@@ -1,17 +1,9 @@
 const Discord = require("discord.js");
-const logger = require("../utils/logger");
+const logger = require("../../utils/logger");
 
+/** @type {import("../../types/command").CommandFile} */
 module.exports = {
-	data: {
-		name: "partenariat-none",
-		description: "1 - 2 partenariat sans mention",
-		category: "₊˚દ Exclusif Teko's Coffee"
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message 
-	 * @returns {Promise<void>}
-	 */
+	commandDescription: "1 à 2 partenariats sans mention.",
 	async execute(message, args) {
 		if (message.guild.id !== "861611425524219924") return message.reply(":x: Votre serveur n'est pas autorisé à utiliser cette commande. ");
 		
@@ -27,7 +19,7 @@ module.exports = {
 			|| message.guild.members.get(userMentionInArgs);
 		const partReason = args.join(" ");
 
-		logger.info(` Service partenariat - un partenariat avec la mention partenariat à été réalisé par ${message.author.username}`);
+		logger.info(`Service partenariat - un partenariat avec la mention partenariat à été réalisé par ${message.author.username}`);
 
 		// On supprime le message original.
 		await message.delete();

@@ -1,15 +1,6 @@
+/** @type {import("../../types/command").CommandFile} */
 module.exports = {
-	data: {
-		name: "warn",
-		description: "Avertir un utilisateur.",
-		category: "₊˚દ Modération"
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message - Données du message.
-	 * @param {string[]} args - Arguments du message, ici la raison du warn.
-	 * @returns {Promise<void>}
-	 */
+	commandDescription: "Avertir un utilisateur.",
 	async execute(message, args) {
 		if (!message.member.permissions.has("ADMINISTRATOR")) {
 			return await message.reply({

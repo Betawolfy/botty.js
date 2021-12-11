@@ -1,19 +1,10 @@
 const Discord = require("discord.js");
-const pkg = require("../../package.json");
+const pkg = require("../../../package.json");
 
+/** @type {import("../../types/command").CommandFile} */
 module.exports = {
-	data: {
-		name: "setup",
-		description: "Créer tout les objets necessaires au bon fonctionnement du bot",
-		category: "₊˚દ Utilitaires"
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message 
-	 * @returns {Promise<void>}
-	 */
-	async execute(message) {
-		
+	commandDescription: "Créer tout les objets necessaires au bon fonctionnement du bot.",
+	async execute(message) {	
 		const setupEmbed = new Discord.MessageEmbed()
 			.setColor("#0099ff")
 			.setTitle("Ce serveur est protégé par Botty Bak-Ban.")

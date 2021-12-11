@@ -1,20 +1,11 @@
 const { MessageEmbed } = require("discord.js");
 
-const getUserJoinPosition = require("../utils/getUserJoinPosition");
-const getUser = require("../utils/getUser");
+const getUserJoinPosition = require("../../utils/getUserJoinPosition");
+const getUser = require("../../utils/getUser");
 
+/** @type {import("../../types/command").CommandFile} */
 module.exports = {
-	data: {
-		name: "userinfo",
-		description: "Affiche des informations sur un utilisateur.",
-		category: "₊˚દ Informations"
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message 
-	 * @param {string[]} args 
-	 * @returns {Promise<void>}
-	 */
+	commandDescription: "Affiche des informations sur un utilisateur.",
 	async execute(message, args) {
 		let member; // L'utilisateur à qui on veut afficher les infos
 

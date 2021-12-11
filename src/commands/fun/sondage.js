@@ -1,18 +1,8 @@
 const { MessageEmbed } = require("discord.js");
-const pkg = require("../../package.json");
+const pkg = require("../../../package.json");
 
 module.exports = {
-	data: {
-		name: "sondage",
-		description: "créer un sondage avec oui ou non",
-		category: "₊˚દ Fun"
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message 
-	 * @param {string[]} args
-	 * @returns {Promise<void>} 
-	 */
+	commandDescription: "Créer un sondage 'OUI ou NON'",
 	async execute(message, args) {
 		let textToSay = args.join(" ");
 		if (textToSay.length <= 0) return;
@@ -32,8 +22,7 @@ module.exports = {
 
 		// On envoie celui que dira le bot.
 		await message.channel.send({
-			embeds: [embed],
-			ephemeral: true
+			embeds: [embed]
 		});
 		await message.react("🤔");
 	}

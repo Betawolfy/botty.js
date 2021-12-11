@@ -1,21 +1,13 @@
+const pkg = require("../../../package.json");
+const logger = require("../../utils/logger");
 const Discord = require("discord.js");
-const pkg = require("../../package.json");
-const logger = require("../utils/logger");
 
+/** @type {import("../../types/command").CommandFile} */
 module.exports = {
-	data: {
-		name: "help",
-		description: "Page d'aide",
-		category: "₊˚દ Utilitaires"
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message 
-	 * @returns {Promise<void>}
-	 */
-	async execute(message) {
+	commandDescription: "Page d'aide globale.",
+	async execute (message) {
 		const helpEmbed = new Discord.MessageEmbed()
-			.setColor("c36666")
+			.setColor("#c36666")
 			.setTitle("꒷꒦︶︶ Page d'aide globale ✦ . *")
 			.setURL("https://botty.ga/")
 			.setImage("https://www.icegif.com/wp-content/uploads/aesthetic-icegif-11.gif")
@@ -26,16 +18,11 @@ module.exports = {
 			)
 			.setFooter("Le bot étant encore en développement, certaines fonctionnalités sont susceptibles de ne pas être encore disponible.");
 
-		const commandsData = message.client.commands.map(command => command.data);
-		const categoriesRaw = commandsData.map(command => command.category);
-		const categoriesSorted = [...new Set(categoriesRaw)];
-		const selectOptions = categoriesSorted.map(category =>
-			({
-				label: category,
-				description: `₊˚ ୨ Affiche les commandes de la catégorie ${category} ・— ๑`,
-				value: `help-${category}`
-			})
-		);
+		const selectOptions = message.client.categories.map((category, categoryName) =>	({
+			label: category.details.categoryName,
+			description: `₊˚ ୨ ${category.details.categoryDescription} ・— ๑`,
+			value: `help-${categoryName}`
+		}));
 
 		const menu = new Discord.MessageActionRow()
 			.addComponents(
@@ -47,23 +34,28 @@ module.exports = {
 
 		try {
 			// On vérifie si l'ID du message est le même,
-			// et si l'utilisateur est le mëme.
+			// et si l'utilisateur est le même.
 			const filter = i => {
 				return (i.customId.replace("menu-help-", "") === message.id)
           && (i.user.id === message.author.id);
 			};
 
 			// On récupère la sélection (30s d'AFK max.)
-			const collector = message.channel.createMessageComponentCollector({ filter, idle: 30 * 1000 });
+			const collector = message.channel.createMessageComponentCollector({
+				filter,
+				idle: 30 * 1000 // 30s.
+			});
 
 			collector.on("collect", async (collected) => {
 				const value = collected.values[0].replace("help-", "");
-				const matchingCommands = commandsData.filter(command => command.category === value);
+				const matchingCommands = message.client.commands.filter(command => command.category === value);
 
 				const newEmbed = new Discord.MessageEmbed()
-					.setTitle(value)
+					.setTitle(message.client.categories.get(value).details.categoryName)
 					.setDescription(
-						matchingCommands.map(command => `*${command.name} - ${command.description}`).join("\n")
+						matchingCommands.map(
+							(command, commandName) => `**\\*${commandName}** - ${command.commandDescription}`
+						).join("\n")
 					);
 
 				await collected.update({

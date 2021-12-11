@@ -1,15 +1,6 @@
+/** @type {import("../../types/command").CommandFile} */
 module.exports = {
-	data: {
-		name: "say",
-		description: "Faire dire au bot ce que tu veux.",
-		category: "₊˚દ Fun"
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message 
-	 * @param {string[]} args
-	 * @returns {Promise<void>} 
-	 */
+	commandDescription: "Faire dire au bot ce que tu veux.",
 	async execute(message, args) {
 		let textToSay = args.join(" ");
 		if (textToSay.length <= 0) return;

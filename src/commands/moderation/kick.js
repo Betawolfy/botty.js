@@ -1,14 +1,6 @@
+/** @type {import("../../types/command").CommandFile} */
 module.exports = {
-	data: {
-		name: "kick",
-		description: "Expulser un membre.",
-		category: "₊˚દ Modération",
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message
-	 * @returns {Promise<void>}
-	 */
+	commandDescription: "Expulser un membre.",	
 	async execute(message) {
 		const member = message.mentions.members.first();
 

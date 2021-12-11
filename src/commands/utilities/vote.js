@@ -1,19 +1,9 @@
-const logger = require("../utils/logger");
 const { MessageEmbed } = require("discord.js");
-const pkg = require("../../package.json");
+const pkg = require("../../../package.json");
 
-
+/** @type {import("../../types/command").CommandFile} */
 module.exports = {
-	data: {
-		name: "vote",
-		description: "redirection pour voter pour le bot",
-		category: "₊˚દ Utilitaires"
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message
-	 * @returns {Promise<void>}
-	 */
+	commandDescription: "Lien pour voter pour le bot",
 	async execute(message) {
 		const voteEmbed = new MessageEmbed()
 			.setColor("#0099ff")
@@ -24,7 +14,7 @@ module.exports = {
 				"‧˚꒷꒦︶︶₊꒷꒦︶︶₊꒷꒦˚꒷꒦︶︶₊꒷꒦︶︶₊꒷꒦˚‧\n"
 			+ "**⊹ ˚. Botty est jeune, alors voter pour lui nous aidera à le rendre connu!"
 			+ ":warning: Attention: apparement, il y aurait des pubs avent de pouvoir voter. sachez que ceci est entièrment pour top.gg et les créateurs de bot n'ont pas la possiblité de les retirer pour le moment.** \n"
-		  + "**₊˚દ Voici le lien:** \n"
+			+ "**₊˚દ Voici le lien:** \n"
 			+ "﹒ ﹕ ̟乀  https://top.gg/bot/480032260993581056/vote \n"
 			+ "**ʚ . ⋆ ₊ —・・₊˚๑・—・— ๑ ˖**\n"
 			+ "┊ ⋆ 。 Données de votes ⊹ ˚. ┊\n"
@@ -32,7 +22,7 @@ module.exports = {
 			)
 			.addFields(
 				{
-					name: "nombre de votes:",
+					name: "Nombre de votes:",
 					value: "https://top.gg/api/bots/480032260993581056/check?userId=" + message.author.id,
 					inline: false
 				},

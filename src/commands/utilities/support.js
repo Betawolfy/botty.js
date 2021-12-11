@@ -1,21 +1,13 @@
 const Discord = require("discord.js");
-const pkg = require("../../package.json");
+const pkg = require("../../../package.json");
 
+/** @type {import("../../types/command").CommandFile} */
 module.exports = {
-	data: {
-		name: "support",
-		description: "Commande pour savoir tout les liens.",
-		category: "₊˚દ Utilitaires"
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message 
-	 * @returns {Promise<void>}
-	 */
+	commandDescription: "Commande pour savoir tout les liens.",
 	async execute(message) {
 		const contactEmbed = new Discord.MessageEmbed()
 			.setColor("#0099ff")
-			.setTitle("Support de Botty ")
+			.setTitle("Support de Botty")
 			.setURL("https://botty.ga/")
 			.setAuthor(`Botty.js v${pkg.version}`, message.client.application.iconURL, "https://botty.ga/")
 			.setDescription(

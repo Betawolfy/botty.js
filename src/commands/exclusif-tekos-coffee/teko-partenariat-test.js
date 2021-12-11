@@ -1,17 +1,8 @@
 const Discord = require("discord.js");
-const logger = require("../utils/logger");
+const logger = require("../../utils/logger");
 
 module.exports = {
-	data: {
-		name: "partenariat-test",
-		description: "3 - 2 partenariat test",
-		category: "₊˚દ Exclusif Teko's Coffee"
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message 
-	 * @returns {Promise<void>}
-	 */
+	commandDescription: "3 - 2 partenariat test.",
 	async execute(message, args) {
 		if (message.guild.id !== "861611425524219924") return message.reply(":x: Votre serveur n'est pas autorisé à utiliser cette commande. ");
 		

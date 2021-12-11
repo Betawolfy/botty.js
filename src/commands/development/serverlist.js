@@ -1,16 +1,8 @@
-const logger = require("../utils/logger");
+const logger = require("../../utils/logger");
 
+/** @type {import("../../types/command").CommandFile} */
 module.exports = {
-	data: {
-		name: "serverlist",
-		description: "Tout les serveurs.",
-		category: "₊˚દ Développement"
-	},
-
-	/**
-	 * @param {import("discord.js").Message} message
-	 * @returns {Promise<void>}
-	 */
+	commandDescription: "Tout les serveurs possédant Botty.",
 	async execute(message) {
 		if (message.guild.id !== "596306506819960832") return message.reply(":x: Votre serveur n' est pas autorisé à utiliser cette commande.");
 
