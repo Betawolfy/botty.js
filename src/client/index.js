@@ -1,7 +1,5 @@
-// Désactivation de Mongo.
-// const connectDatabase = require("../utils/connectDatabase");
-
 const { Client, Intents, Collection } = require("discord.js");
+const database = require("../utils/connectDatabase");
 const logger = require("../utils/logger");
 const pkg = require("../../package.json");
 const path = require("path");
@@ -19,19 +17,16 @@ const client = new Client({
 	// Personalisation de la présence
 	presence: {
 		activities: [{
-			name: `v${pkg.version} | *help`,
+			name: `*help | v${pkg.version}`,
 			type: "LISTENING"
 		}]
 	}
 });
 
-	
 // Une fois que le bot est connecté.
 client.once("ready", async () => {
 	logger.info(`${client.user.username} est en ligne sur ${client.guilds.cache.size} serveurs !`);
-
-	// On désactive temporairement Mongo.
-	// await connectDatabase();
+	await database.connect();
 });
 	
 // Ajout des events
@@ -49,21 +44,49 @@ for (const file of eventFiles) {
 // On crée une collection de commandes à partir du dossier `commands`.
 client.commands = new Collection();
 
+// On crée une collection de catégories pour les commandes.
+client.categories = new Collection();
+
 const commandsFolder = path.join(__dirname, "../commands");
-const commandFiles = fs.readdirSync(commandsFolder).filter(file => file.endsWith(".js"));
+const categories = fs.readdirSync(commandsFolder);
 
 // On ajoute chaque commandes à la collection.
-for (const file of commandFiles) {
-	const command = require(`${commandsFolder}/${file}`);
-	client.commands.set(command.data.name, command);
+for (const category of categories) {
+	console.log(category);
+	const categoryFolderContent = fs.readdirSync(path.join(commandsFolder, category));
+	const commandFiles = categoryFolderContent.filter(file => file.endsWith(".js"));
+	const details = require(`${commandsFolder}/${category}/details.json`);
+	const commandsName = [];
+	
+	for (const commandFile of commandFiles) {
+		const commandName = commandFile.replace(".js", "");
+		/** @type {import("../types/command")} */
+		const command = require(`${commandsFolder}/${category}/${commandFile}`);
+		
+		// On ajoute la commande à la catégorie.
+		commandsName.push(commandName);
+		
+		// On ajoute la catégorie a la collection.
+		client.commands.set(commandName, {
+			category,
+			...command
+		});
 
-	logger.debug(`La commande ${command.data.name} a bien été chargée !`);
+		logger.log("info", `La commande ${commandName} a bien été chargée !`);
+	}
+	
+	// On définit toutes les commandes dans cette catégorie.
+	client.categories.set(category, {
+		details,
+		commandsName
+	});
+	logger.log("info", `La catégorie ${category} a bien été chargée !`);
 }
 
 // Debug et logs émis par Discord.
-client.on("debug", (msg) => logger.debug(msg));
-client.on("warn", (msg) => logger.warn(msg));
-client.on("error", (msg) => logger.error(msg));
+client.on("debug", (msg) => logger.log("debug", msg));
+client.on("warn", (msg) => logger.log("warn", msg));
+client.on("error", (msg) => logger.log("error", msg));
 
 // Connexion du bot.
 client.login(process.env.DISCORD_TOKEN);
