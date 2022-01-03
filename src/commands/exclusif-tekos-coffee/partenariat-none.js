@@ -24,6 +24,13 @@ module.exports = {
 		// On supprime le message original.
 		await message.delete();
     
+let role = message.guild.roles.cache.find(r => r.id === "897416194582257675");
+// Add role to the member
+await userTopart.roles.add(role);
+
+ const Mchannel = message.guild.channels.cache.get('914235577400967218');
+        Mchannel.send(`Service partenariat - un partenariat sans mention à été réalisé par ${message.author.username} avec ${userTopart}`);
+  
 		const partEmbed = new Discord.MessageEmbed()
 			.setColor("#dfb7e2")
 			.setTitle("﹒൭˚ Un nouveau partenariat!")
