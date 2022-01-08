@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports = {
 	commandDescription: "Commande pour hacker quelqu'un (c'est faux).",
 	async execute (message, args) {
-		const motDePasse = [
+		const variMotDePasse = [
 			"7;OJ4(gj*:",
 			"?BxKmtBUAE",
 			"JNS+6u.0v6",
@@ -13,7 +13,7 @@ module.exports = {
 			"Alpha_x_Maikoa",
 		];
 
-		const adresseEmail = [
+		const variAdresseEmail = [
 			"@orange.fr",
 			"@gmail.com",
 			"@outlook.fr",
@@ -21,7 +21,7 @@ module.exports = {
 			"@gloomylaunge.org",
 		];
 
-		const Token = [
+		const variToken = [
 			"X0MZQQggmviXCddXL4T41sqQE",
 			"p3C358csEBoqadTTpI9nPFIHT",
 			"NCGhJHtpIHuZ0ehdR8QagnfN5",
@@ -34,8 +34,13 @@ module.exports = {
 		const ipAdress3 = Math.floor(Math.random() * 255) + 1;
 		const ipAdress4 = Math.floor(Math.random() * 255) + 1;
 
-		//const response = responses[Math.floor(Math.random() * responses.length)];
+		const motDePasse = variMotDePasse[Math.floor(Math.random() * variMotDePasse.length)];
+		const adresseEmail = variAdresseEmail[Math.floor(Math.random() * variAdresseEmail.length)];
+		const Token = variToken[Math.floor(Math.random() * variToken.length)];
+		
 		const preResponse = `${message.author.username} à hacké `;
+
+
 
 		const userMentionInArgs = args.shift();
 		if (!userMentionInArgs) {
