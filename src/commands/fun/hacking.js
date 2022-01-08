@@ -32,7 +32,7 @@ module.exports = {
 		const ipAdress3 = Math.floor(Math.random() * 255) + 1;
 		const ipAdress4 = Math.floor(Math.random() * 255) + 1;
 
-		const response = responses[Math.floor(Math.random() * responses.length)];
+		//const response = responses[Math.floor(Math.random() * responses.length)];
 		const preResponse = `${message.author.username} à hacké `;
 
 		const userMentionInArgs = args.shift();
