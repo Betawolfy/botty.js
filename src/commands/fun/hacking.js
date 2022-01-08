@@ -1,3 +1,5 @@
+const Discord = require("discord.js");
+
 /** @type {import("../../types/command").CommandFile} */
 module.exports = {
 	commandDescription: "Commande pour hacker quelqu'un (c'est faux).",
