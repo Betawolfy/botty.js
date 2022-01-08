@@ -64,7 +64,8 @@ module.exports = {
 
 		
 		await message.channel.send({
-			content: `${preResponse} ${hackEmbed}`
-		});
+			embeds: [hackEmbed],
+			ephemeral: true
+			});
 	}
 };
