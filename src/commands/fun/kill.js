@@ -1,7 +1,7 @@
 /** @type {import("../../types/command").CommandFile} */
 module.exports = {
 	commandDescription: "Commande pour pleurer.",
-	async execute (message) {
+	async execute (message, args) {
 		const responses = [
 			"https://i.kym-cdn.com/photos/images/original/001/890/995/e1c.gif",
 			"https://www.icegif.com/wp-content/uploads/among-us-kill-icegif.gif",
