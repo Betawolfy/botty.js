@@ -63,4 +63,23 @@ const userSchema = new mongoose.Schema({
 	guilds: [userGuildSchema]
 });
 
+/*const ecoUserSchema = new mongosse.Schema({
+	id: {
+		type: String,
+		required: true 
+	},
+
+	moneyInHand: {
+		type: Number,
+		required: true,
+		default: 0
+	},
+
+	moneyInBank: {
+		type: Number,
+		required: true,
+			default: 0
+	}
+});
+*/
 module.exports = mongoose.model("User", userSchema);
