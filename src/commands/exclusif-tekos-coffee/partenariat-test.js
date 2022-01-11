@@ -27,8 +27,16 @@ let role = message.guild.roles.cache.find(r => r.id === "897416194582257675");
 // Add role to the member
 await userTopart.roles.add(role);
 
+const logEmbed = new Discord.MessageEmbed()
+.setColor("#f5af96")
+.setTitle("﹒൭˚ Service partnenariat")
+.setAuthor(`╰ ╴▸   .˚ ⤹ ❝ Partenariat géré par: ${message.author.username} ︶꒷꒦`, message.client.application.iconURL, "https://botty.ga/")
+.setDescription(`ᓚ𖦹 ୨un partenariat avec la mention partenariat à été réalisé avec ${userTopart}﹒ ﹕`)
+.setFooter("Si le membre à quitté le serv, supprimer la pub de cette personne et mettez une réaction croix sur ce message. "); 
+
+
  const Mchannel = message.guild.channels.cache.get('914235577400967218');
-        Mchannel.send(`Service partenariat - un partenariat avec la mention partenariat à été réalisé par ${message.author.username} avec ${userTopart}`);
+        Mchannel.send(`Service partenariat - un partenariat avec la mention partenariat à été réalisé par  avec ${userTopart}`);
 
 
 
