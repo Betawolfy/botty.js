@@ -36,7 +36,7 @@ const logEmbed = new Discord.MessageEmbed()
 
 
  const Mchannel = message.guild.channels.cache.get('914235577400967218');
-        Mchannel.send(`Service partenariat - un partenariat avec la mention partenariat à été réalisé par  avec ${userTopart}`);
+        Mchannel.send(logEmbed);
 
 
 
