@@ -24,7 +24,8 @@ module.exports = {
 		// On supprime le message original.
 		await message.delete();
 
-    
+		message.channel.send("Commande inutilisé depuis un moment. Prévenez wolfy pour la remise en marche.");
+    /*
 		const partyuuEmbed = new Discord.MessageEmbed()
 			.setColor("#fadce6")
 			.setTitle("・🎐୨ Nouveau Partenariat ୧🎐・")
@@ -41,6 +42,7 @@ module.exports = {
 		message.channel.send({
 			embeds: [partyuuEmbed],
 			ephemeral: true
-		});
+		});*/
 	}
+
 };

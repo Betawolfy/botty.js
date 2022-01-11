@@ -2,6 +2,9 @@
 module.exports = {
 	commandDescription: "Faire dire au bot ce que tu veux.",
 	async execute(message, args) {
+		if (interaction.user.id === '432116536866766849') {
+			// ...
+		
 		let textToSay = args.join(" ");
 		if (textToSay.length <= 0) return;
 
@@ -12,5 +15,5 @@ module.exports = {
 		await message.channel.send({
 			content: textToSay
 		});
-	}
+	}}
 };
