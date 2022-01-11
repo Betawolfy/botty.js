@@ -36,7 +36,9 @@ const logEmbed = new Discord.MessageEmbed()
 
 
  const Mchannel = message.guild.channels.cache.get('914235577400967218');
-        Mchannel.send(logEmbed);
+        Mchannel.send({
+					embeds: [partEmbed],
+					ephemeral: true});
 
 
 
