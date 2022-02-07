@@ -11,13 +11,14 @@ const client = new Client({
 		Intents.FLAGS.GUILDS,
 		Intents.FLAGS.GUILD_BANS,
 		Intents.FLAGS.GUILD_MESSAGES,
-		Intents.FLAGS.GUILD_MEMBERS
+		Intents.FLAGS.GUILD_MEMBERS,
+    Intents.FLAGS.GUILD_MESSAGE_REACTIONS
 	],
 
 	// Personalisation de la présence
 	presence: {
 		activities: [{
-			name: `*help | v${pkg.version}`,
+			name: `*help`,
 			type: "LISTENING"
 		}]
 	}

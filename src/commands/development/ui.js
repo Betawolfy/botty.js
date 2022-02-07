@@ -8,7 +8,7 @@ module.exports = {
 		let member; // L'utilisateur à qui on veut afficher les infos
 
 		// Si l'utilisateur n'est pas mentionné
-		// on affiche les infos de l'auteur du message.
+		// on affiche les infos de l'auteur du message
 		if (!args.length) {
 			member = await message.guild.members.fetch(message.author);
 		}

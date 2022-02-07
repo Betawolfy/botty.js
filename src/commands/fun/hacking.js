@@ -11,6 +11,7 @@ module.exports = {
 			"VeryWeakPassword",
 			"TekoTheBest",
 			"Alpha_x_Maikoa",
+      "jaimelesfrites",
 		];
 
 		const variAdresseEmail = [

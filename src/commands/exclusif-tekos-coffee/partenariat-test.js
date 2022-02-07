@@ -65,7 +65,7 @@ const logEmbed = new Discord.MessageEmbed()
         + `** ୨<:B_NezukoCute:901469985300439040>୧  ̊  ̟ ๑ ︵︵  ${partReason.length < 1 ? "Merci de vous être associé.e à nous!" : partReason} ·˚ ༘**\n`
 				+ "**╰ ๑₊˚ʚ<a:A_ValideRose:902448325733781524>ɞ︶꒦꒷₊˚**"
         */
-      `**\ 🌸◞ ꒷꒦﹕**Oh! Un nouveau partenariat !** ! ₊˚ᗢ**\n`
+      `**\ 🌸◞ ꒷꒦﹕**Oh! Merci gentil(le) personne! ** ! ₊˚ᗢ**\n`
       + `**・‿︵‿︵‿︵๑‧˚₊꒷︶꒦꒷︶**\n`
       + `**‧₊꒷ ʚ\ 🍼❜﹕*Partenariat réalisé avec ${userTopart} * ! ꒷₊˚**\n`
       + `**⌗・Mention : Ping a voir après test** ꒰\ 🌊꒷꒦**\n`

@@ -3,7 +3,7 @@ const logger = require("./utils/logger");
 const Discord = require("discord.js");
 const express = require("express");
 const router = require("./routes");
-const path = require("path");
+const path = require("path"); 
 
 // Chargement des variables d'environnements.
 require("dotenv").config();
