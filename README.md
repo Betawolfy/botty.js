@@ -13,6 +13,10 @@
 ## Informations
 Vous retrouverez, ici, tout les aspects complexe du bot.
 
+### Projet de création de bot gratuit: 
+
+> plus d'infos prochainement.
+
 ### Le bak-ban
 [**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/BAK-BAN)
 pour retrouver la FAQ et les explications sur le bak-ban.
@@ -56,3 +60,5 @@ Le bot est équipé d'un système de log général. ces log ne sont visibles uni
 - de vous opposer au traitement de vos données à caractère personnel à des fins de prospection ou pour des raisons liées à votre situation particulière ;
 - de demander la limitation du traitement de vos données à caractère personnel dans des cas précis ;
 - de récupérer vos données personnelles, dans un format utilisé et lisible par machine, pour un usage personnel ou pour les transférer à un autre organisme ;
+
+> ad: Overcast : for you, and only you.
