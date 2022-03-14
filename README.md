@@ -15,6 +15,8 @@ Vous retrouverez, ici, tout les aspects complexe du bot.
 
 ### Projet de création de bot gratuit: 
 
+Freebot by discordBotty devient All' Place! 
+Venez demander votre bot discord gratuit maintenent!
 > plus d'infos prochainement.
 
 ### Le bak-ban
