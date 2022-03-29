@@ -1,5 +1,7 @@
 # Botty.js
 
+## Version: 1.1.0
+
 <p align="center">
 <a href="https://bottybot.statuspage.io">
 <img alt="Status" src="https://img.shields.io/badge/dynamic/json?color=c36666&label=Status&query=%24.status.description&url=https%3A%2F%2F7dlbrn7w2vm1.statuspage.io%2Fapi%2Fv2%2Fstatus.json&style=for-the-badge" />
@@ -9,6 +11,10 @@
 </p>
 
 <hr />
+
+# Botty.js (bêta):
+
+## Version: 2.0.2.1b
 
 ## Informations
 Vous retrouverez, ici, tout les aspects complexe du bot.
