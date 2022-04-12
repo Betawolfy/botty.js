@@ -1,5 +1,7 @@
 # Botty.js
 
+![alt-text](https://i.imgur.com/ZC3BRHr.png)
+
 ## Version: 1.1.0
 
 <p align="center">
