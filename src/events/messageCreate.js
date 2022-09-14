@@ -53,6 +53,8 @@ module.exports = {
 				if (!message.client.commands.has(commandName)) return;
 	
 				// On exécute la commande.
+        //await message.channel.send("Maintenence en cours, merci de pacienter jusqu'au retour du bot. ")
+        
 				logger.info(`[${message.guild.id}] La commande ${commandName} a bien été executé par ${message.author.id}`);
 				await message.client.commands.get(commandName).execute(message, args);
 			

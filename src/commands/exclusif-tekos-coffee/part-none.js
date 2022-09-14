@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const logger = require("../../utils/logger");
-
+const partlogger = require("../../utils/partlogger");
 /** @type {import("../../types/command").CommandFile} */
 module.exports = {
 	commandDescription: "1 à 2 partenariats sans mention.",
@@ -20,6 +20,7 @@ module.exports = {
 		const partReason = args.join(" ");
 
 		logger.info(`Service partenariat - un partenariat avec la mention partenariat à été réalisé par ${message.author.username}`);
+    partlogger.info(`Service partenariat - un partenariat sans mention à été réalisé par ${message.author.username} sur le serveur ${message.guild.name} (teko coffee) `);
 
 		// On supprime le message original.
 		await message.delete();

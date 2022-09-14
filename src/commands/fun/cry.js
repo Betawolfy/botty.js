@@ -3,7 +3,7 @@ module.exports = {
 	commandDescription: "Commande pour pleurer.",
 	async execute (message) {
 
-		if (message.guild.id !== "933639832255750205") return message.reply(":x: Il y a quelqu'un de Noir sur le serv, je ne peux pas executer cette commande. OUI JE SUIS RACISTE ET ALORS JE SUIS UN BOT KESTU VA FAIRE!!");
+		if (message.guild.id !== "933639832255750205") return message.reply(":x: commande en cours de maintenance pour cause de plainte, veuillez réessayer plus tard. !!");
 
 		const responses = [
 			"https://i.pinimg.com/originals/b4/b1/64/b4b1640525ecadfa1030e6096f3ec842.gif",

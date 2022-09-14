@@ -12,6 +12,7 @@ module.exports = {
 			if (!message.member.permissions.has("KICK_MEMBERS") || !message.member.permissions.has("ADMINISTRATOR")) {
 				await message.reply("Vous ne pouvez pas utiliser cette commande !");
 			}
+      
 			else if (message.member.permissions.has("KICK_MEMBERS") || message.member.permissions.has("ADMINISTRATOR")) {
 				await message.reply({
 					content: "Vous ne pouvez pas kick cet utilisateur."
