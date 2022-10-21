@@ -29,7 +29,7 @@ Vous postez votre partenariat dans votre salon, vous executez la commande:
 
 Et boom! un Joli message et la mention choisi apparait!
 
-![Imgur](https://imgur.com/0QocmaH)
+![présentation](https://cdn.discordapp.com/attachments/961167942341513219/1033011015656419329/Sans_titre.gif)
 
 Bien sûr, Botty ne se limite pas à cela! 
 
