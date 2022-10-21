@@ -54,7 +54,7 @@ await userTopart.roles.add(role);
 +`** ‧₊꒷ ʚ <a:A_PapillonsRoseClair:902491951373373530>❜﹕À la prochaine pour de nouveaux partenariats ! ꒷₊˚ **\n`
 +`** ╰ ๑ ‧ ₊˚ ︶꒷꒦︶︶꒷︶꒷꒦ ⊹ ₊˚ <a:A_SparklesWhite:901398531393355786> **`
 			)
-	.setFooter("Vous voulez faire un partenariat avec nous? Allez dans le salon ticket et cherchez ceux pour les partenariats.");
+	.setFooter("Vous voulez que je fasse le même message sur votre serveur? allez voir wolfy en mp.");
 
 		message.channel.send({
 			embeds: [partEmbed],
