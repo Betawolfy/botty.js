@@ -1,5 +1,7 @@
 # Botty.js
 
+![alt-text](https://i.imgur.com/ZC3BRHr.png)
+
 <p align="center">
 <a href="https://bottybot.statuspage.io">
 <img alt="Status" src="https://img.shields.io/badge/dynamic/json?color=c36666&label=Status&query=%24.status.description&url=https%3A%2F%2F7dlbrn7w2vm1.statuspage.io%2Fapi%2Fv2%2Fstatus.json&style=for-the-badge" />
@@ -11,15 +13,37 @@
 <hr />
 
 ## Informations
-Vous retrouverez, ici, tout les aspects complexe du bot.
 
-### Le bak-ban
-[**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/BAK-BAN)
-pour retrouver la FAQ et les explications sur le bak-ban.
+Botty reviens plus fort! Je vous propose de créer des commandes pour réaliser des partenariats! c'est un peu le (futur) Luminous Nova français!
 
-### Commandes exclusifs pour les serveurs
-[**Cliquez ici**](https://github.com/betawolfy/botty.js/wiki/commandes---systèmes-exclusif-serveur)
-pour retrouver la FAQ et les explications sur cette fonctionnalité.
+Voici plus d'infos:
+
+Vous postez votre partenariat dans votre salon, vous executez la commande: 
+```js
+*<deux première lettres de votre serveur><none; part; everyone; here> <mention du partenaire>
+```
+> none = sans mention.
+> part = mention partenariat.
+> everyone = mention everyone.
+> here = mention here.
+
+Et boom! un Joli message et la mention choisi apparait!
+
+![Imgur](https://imgur.com/0QocmaH)
+
+Bien sûr, Botty ne se limite pas à cela! 
+
+je propose aussi un système de logs de vos partenariat:
+```js
+Un salon dans lequel tout les partenariats réalisés sont stockées
+```
+
+et également la possibilité de donner un rôle à la personne avec qui vous avez fait un partenariat:
+```js
+La personne que vous avez mentionné dans la commande ce recevera un rôle "partenaire"
+```
+
+Si vous voulez avoir vos commandes ou juste plus d'informations, contactez moi en mp sur discord : ๑ ﾟ˖ 𑄻 Bêta wolfy⸝⸝☕ ̇ ⊹#0911.
 
 ### Scripts
 
