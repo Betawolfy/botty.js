@@ -29,7 +29,7 @@ let role = message.guild.roles.cache.find(r => r.id === "897416194582257675");
 // Add role to the member
 await userTopart.roles.add(role);
 
- const Mchannel = message.guild.channels.cache.get('914235577400967218');
+ const Mchannel = message.guild.channels.cache.get('897416454557814795');
         Mchannel.send(`Service partenariat - un partenariat avec la mention partenariat à été réalisé par ${message.author.username} avec ${userTopart}`);
     
 const partEmbed = new Discord.MessageEmbed()
