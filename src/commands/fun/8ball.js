@@ -15,6 +15,10 @@ module.exports = {
 			"Je n'en doute pas.",
 			"N'y compte pas.",
 			"Repose moi la question plus clairement.",
+			"De quoi tu parles?",
+			"J'espère que c\' est pas vrai.",
+			"Mais de quoi tu me parles frérot?!",
+			"Ta gueule Lunar.. "
 		];
 
 		const response = responses[Math.floor(Math.random() * responses.length)];
