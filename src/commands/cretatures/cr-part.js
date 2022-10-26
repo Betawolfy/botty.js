@@ -5,7 +5,7 @@ const partlogger = require("../../utils/partlogger");
 module.exports = {
 	commandDescription: "1 - 1 partenariat avec la mention everyone",
 	async execute(message, args) {
-		if (message.guild.id !== "911369501508009996") return message.reply(":x: Votre serveur n'est pas autorisé à utiliser cette commande. ");
+		if (message.guild.id !== "888737212496228373") return message.reply(":x: Votre serveur n'est pas autorisé à utiliser cette commande. ");
 		
 		const userMentionInArgs = args.shift();
 		if (!userMentionInArgs) {
