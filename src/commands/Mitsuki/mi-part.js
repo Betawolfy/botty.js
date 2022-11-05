@@ -41,7 +41,7 @@ await userTopart.roles.add(role);
 			.setDescription(`**\ 🌸◞ ꒷꒦﹕**Oh! Merci gentil(le) personne! ** ! ₊˚ᗢ**\n`
       + `**・‿︵‿︵‿︵๑‧˚₊꒷︶꒦꒷︶**\n`
       + `**‧₊꒷ ʚ\ 🍼❜﹕*Partenariat réalisé avec ${userTopart} * ! ꒷₊˚**\n`
-      + `**⌗・Mention : Ping a voir après test** ꒰\ 🌊꒷꒦**\n`
+      + `**⌗・Mention : Partenariat** ꒰\ 🌊꒷꒦**\n`
       + `**꒷꒦ __Géré par : ${message.author.username} __! ⸝⸝ ‧˚.**\n`
       + `**‧₊꒷ ʚ\ 🦋❜﹕Merci de t'être associé.e à nous ! ꒷₊˚**\n`
       + `╰ ๑ ‧ ₊˚ ︶꒷꒦︶︶꒷︶꒷꒦ ⊹ ₊˚  `
@@ -49,7 +49,7 @@ await userTopart.roles.add(role);
 			)
 			.setFooter("Tu veux faire un partenariat avec nous? Va dans le salon ticket et cherche ceux pour les partenariats.");
 
-		message.channel.send("mention");
+		message.channel.send("<@&1038151652819075272>");
 		message.channel.send({
 			embeds: [partEmbed],
 			ephemeral: true
