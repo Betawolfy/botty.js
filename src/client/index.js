@@ -18,7 +18,7 @@ const client = new Client({
 	// Personalisation de la présence
 	presence: {
 		activities: [{
-			name: `*help`,
+			name: `MAINTENENCE`,
 			type: "LISTENING"
 		}]
 	}

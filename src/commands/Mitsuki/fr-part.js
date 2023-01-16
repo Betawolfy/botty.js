@@ -5,7 +5,7 @@ const partlogger = require("../../utils/partlogger");
 module.exports = {
 	commandDescription: "1 - 1 partenariat avec la mention partenariat.",
 	async execute(message, args) {
-		if (message.guild.id !== "1038151652819075266") return message.reply(":x: Votre serveur n'est pas autorisé à utiliser cette commande. ");
+		if (message.guild.id !== "1057380177744777249") return message.reply(":x: Votre serveur n'est pas autorisé à utiliser cette commande. ");
 		
 		const userMentionInArgs = args.shift();
 		if (!userMentionInArgs) {
@@ -29,14 +29,14 @@ let role = message.guild.roles.cache.find(r => r.id === "1028211812019212288");
 // Add role to the member
 await userTopart.roles.add(role);
 */
- const Mchannel = message.guild.channels.cache.get('1038394311382933565');
+ const Mchannel = message.guild.channels.cache.get('1057380179766431796');
         Mchannel.send(`Service partenariat - un partenariat avec la mention partenariat à été réalisé par ${message.author.username} avec ${userTopart}`);
     
     
 		const partEmbed = new Discord.MessageEmbed()
 			.setColor("#e2a6e7")
 			.setTitle("﹒൭˚ Un Nouveau Partenariat!")
-      .setImage("https://media.tenor.com/vlEdQPI9QIIAAAAC/kanna-eating.gif")
+      //.setImage("https://media.tenor.com/vlEdQPI9QIIAAAAC/kanna-eating.gif")
 			.setAuthor("╰ ╴▸   .˚ ⤹ ❝ mais que vois-je? ︶꒷꒦", message.client.application.iconURL, "https://unusualpaltformgame.valv0fluttershy.repl.co/")
 			.setDescription(`**\ 🌸◞ ꒷꒦﹕**Oh! Merci gentil(le) personne! ** ! ₊˚ᗢ**\n`
       + `**・‿︵‿︵‿︵๑‧˚₊꒷︶꒦꒷︶**\n`
@@ -49,7 +49,7 @@ await userTopart.roles.add(role);
 			)
 			.setFooter("Tu veux faire un partenariat avec nous? Va dans le salon ticket et cherche ceux pour les partenariats.");
 
-		message.channel.send("<@&1038151652819075272>");
+		message.channel.send("<@&1057380177849622592>");
 		message.channel.send({
 			embeds: [partEmbed],
 			ephemeral: true
