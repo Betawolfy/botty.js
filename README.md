@@ -51,9 +51,11 @@ La personne que vous avez mentionné dans la commande ce recevera un rôle "part
 | Prefix:      | **oui**: *          | non: slash commends |
 | Interaction dev - serveur | **oui: 100%** | non: Uniquement sur le support |
 | Personnalisation: | **Oui** | **Oui** |
+| Message personalisé: | **Oui** | Non |
 | Nombres de partenariats: | en cours | **Oui** |
 | Blacklist: | en cours | **Oui** |
 | Commandes en plus | **Oui** | **Non** |
+
 
 
 Si vous voulez avoir vos commandes ou juste plus d'informations, contactez moi en mp sur discord : ๑ ﾟ˖ 𑄻 Bêta wolfy⸝⸝☕ ̇ ⊹#0911.
