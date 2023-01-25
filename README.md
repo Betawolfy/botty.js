@@ -42,8 +42,23 @@ et également la possibilité de donner un rôle à la personne avec qui vous av
 ```js
 La personne que vous avez mentionné dans la commande ce recevera un rôle "partenaire"
 ```
+### Voici ce que nous faisons et ce que Luminus Nova ne fait pas:
+
+| Features     | Botty     | Luminous Nova |
+|--------------|-----------|------------|
+| Premium:      | Non       | Non        |
+| Commandes:    | **Seulement 1 à 4**  | Des tonnes et des tonnes     |
+| Prefix:      | **oui**: *          | non: slash commends |
+| Interaction dev - serveur | **oui: 100%** | non: Uniquement sur le support |
+| Personnalisation: | **Oui** | **Oui** |
+| Nombres de partenariats: | en cours | **Oui** |
+| Blacklist: | en cours | **Oui** |
+| Commandes en plus | **Oui** | **Non** |
+
 
 Si vous voulez avoir vos commandes ou juste plus d'informations, contactez moi en mp sur discord : ๑ ﾟ˖ 𑄻 Bêta wolfy⸝⸝☕ ̇ ⊹#0911.
+
+Je rappel que nous ne sommes que 2 à dev botty. nous faisons ce que nous pouvons pour nous démarquer de Luminous Nova. 
 
 ### Scripts
 
